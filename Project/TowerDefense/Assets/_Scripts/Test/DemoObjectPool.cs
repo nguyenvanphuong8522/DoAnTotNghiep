@@ -12,9 +12,10 @@ public class DemoObjectPool : MonoBehaviour
     public void Spawn()
     {
         GameObject triangle = objectPool.Get(objectPool.pools[0]);
-        triangle.transform.position = Vector3.zero;
+        triangle.transform.position = transform.position;
+        triangle.transform.localScale = Vector3.one * 0.25f;
         triangle.SetActive(true);
-        StartCoroutine(DelayDestroy(triangle));
+        //StartCoroutine(DelayDestroy(triangle));
     }
 
     private void Update()
@@ -27,6 +28,6 @@ public class DemoObjectPool : MonoBehaviour
     IEnumerator DelayDestroy(GameObject go)
     {
         yield return new WaitForSecondsRealtime(0.5f);
-        objectPool.Return(go, true);
+        objectPool.Return(go);
     }
 }
