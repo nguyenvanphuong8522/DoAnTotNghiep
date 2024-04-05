@@ -1,0 +1,56 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class EnemyMovement : MonoBehaviour
+{
+    [SerializeField] private Rigidbody2D rb;
+    private Vector2 curTarget;
+    [SerializeField] private float speed;
+    [SerializeField] private Vector2[] path;
+    private int curIndex = 0;
+    private float stepMove { get => speed * Time.fixedDeltaTime; }
+    private void Start()
+    {
+        curTarget = path[curIndex];
+    }
+    private void FixedUpdate()
+    {
+        Move();
+    }
+    private void Move()
+    {
+        if (curIndex > path.Length - 1)
+        {
+            //return;
+            curIndex = 0;
+        }
+        GetVelocity();
+    }
+    private void GetVelocity()
+    {
+        float distance = Vector2.Distance(rb.position, curTarget);
+        Vector2 directionToward = (curTarget - rb.position).normalized;
+        if (distance >= stepMove)
+        {
+            Vector2 dir = directionToward * stepMove;
+            rb.MovePosition(rb.position + dir);
+        }
+        else
+        {
+            rb.MovePosition(curTarget);
+            NextTarget();
+            float offset = stepMove - distance;
+            rb.MovePosition(rb.position + directionToward * offset);
+        }
+    }
+    private void NextTarget()
+    {
+        curIndex++;
+        if (curIndex < path.Length)
+        {
+            curTarget = path[curIndex];
+        }
+    }
+}
