@@ -58,17 +58,10 @@ public class Pool
     }
 }
 
-public class ObjectPool : MonoBehaviour
+public class ObjectPool : Singleton<ObjectPool>
 {
-    public static ObjectPool instance;
     public Dictionary<int, int> dicPairHash = new Dictionary<int, int>();
     public List<Pool> pools = new List<Pool>();
-
-    private void Awake()
-    {
-        instance = this;
-    }
-
     private void Start()
     {
         foreach (var pool in pools)
@@ -117,6 +110,14 @@ public class ObjectPool : MonoBehaviour
     public GameObject Get(Pool p)
     {
         return p.Get(transform, dicPairHash);
+    }
+    public GameObject Get(Pool p, Vector3 pos, float scale)
+    {
+        GameObject clone = p.Get(transform, dicPairHash);
+        clone.transform.position = pos;
+        clone.transform.localScale = Vector3.one * scale;
+        clone.SetActive(true);
+        return clone;
     }
 
     public void Return(GameObject clone)

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletExplore : MonoBehaviour
+public class ProjectileExplore : MonoBehaviour
 {
     private ObjectPool objectPool;
     [SerializeField] private Rigidbody2D rb;
@@ -20,15 +20,12 @@ public class BulletExplore : MonoBehaviour
 
     private void Explore()
     {
-        Debug.LogError("Boom");
         ResetValueBullet();
         objectPool.Return(gameObject);
     }
     private void ResetValueBullet()
     {
         rb.velocity = Vector3.zero;
-        transform.position = Vector3.zero;
-        transform.rotation = Quaternion.identity;
     }
     private void OnValidate()
     {

@@ -10,8 +10,11 @@ public class AudioManager : Singleton<AudioManager>
 
     private Queue<AudioSource> _queueSources;
 
+    public AudioClip[] gunShoots;
+
     protected override void Awake()
     {
+        base.Awake();
         _queueSources = new Queue<AudioSource>(soundSources);
         OnInit();
     }
