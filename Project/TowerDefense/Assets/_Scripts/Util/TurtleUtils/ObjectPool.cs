@@ -34,7 +34,7 @@ public class Pool
     {
         var clone = Object.Instantiate(prefab, container);
         clone.transform.localScale = Vector3.one;
-        clone.name += (actives.Count + deactives.Count);
+        clone.name += actives.Count + deactives.Count;
         deactives.Enqueue(clone);
         dicPairHash.Add(clone.GetHashCode(), GetHashCode());
     }
@@ -62,11 +62,32 @@ public class ObjectPool : Singleton<ObjectPool>
 {
     public Dictionary<int, int> dicPairHash = new Dictionary<int, int>();
     public List<Pool> pools = new List<Pool>();
-    private void Start()
+
+    public List<Pool> bullets = new List<Pool>();
+    public List<Pool> enemyLives = new List<Pool>();
+    public List<Pool> enemyDies = new List<Pool>();
+    public List<Pool> towers = new List<Pool>();
+    protected override void Awake()
+    {
+        AddToPools(bullets);
+        AddToPools(enemyLives);
+        AddToPools(enemyDies);
+        AddToPools(towers);
+        InitPools();
+        base.Awake();
+    }
+    private void InitPools()
     {
         foreach (var pool in pools)
         {
             pool.InitaPool(transform, dicPairHash);
+        }
+    }
+    private void AddToPools(List<Pool> listPools)
+    {
+        foreach(var pool in listPools)
+        {
+            pools.Add(pool);
         }
     }
 
@@ -111,7 +132,7 @@ public class ObjectPool : Singleton<ObjectPool>
     {
         return p.Get(transform, dicPairHash);
     }
-    public GameObject Get(Pool p, Vector3 pos, float scale)
+    public GameObject Get(Pool p, Vector3 pos, float scale = 1)
     {
         GameObject clone = p.Get(transform, dicPairHash);
         clone.transform.position = pos;

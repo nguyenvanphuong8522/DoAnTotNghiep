@@ -45,7 +45,7 @@ public class Gun : MonoBehaviour
     private void Shoot()
     {
         PlaySound();
-        GameObject bullet = ObjectPool.instance.Get(ObjectPool.instance.pools[0], pointShoot.position, 0.15f);
+        GameObject bullet = ObjectPool.instance.Get(ObjectPool.instance.bullets[0], pointShoot.position);
         ProjectileMovement movement = bullet.GetComponent<ProjectileMovement>();
         if (movement != null)
         {

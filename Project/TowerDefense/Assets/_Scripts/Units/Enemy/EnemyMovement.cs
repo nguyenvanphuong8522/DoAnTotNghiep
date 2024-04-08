@@ -7,7 +7,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     private Vector2 curTarget;
     [SerializeField] private float speed;
-    [SerializeField] private Vector2[] path;
+    private Vector2[] path;
     private int curIndex = 0;
     [SerializeField] private Transform sprite;
     private float stepMove { get => speed * Time.fixedDeltaTime; }
@@ -28,8 +28,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (curIndex > path.Length - 1)
         {
-            //return;
-            curIndex = 0;
+            return;
         }
         GetVelocity();
     }
@@ -63,5 +62,9 @@ public class EnemyMovement : MonoBehaviour
     private void RotateFace()
     {
         sprite.up = (Vector3)curTarget - transform.position;
+    }
+    public void SetPath(Vector2[] path)
+    {
+        this.path = path;
     }
 }

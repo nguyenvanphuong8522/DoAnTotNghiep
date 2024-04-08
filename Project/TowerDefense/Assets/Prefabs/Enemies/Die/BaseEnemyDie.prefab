@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6959000997565850090}
   - component: {fileID: 380343391}
   m_Layer: 0
-  m_Name: SoliderSmallDie
+  m_Name: BaseEnemyDie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

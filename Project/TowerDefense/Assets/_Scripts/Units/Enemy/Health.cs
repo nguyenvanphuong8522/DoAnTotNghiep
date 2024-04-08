@@ -36,7 +36,7 @@ public class Health : MonoBehaviour
     }
     private void SpawnEffectDie()
     {
-        GameObject die = ObjectPool.instance.Get(ObjectPool.instance.pools[1], transform.position, 0.5f);
+        GameObject die = ObjectPool.instance.Get(ObjectPool.instance.enemyDies[0], transform.position);
         die.transform.up = transform.GetChild(0).up;
     }
 }
