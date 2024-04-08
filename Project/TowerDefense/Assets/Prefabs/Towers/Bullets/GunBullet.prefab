@@ -9,27 +9,67 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5068025254508596131, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: speed
-      value: 22
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184847961776077844, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Color.b
+      value: 0.04905659
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184847961776077844, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Color.g
+      value: 0.04905659
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184847961776077844, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Color.r
+      value: 0.04905659
       objectReference: {fileID: 0}
     - target: {fileID: 5589125492852312153, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 826ea3d1669996d4e8a0165518ed9f97, type: 2}
+    - target: {fileID: 5736504776222143563, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736504776222143563, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736504776222143563, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736504776222143563, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525510425608785380, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6525510425608785384, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Name
       value: GunBullet
       objectReference: {fileID: 0}
     - target: {fileID: 6525510425608785385, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
+    - target: {fileID: 6525510425608785385, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Color.b
-      value: 0.033641852
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6525510425608785385, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Color.g
-      value: 0.2830189
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6525510425608785385, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Color.r
-      value: 0.1193909
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525510425608785385, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6525510425608785386, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_RootOrder
@@ -81,15 +121,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8696417864825731360, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8696417864825731360, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8696417864825731360, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8696417864825731360, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_LocalPosition.x
@@ -155,18 +195,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.0056896806}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1, y: 2}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 2.031776}
   m_EdgeRadius: 0
 --- !u!114 &-3800390128178605913
 MonoBehaviour:

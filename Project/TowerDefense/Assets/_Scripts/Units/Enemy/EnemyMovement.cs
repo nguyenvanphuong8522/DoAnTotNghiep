@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -10,10 +9,16 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private Vector2[] path;
     private int curIndex = 0;
+    [SerializeField] private Transform sprite;
     private float stepMove { get => speed * Time.fixedDeltaTime; }
     private void Start()
     {
+        Init();
+    }
+    private void Init()
+    {
         curTarget = path[curIndex];
+        RotateFace();
     }
     private void FixedUpdate()
     {
@@ -32,6 +37,7 @@ public class EnemyMovement : MonoBehaviour
     {
         float distance = Vector2.Distance(rb.position, curTarget);
         Vector2 directionToward = (curTarget - rb.position).normalized;
+        
         if (distance >= stepMove)
         {
             Vector2 dir = directionToward * stepMove;
@@ -51,6 +57,11 @@ public class EnemyMovement : MonoBehaviour
         if (curIndex < path.Length)
         {
             curTarget = path[curIndex];
+            RotateFace();
         }
+    }
+    private void RotateFace()
+    {
+        sprite.up = (Vector3)curTarget - transform.position;
     }
 }

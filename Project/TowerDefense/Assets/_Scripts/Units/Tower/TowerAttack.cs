@@ -14,7 +14,7 @@ public class TowerAttack : MonoBehaviour
     {
         queueEnemies.Enqueue(enemy);
 
-        SetGunValue();
+        SetGunTarget();
 
         gun.StartShoot();
     }
@@ -23,14 +23,14 @@ public class TowerAttack : MonoBehaviour
         queueEnemies.Dequeue();
         if(queueEnemies.Count > 0)
         {
-            SetGunValue();
+            SetGunTarget();
         }
         else
         {
             gun.StopShoot();
         }
     }
-    private void SetGunValue() => gun.target = queueEnemies.Peek();
+    private void SetGunTarget() => gun.target = queueEnemies.Peek();
 
     private void OnTriggerEnter2D(Collider2D col)
     {

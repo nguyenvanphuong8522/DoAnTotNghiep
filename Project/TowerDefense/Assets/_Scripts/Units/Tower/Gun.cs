@@ -8,46 +8,46 @@ public class Gun : MonoBehaviour
     private Coroutine coroutineAttack;
     private bool isAttacking = false;
     public Transform target;
-
-    private ObjectPool objectPool;
-    
-    private void Start()
-    {
-        objectPool = ObjectPool.instance;
-    }
+    public Transform gun;
+    public Transform pointShoot;
 
     public void StartShoot()
     {
-        if(!isAttacking)
+        if (!isAttacking)
         {
-            isAttacking = true;
             StopShoot();
+            isAttacking = true;
             coroutineAttack = StartCoroutine(RateShoot());
         }
     }
-
     public void StopShoot()
     {
-        if(coroutineAttack != null)
+        if (coroutineAttack != null)
         {
             StopCoroutine(coroutineAttack);
-            isAttacking = false;
         }
+        isAttacking = false;
     }
     public IEnumerator RateShoot()
     {
-        while (true)
+        float curTime = Time.time;
+        while (isAttacking)
         {
-            Shoot();
-            yield return new WaitForSeconds(duration);
+            RotateToDirection();
+            if (Time.time - curTime >= duration)
+            {
+                Shoot();
+                curTime = Time.time;
+            }
+            yield return null;
         }
     }
     private void Shoot()
     {
         PlaySound();
-        GameObject bullet = objectPool.Get(objectPool.pools[0], transform.position, 0.3f);
+        GameObject bullet = ObjectPool.instance.Get(ObjectPool.instance.pools[0], pointShoot.position, 0.15f);
         ProjectileMovement movement = bullet.GetComponent<ProjectileMovement>();
-        if(movement != null)
+        if (movement != null)
         {
             movement.SetTarget(target);
         }
@@ -55,5 +55,9 @@ public class Gun : MonoBehaviour
     private void PlaySound()
     {
         AudioManager.instance.PlayShot(AudioManager.instance.gunShoots[0]);
+    }
+    private void RotateToDirection()
+    {
+        gun.up = target.position - gun.position;
     }
 }

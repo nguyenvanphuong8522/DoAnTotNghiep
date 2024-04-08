@@ -16,6 +16,7 @@ public class ProjectileMovement : MonoBehaviour
     private void Move()
     {
         direction = target.position - transform.position;
+        transform.up = direction;
         rb.velocity = direction.normalized * speed;
     }
 
