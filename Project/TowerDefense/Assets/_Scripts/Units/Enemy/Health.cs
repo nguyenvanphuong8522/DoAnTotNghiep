@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-            ReturnToPool();
+            SetDie();
         }
     }
 
@@ -24,12 +24,16 @@ public class Health : MonoBehaviour
         }
     }
 
-    private void ReturnToPool()
+    public void ReturnToPool()
+    {
+        WaveManager.instance.curWave.ReduceCountEnemy();
+        ObjectPool.instance.Return(gameObject);
+    }
+    private void SetDie()
     {
         SpawnEffectDie();
-        Destroy(gameObject);
+        ReturnToPool();
     }
-
     private void EnableCollider(bool value = true)
     {
         GetComponent<Collider>().isTrigger = value;

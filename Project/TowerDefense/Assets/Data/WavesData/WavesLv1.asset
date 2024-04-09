@@ -14,14 +14,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gatesPos:
   - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   paths:
   - path:
-    - {x: -10, y: 0}
-  listArrayGate:
+    - {x: 5.46, y: -5.57}
+    - {x: 5.46, y: -1.54}
+    - {x: -3.46, y: -1.54}
+    - {x: -3.46, y: -1.54}
+    - {x: -3.57, y: 4.81}
+  - path:
+    - {x: 5.46, y: 0.43}
+    - {x: 5.46, y: 2.41}
+    - {x: -3.46, y: 2.41}
+    - {x: -3.57, y: 4.81}
+  listWave:
   - gates:
-    - amount: 5
+    - amount: 1
+      rate: 0.5
+      type: 0
+    - amount: 2
+      rate: 0.5
+      type: 0
+  - gates:
+    - amount: 2
+      rate: 0.5
+      type: 0
+    - amount: 4
+      rate: 0.5
+      type: 0
+  - gates:
+    - amount: 4
       rate: 0.5
       type: 0
     - amount: 8
+      rate: 0.5
+      type: 0
+  - gates:
+    - amount: 8
+      rate: 0.5
+      type: 0
+    - amount: 16
       rate: 0.5
       type: 0

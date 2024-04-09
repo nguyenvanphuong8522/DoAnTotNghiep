@@ -7,10 +7,10 @@ public class ListWaveScriptable : ScriptableObject
 {
     public Vector3[] gatesPos;
     public List<Path> paths;
-    public List<ArrayGate> listArrayGate;
+    public List<WaveScriptable> listWave;
 }
 [Serializable]
-public class ArrayGate
+public class WaveScriptable
 {
     public GateScriptable[] gates;
 }

@@ -10,14 +10,13 @@ public class EnemyMovement : MonoBehaviour
     private Vector2[] path;
     private int curIndex = 0;
     [SerializeField] private Transform sprite;
+    public Health health;
     private float stepMove { get => speed * Time.fixedDeltaTime; }
-    private void Start()
+    public void Init()
     {
-        Init();
-    }
-    private void Init()
-    {
+        curIndex = 0;
         curTarget = path[curIndex];
+        transform.position = curTarget;
         RotateFace();
     }
     private void FixedUpdate()
@@ -28,6 +27,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (curIndex > path.Length - 1)
         {
+            health.ReturnToPool();
             return;
         }
         GetVelocity();
@@ -63,8 +63,8 @@ public class EnemyMovement : MonoBehaviour
     {
         sprite.up = (Vector3)curTarget - transform.position;
     }
-    public void SetPath(Vector2[] path)
+    public void SetPath(Path path)
     {
-        this.path = path;
+        this.path = path.path;
     }
 }

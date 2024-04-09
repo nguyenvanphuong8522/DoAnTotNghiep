@@ -46,11 +46,11 @@ TagManager:
   - name: Ground
     uniqueID: 1958882495
     locked: 0
-  - name: Tower
-    uniqueID: 105489811
-    locked: 0
   - name: Enemy
     uniqueID: 1408234663
+    locked: 0
+  - name: Tower
+    uniqueID: 105489811
     locked: 0
   - name: Particle
     uniqueID: 1539563763

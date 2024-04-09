@@ -46,6 +46,7 @@ public class Pool
             spawnAClone(container, dicPairHash);
         }
         var clone = deactives.Dequeue();
+        clone.SetActive(true);
         actives.Add(clone);
         return clone;
     }
@@ -67,8 +68,11 @@ public class ObjectPool : Singleton<ObjectPool>
     public List<Pool> enemyLives = new List<Pool>();
     public List<Pool> enemyDies = new List<Pool>();
     public List<Pool> towers = new List<Pool>();
+
+    public Pool gate;
     protected override void Awake()
     {
+        pools.Add(gate);
         AddToPools(bullets);
         AddToPools(enemyLives);
         AddToPools(enemyDies);
@@ -115,17 +119,17 @@ public class ObjectPool : Singleton<ObjectPool>
     //    return p;
     //}
 
-    //     #if UNITY_EDITOR
-    //     private void Update()
-    //     {
-    //         foreach (var p in pools)
-    //         {
-    //             var activeCount = p.actives.Count;
-    //             var deactiveCount = p.deactives.Count;
-    //             p.name = $"total: {activeCount + deactiveCount} | active: {activeCount} | deactive: {deactiveCount}";
-    //         }
-    //     }
-    // #endif
+#if UNITY_EDITOR
+    private void Update()
+    {
+        foreach (var p in pools)
+        {
+            var activeCount = p.actives.Count;
+            var deactiveCount = p.deactives.Count;
+            p.name = $"total: {activeCount + deactiveCount} | active: {activeCount} | deactive: {deactiveCount}";
+        }
+    }
+#endif
     #endregion
 
     public GameObject Get(Pool p)
@@ -137,7 +141,6 @@ public class ObjectPool : Singleton<ObjectPool>
         GameObject clone = p.Get(transform, dicPairHash);
         clone.transform.position = pos;
         clone.transform.localScale = Vector3.one * scale;
-        clone.SetActive(true);
         return clone;
     }
 

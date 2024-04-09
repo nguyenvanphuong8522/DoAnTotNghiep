@@ -87,8 +87,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3924942737718875286}
   speed: 2
-  path: []
   sprite: {fileID: 6405387951494929303}
+  health: {fileID: 2330800040941479201}
 --- !u!114 &2330800040941479201
 MonoBehaviour:
   m_ObjectHideFlags: 0
