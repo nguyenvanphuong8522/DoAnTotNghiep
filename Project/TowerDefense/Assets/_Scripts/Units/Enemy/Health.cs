@@ -6,7 +6,15 @@ public class Health : MonoBehaviour
 {
     public int health;
     public CircleCollider2D circleCollider;
-
+    private void OnEnable()
+    {
+        Init();
+    }
+    private void Init()
+    {
+        int index = (int)EnemyName.SmallSolider;
+        health = GameManager.instance.enemiesData.enemies[index].health;
+    }
     private void TakeDamage(int damage)
     {
         health -= damage;

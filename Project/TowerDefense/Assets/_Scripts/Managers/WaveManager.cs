@@ -11,10 +11,11 @@ public class WaveManager : Singleton<WaveManager>
     private Gate[] gates;
     public Wave curWave;
     private int waveIndex;
-    private float timeDelayNextWave = 1.5f;
+    public float timeDelayNextWave = 1.5f;
     private void Start()
     {
         Init();
+        NextWave();
     }
     private void Init()
     {
@@ -27,8 +28,6 @@ public class WaveManager : Singleton<WaveManager>
     {
         StartCoroutine(DelayNextWave());
     }
-
-    [Button]
     public void UpToDateWave()
     {
         WaveScriptable newWave = listWaveData.listWave[waveIndex];
@@ -50,7 +49,7 @@ public class WaveManager : Singleton<WaveManager>
     }
     private IEnumerator DelayNextWave()
     {
-        yield return new WaitForSecondsRealtime(1.5f);
+        yield return new WaitForSecondsRealtime(timeDelayNextWave);
         UpToDateWave();
     }
 }

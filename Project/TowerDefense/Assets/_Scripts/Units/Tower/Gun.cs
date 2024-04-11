@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour
     public Transform target;
     public Transform gun;
     public Transform pointShoot;
+    public int typeBullet;
 
     public void StartShoot()
     {
@@ -45,7 +46,7 @@ public class Gun : MonoBehaviour
     private void Shoot()
     {
         PlaySound();
-        GameObject bullet = ObjectPool.instance.Get(ObjectPool.instance.bullets[0], pointShoot.position);
+        GameObject bullet = ObjectPool.instance.Get(ObjectPool.instance.bullets[typeBullet], pointShoot.position);
         ProjectileMovement movement = bullet.GetComponent<ProjectileMovement>();
         if (movement != null)
         {
@@ -58,6 +59,8 @@ public class Gun : MonoBehaviour
     }
     private void RotateToDirection()
     {
-        gun.up = target.position - gun.position;
+        Vector3 look = target.position - gun.position;
+        float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg - 90;
+        gun.rotation = Quaternion.Euler(0, 0, angle);
     }
 }
