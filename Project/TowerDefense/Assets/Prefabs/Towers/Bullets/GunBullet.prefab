@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: speed
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 5068025254508596131, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: explore
+      value: 
+      objectReference: {fileID: -3800390128178605913}
     - target: {fileID: 5184847961776077844, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -135,13 +139,25 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8696417864825731360, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696417864825731360, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.083
+      objectReference: {fileID: 0}
     - target: {fileID: 9127634253422744863, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: ClampVelocityModule.dampen
-      value: 0.1
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127634253422744863, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: ClampVelocityModule.magnitude.scalar
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9127634253422744863, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 30
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
@@ -189,6 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4534448992619034430}
+  damage: 2
 --- !u!50 &4534448992619034430 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 6525510425608785380, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}

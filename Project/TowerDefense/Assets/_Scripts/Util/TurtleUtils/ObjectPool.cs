@@ -58,6 +58,11 @@ public class Pool
         deactives.Enqueue(go);
     }
 }
+[Serializable]
+public class ArrayPool
+{
+    public Pool[] pools;
+}
 
 public class ObjectPool : Singleton<ObjectPool>
 {
@@ -67,7 +72,8 @@ public class ObjectPool : Singleton<ObjectPool>
     public List<Pool> bullets = new List<Pool>();
     public List<Pool> enemyLives = new List<Pool>();
     public List<Pool> enemyDies = new List<Pool>();
-    public List<Pool> towers = new List<Pool>();
+    public List<Pool> obstacleDestroys = new List<Pool>();
+    public List<ArrayPool> towers = new List<ArrayPool>();
 
     public Pool gate;
     protected override void Awake()
@@ -76,9 +82,20 @@ public class ObjectPool : Singleton<ObjectPool>
         AddToPools(bullets);
         AddToPools(enemyLives);
         AddToPools(enemyDies);
-        AddToPools(towers);
+        AddToPools(obstacleDestroys);
+        InitArrayPool(towers);
         InitPools();
         base.Awake();
+    }
+    private void InitArrayPool(List<ArrayPool> arrayPools)
+    {
+        for(int i = 0; i < arrayPools.Count; i++)
+        {
+            for(int j = 0; j < arrayPools[i].pools.Length; j++)
+            {
+                pools.Add(arrayPools[i].pools[j]);
+            }
+        }
     }
     private void InitPools()
     {

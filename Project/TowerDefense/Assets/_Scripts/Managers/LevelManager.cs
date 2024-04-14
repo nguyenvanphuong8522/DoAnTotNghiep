@@ -5,4 +5,5 @@ using UnityEngine;
 public class LevelManager : Singleton<LevelManager>
 {
     public LevelsScriptable levelsData;
+    public Level curLevel;
 }

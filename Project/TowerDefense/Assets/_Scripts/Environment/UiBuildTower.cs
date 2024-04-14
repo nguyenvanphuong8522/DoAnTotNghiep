@@ -1,14 +1,10 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
-using static UnityEditor.ObjectChangeEventStream;
 
 public class UiBuildTower : MonoBehaviour
 {
-    private bool isShowing = false;
+    public bool isShowing = false;
     public Transform indicator;
     public Transform canvas;
     public void SetShowHide()
@@ -16,10 +12,11 @@ public class UiBuildTower : MonoBehaviour
         isShowing = !isShowing;
         SetActiveUiBuilder(isShowing);
     }
-    private void SetActiveUiBuilder(bool value)
+    public void SetActiveUiBuilder(bool value)
     {
         indicator.gameObject.SetActive(value);
         canvas.gameObject.SetActive(value);
+        isShowing = value;
     }
     public void SetPos(Vector3 pos)
     {

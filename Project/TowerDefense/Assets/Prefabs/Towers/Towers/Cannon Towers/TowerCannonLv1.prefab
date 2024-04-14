@@ -71,6 +71,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3618862129832775546, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618862129832775546, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618862129832775546, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618862129832775546, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3618862129832775547, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
       propertyPath: m_SortingOrder
       value: -5
@@ -155,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb56f22e0d794c49b2401bc64f4ebc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.2
+  rate: 1
   target: {fileID: 0}
   gun: {fileID: 2798521802631106558}
   pointShoot: {fileID: 5310874420323071472}

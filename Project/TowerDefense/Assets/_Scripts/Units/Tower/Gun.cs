@@ -4,30 +4,35 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public float duration;
+    public float rate;
     private Coroutine coroutineAttack;
     private bool isAttacking = false;
     public Transform target;
     public Transform gun;
     public Transform pointShoot;
     public int typeBullet;
+    public bool isShootingObstacle = false;
 
+    public void CheckAndShoot()
+    {
+        if(!isShootingObstacle && !isAttacking)
+        {
+            StartShoot();
+        }
+    }
     public void StartShoot()
     {
-        if (!isAttacking)
-        {
-            StopShoot();
-            isAttacking = true;
-            coroutineAttack = StartCoroutine(RateShoot());
-        }
+        StopShoot();
+        isAttacking = true;
+        coroutineAttack = StartCoroutine(RateShoot());
     }
     public void StopShoot()
     {
         if (coroutineAttack != null)
         {
             StopCoroutine(coroutineAttack);
+            isAttacking = false;
         }
-        isAttacking = false;
     }
     public IEnumerator RateShoot()
     {
@@ -35,7 +40,7 @@ public class Gun : MonoBehaviour
         while (isAttacking)
         {
             RotateToDirection();
-            if (Time.time - curTime >= duration)
+            if (Time.time - curTime >= rate)
             {
                 Shoot();
                 curTime = Time.time;
@@ -63,4 +68,5 @@ public class Gun : MonoBehaviour
         float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg - 90;
         gun.rotation = Quaternion.Euler(0, 0, angle);
     }
+
 }

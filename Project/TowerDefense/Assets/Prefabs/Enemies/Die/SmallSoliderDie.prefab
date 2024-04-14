@@ -71,6 +71,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7ab0fe098dad0844e85be1dd72750e3e, type: 3}
+    - target: {fileID: 6959000997565850090, guid: aadea8f519b09804e958025626da43ff, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959000997565850090, guid: aadea8f519b09804e958025626da43ff, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6959000997565850090, guid: aadea8f519b09804e958025626da43ff, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1408234663
+      objectReference: {fileID: 0}
     - target: {fileID: 6959000997565850091, guid: aadea8f519b09804e958025626da43ff, type: 3}
       propertyPath: m_Name
       value: SmallSoliderDie

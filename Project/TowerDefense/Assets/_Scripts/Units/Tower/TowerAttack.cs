@@ -5,23 +5,25 @@ using UnityEngine;
 public class TowerAttack : MonoBehaviour
 {
     private Queue<Transform> queueEnemies = new Queue<Transform>();
-
-    [Space(3)]
-    [Header("References")]
-    [SerializeField]private Gun gun;
+    public Gun gun;
 
     private void AddEnemy(Transform enemy)
     {
         queueEnemies.Enqueue(enemy);
-
         SetGunTarget();
-
-        gun.StartShoot();
+        gun.CheckAndShoot();
     }
     private void RemoveEnemy()
     {
         queueEnemies.Dequeue();
-        if(queueEnemies.Count > 0)
+        if(!gun.isShootingObstacle)
+        {
+            CheckRemoveEnemy();
+        }
+    }
+    public void CheckRemoveEnemy()
+    {
+        if (queueEnemies.Count > 0)
         {
             SetGunTarget();
         }
@@ -30,7 +32,17 @@ public class TowerAttack : MonoBehaviour
             gun.StopShoot();
         }
     }
-    private void SetGunTarget() => gun.target = queueEnemies.Peek();
+    private void SetGunTarget()
+    {
+        if(!gun.isShootingObstacle)
+        {
+            gun.target = queueEnemies.Peek();
+        }
+    }
+    public void SetGunTarget(Transform target)
+    {
+        gun.target = target;
+    }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -56,14 +68,22 @@ public class TowerAttack : MonoBehaviour
             }
         }
     }
-    #region Gizmos
-    //private void OnDrawGizmos()
-    //{
-    //    if (curTarget != null)
-    //    {
-    //        Gizmos.color = Color.red;
-    //        Gizmos.DrawLine(transform.position, curTarget.position);
-    //    }
-    //}
-    #endregion
+    public void StartShootObstacle(Transform newTarget)
+    {
+        gun.StopShoot();
+        gun.isShootingObstacle = true;
+        SetGunTarget(newTarget);
+        gun.StartShoot();
+    }
+
+    public void StopShootObstacle()
+    {
+        gun.StopShoot();
+        gun.isShootingObstacle = false;
+        if (queueEnemies.Count > 0)
+        {
+            SetGunTarget();
+            gun.StartShoot();
+        }
+    }
 }

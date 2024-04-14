@@ -67,6 +67,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3618862129832775544, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3618862129832775547, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
       propertyPath: m_SortingOrder
       value: -5
@@ -87,6 +91,18 @@ PrefabInstance:
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8135122845235955180, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135122845235955180, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 8135122845235955180, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.78
+      objectReference: {fileID: 0}
     - target: {fileID: 8909884453945965802, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
       propertyPath: m_LocalPosition.z
       value: -1
@@ -103,37 +119,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 37357292424937819, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
   m_PrefabInstance: {fileID: 5273922317822653611}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &8569844212324713026 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4602273649924224745, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
-  m_PrefabInstance: {fileID: 5273922317822653611}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &5937102544510909817
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8569844212324713026}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.78, y: 0.78}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &8865471695728493902 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3618862129383191013, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
@@ -151,7 +136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecb56f22e0d794c49b2401bc64f4ebc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 0.2
+  rate: 0.25
   target: {fileID: 0}
   gun: {fileID: 2798521802631106558}
   pointShoot: {fileID: 5310874420323071472}
+  typeBullet: 0

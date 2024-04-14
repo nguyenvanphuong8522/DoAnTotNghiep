@@ -12,11 +12,10 @@ public class BtnBuildTower : MonoBehaviour
     {
         btn.onClick.AddListener(BuildTower);
     }
-
     public void BuildTower()
     {
         uiBuilder.SetShowHide();
-        ObjectPool.instance.Get(ObjectPool.instance.towers[indexTower], uiBuilder.indicator.position);
+        ObjectPool.instance.Get(ObjectPool.instance.towers[indexTower].pools[0], uiBuilder.indicator.position);
     }
 
 }

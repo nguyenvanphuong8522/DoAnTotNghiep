@@ -28,7 +28,12 @@ public class Health : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Bullet"))
         {
-            TakeDamage(1);
+            ProjectileExplore bulletExplore = col.gameObject.GetComponent<ProjectileExplore>();
+            if (bulletExplore != null)
+            {
+                TakeDamage(bulletExplore.damage);
+                bulletExplore.Explore();
+            }
         }
     }
 
