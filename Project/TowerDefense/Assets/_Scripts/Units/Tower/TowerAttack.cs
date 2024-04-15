@@ -6,6 +6,8 @@ public class TowerAttack : MonoBehaviour
 {
     private Queue<Transform> queueEnemies = new Queue<Transform>();
     public Gun gun;
+
+    //Add an enemy to the queue and start attack
     private void AddEnemy(Transform enemy)
     {
         queueEnemies.Enqueue(enemy);
@@ -26,16 +28,17 @@ public class TowerAttack : MonoBehaviour
     }
     public void CheckRemoveEnemy()
     {
-        if (!gun.isShootingObstacle)
+        if (gun.isShootingObstacle) return;
+
+        if (queueEnemies.Count > 0)
         {
-            if (queueEnemies.Count > 0)
-            {
-                UpdateTargetInQueue();
-                return;
-            }
-            gun.StopShoot();
+            UpdateTargetInQueue();
+            return;
         }
+        gun.StopShoot();
     }
+
+    //Update the target if not shooting an obstacle
     private void UpdateTargetInQueue()
     {
         if (!gun.isShootingObstacle)
@@ -53,22 +56,22 @@ public class TowerAttack : MonoBehaviour
     {
         UpdateEnemyQueue(col, false);
     }
+    //Update enemyqueue when an enemy enters or exits trigger
     private void UpdateEnemyQueue(Collider2D enemy, bool add = true)
     {
-        if (enemy.CompareTag("Enemy"))
+        if (!enemy.CompareTag("Enemy")) return;
+        if (add)
         {
-            if (add)
-            {
-                AddEnemy(enemy.transform);
-                return;
-            }
-            RemoveEnemy();
+            AddEnemy(enemy.transform);
+            return;
         }
+        RemoveEnemy();
     }
+    //Shoot or Stop shoot an obstacle
     public void ShootObstacle(Transform newTarget, bool value = true)
     {
         gun.StartPinTarget();
-        if(value)
+        if (value)
         {
             gun.target = newTarget;
             gun.StartShoot();
@@ -80,21 +83,4 @@ public class TowerAttack : MonoBehaviour
             gun.StartShoot();
         }
     }
-    //public void StartShootObstacle(Transform newTarget)
-    //{
-    //    gun.StartPinTarget();
-
-    //    gun.target = newTarget;
-    //    gun.StartShoot();
-    //}
-    //public void StopShootObstacle()
-    //{
-    //    gun.StartPinTarget();
-
-    //    if (queueEnemies.Count > 0)
-    //    {
-    //        UpdateTargetInQueue();
-    //        gun.StartShoot();
-    //    }
-    //}
 }

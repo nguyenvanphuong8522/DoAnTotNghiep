@@ -33,26 +33,18 @@ public class Obstacle : MonoBehaviour
     }
     public void CheckIsShootObstacle(TowerAttack towerAttack)
     {
-        if (!towerAttack.gun.isShootingObstacle)
-        {
-            towerAttack.ShootObstacle(transform);
-        }
-        else
-        {
-            towerAttack.ShootObstacle(transform, false);
-        }
+        towerAttack.ShootObstacle(transform, !towerAttack.gun.isShootingObstacle);
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Bullet"))
+        if (!col.gameObject.CompareTag("Bullet")) return;
+
+        ProjectileExplore bulletExplore = col.gameObject.GetComponent<ProjectileExplore>();
+        if (bulletExplore != null)
         {
-            ProjectileExplore bulletExplore = col.gameObject.GetComponent<ProjectileExplore>();
-            if (bulletExplore != null)
-            {
-                TakeDamage(bulletExplore.damage);
-                bulletExplore.Explore();
-            }
+            TakeDamage(bulletExplore.damage);
+            bulletExplore.Explore();
         }
     }
     private void OnTriggerEnter2D(Collider2D col)
@@ -66,19 +58,17 @@ public class Obstacle : MonoBehaviour
 
     private void AddOrRemove(Collider2D col, bool value = true)
     {
-        if (col.CompareTag("Tower"))
+        if (!col.CompareTag("Tower")) return;
+
+        TowerAttack towerAttack = col.gameObject.GetComponentInParent<TowerAttack>();
+        if (towerAttack == null) return;
+
+        if (value)
         {
-            TowerAttack towerAttack = col.gameObject.GetComponentInParent<TowerAttack>();
-            if (towerAttack != null)
-            {
-                if (value)
-                {
-                    AddTowerAttack(towerAttack);
-                    return;
-                }
-                towerAttacks.Remove(towerAttack);
-            }
+            AddTowerAttack(towerAttack);
+            return;
         }
+        towerAttacks.Remove(towerAttack);
     }
     private void AddTowerAttack(TowerAttack towerAttack)
     {
@@ -88,7 +78,6 @@ public class Obstacle : MonoBehaviour
             towerAttack.ShootObstacle(transform);
         }
     }
-
     public void ReturnToPool()
     {
         ObjectPool.instance.Return(gameObject);

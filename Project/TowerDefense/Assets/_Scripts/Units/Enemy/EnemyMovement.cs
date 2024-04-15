@@ -70,4 +70,19 @@ public class EnemyMovement : MonoBehaviour
     {
         this.path = path.path;
     }
+    public void Teleport()
+    {
+        health.EnableCollider(false);
+        curIndex = 0;
+        curTarget = path[curIndex];
+        transform.position = path[curIndex];
+        health.EnableCollider();
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.CompareTag("Teleport"))
+        {
+            Teleport();
+        }
+    }
 }

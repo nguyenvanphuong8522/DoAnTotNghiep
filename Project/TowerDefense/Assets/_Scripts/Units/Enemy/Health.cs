@@ -24,7 +24,6 @@ public class Health : MonoBehaviour
             SetDie();
         }
     }
-
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (col.gameObject.CompareTag("Bullet"))
@@ -37,7 +36,6 @@ public class Health : MonoBehaviour
             }
         }
     }
-
     public void ReturnToPool()
     {
         WaveManager.instance.curWave.ReduceCountEnemy();
@@ -49,7 +47,7 @@ public class Health : MonoBehaviour
         SpawnEffectDie();
         ReturnToPool();
     }
-    private void EnableCollider(bool value = true)
+    public void EnableCollider(bool value = true)
     {
         circleCollider.enabled = value;
     }

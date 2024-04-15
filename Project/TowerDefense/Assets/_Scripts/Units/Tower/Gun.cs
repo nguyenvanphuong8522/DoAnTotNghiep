@@ -60,11 +60,9 @@ public class Gun : MonoBehaviour
         float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg - 90;
         gun.rotation = Quaternion.Euler(0, 0, angle);
     }
-
     public void StartPinTarget()
     {
         StopShoot();
         isShootingObstacle = !isShootingObstacle;
     }
-
 }
