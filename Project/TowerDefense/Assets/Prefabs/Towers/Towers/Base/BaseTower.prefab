@@ -104,7 +104,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 0}
-  isShootingObstacle: 0
 --- !u!114 &1459079082663220663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +121,7 @@ MonoBehaviour:
   curLevel: {fileID: 0}
   range: {fileID: 3618862129832775546}
   indexTower: 0
+  rangeCollider: {fileID: 3618862129832775544}
 --- !u!1 &3618862129832775541
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ public class Health : MonoBehaviour
     {
         int index = (int)EnemyName.SmallSolider;
         health = GameManager.instance.enemiesData.enemies[index].health;
+        EnableCollider();
     }
     private void TakeDamage(int damage)
     {
@@ -44,12 +45,13 @@ public class Health : MonoBehaviour
     }
     private void SetDie()
     {
+        EnableCollider(false);
         SpawnEffectDie();
         ReturnToPool();
     }
     private void EnableCollider(bool value = true)
     {
-        GetComponent<Collider>().isTrigger = value;
+        circleCollider.enabled = value;
     }
     private void SpawnEffectDie()
     {

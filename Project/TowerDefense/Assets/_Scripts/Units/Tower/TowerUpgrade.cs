@@ -10,7 +10,11 @@ public class TowerUpgrade : MonoBehaviour
     public Transform range;
     public int indexTower;
     private UiTowerUpgrade uiTowerUpgrade;
-
+    public CircleCollider2D rangeCollider;
+    private void OnEnable()
+    {
+        EnableRange();
+    }
 
     private void Start()
     {
@@ -48,6 +52,7 @@ public class TowerUpgrade : MonoBehaviour
     {
         indexTower = 0;
         uiTowerUpgrade.SetShowHide();
+        EnableRange(false);
         ObjectPool.instance.Return(gameObject);
     }
     public void UpdateTower()
@@ -60,5 +65,9 @@ public class TowerUpgrade : MonoBehaviour
     {
         curLevel.SetCoin(coinSell, false);
         ReturnToPool();
+    }
+    private void EnableRange(bool value = true)
+    {
+        rangeCollider.enabled = value;
     }
 }

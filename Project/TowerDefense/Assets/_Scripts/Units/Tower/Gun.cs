@@ -6,20 +6,12 @@ public class Gun : MonoBehaviour
 {
     public float rate;
     private Coroutine coroutineAttack;
-    private bool isAttacking = false;
+    public bool isAttacking = false;
     public Transform target;
     public Transform gun;
     public Transform pointShoot;
     public int typeBullet;
     public bool isShootingObstacle = false;
-
-    public void CheckAndShoot()
-    {
-        if(!isShootingObstacle && !isAttacking)
-        {
-            StartShoot();
-        }
-    }
     public void StartShoot()
     {
         StopShoot();
@@ -67,6 +59,12 @@ public class Gun : MonoBehaviour
         Vector3 look = target.position - gun.position;
         float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg - 90;
         gun.rotation = Quaternion.Euler(0, 0, angle);
+    }
+
+    public void StartPinTarget()
+    {
+        StopShoot();
+        isShootingObstacle = !isShootingObstacle;
     }
 
 }

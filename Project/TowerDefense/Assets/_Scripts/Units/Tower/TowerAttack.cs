@@ -6,42 +6,42 @@ public class TowerAttack : MonoBehaviour
 {
     private Queue<Transform> queueEnemies = new Queue<Transform>();
     public Gun gun;
-
     private void AddEnemy(Transform enemy)
     {
         queueEnemies.Enqueue(enemy);
-        SetGunTarget();
-        gun.CheckAndShoot();
+        UpdateTargetInQueue();
+        StartAttack();
+    }
+    public void StartAttack()
+    {
+        if (!gun.isShootingObstacle)
+        {
+            gun.StartShoot();
+        }
     }
     private void RemoveEnemy()
     {
         queueEnemies.Dequeue();
-        if(!gun.isShootingObstacle)
-        {
-            CheckRemoveEnemy();
-        }
+        CheckRemoveEnemy();
     }
     public void CheckRemoveEnemy()
     {
-        if (queueEnemies.Count > 0)
+        if (!gun.isShootingObstacle)
         {
-            SetGunTarget();
-        }
-        else
-        {
+            if (queueEnemies.Count > 0)
+            {
+                UpdateTargetInQueue();
+                return;
+            }
             gun.StopShoot();
         }
     }
-    private void SetGunTarget()
+    private void UpdateTargetInQueue()
     {
-        if(!gun.isShootingObstacle)
+        if (!gun.isShootingObstacle)
         {
             gun.target = queueEnemies.Peek();
         }
-    }
-    public void SetGunTarget(Transform target)
-    {
-        gun.target = target;
     }
 
     private void OnTriggerEnter2D(Collider2D col)
@@ -53,7 +53,6 @@ public class TowerAttack : MonoBehaviour
     {
         UpdateEnemyQueue(col, false);
     }
-
     private void UpdateEnemyQueue(Collider2D enemy, bool add = true)
     {
         if (enemy.CompareTag("Enemy"))
@@ -61,29 +60,41 @@ public class TowerAttack : MonoBehaviour
             if (add)
             {
                 AddEnemy(enemy.transform);
+                return;
             }
-            else
-            {
-                RemoveEnemy();
-            }
+            RemoveEnemy();
         }
     }
-    public void StartShootObstacle(Transform newTarget)
+    public void ShootObstacle(Transform newTarget, bool value = true)
     {
-        gun.StopShoot();
-        gun.isShootingObstacle = true;
-        SetGunTarget(newTarget);
-        gun.StartShoot();
-    }
-
-    public void StopShootObstacle()
-    {
-        gun.StopShoot();
-        gun.isShootingObstacle = false;
+        gun.StartPinTarget();
+        if(value)
+        {
+            gun.target = newTarget;
+            gun.StartShoot();
+            return;
+        }
         if (queueEnemies.Count > 0)
         {
-            SetGunTarget();
+            UpdateTargetInQueue();
             gun.StartShoot();
         }
     }
+    //public void StartShootObstacle(Transform newTarget)
+    //{
+    //    gun.StartPinTarget();
+
+    //    gun.target = newTarget;
+    //    gun.StartShoot();
+    //}
+    //public void StopShootObstacle()
+    //{
+    //    gun.StartPinTarget();
+
+    //    if (queueEnemies.Count > 0)
+    //    {
+    //        UpdateTargetInQueue();
+    //        gun.StartShoot();
+    //    }
+    //}
 }

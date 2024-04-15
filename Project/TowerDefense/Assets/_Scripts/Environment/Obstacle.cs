@@ -7,6 +7,7 @@ public class Obstacle : MonoBehaviour
     public int health;
     public Animator animator;
     public List<TowerAttack> towerAttacks;
+    public bool isUnderAttack = false;
     private void TakeDamage(int damage)
     {
         health -= damage;
@@ -19,22 +20,26 @@ public class Obstacle : MonoBehaviour
     {
         CheckStartShootObstacles();
     }
-    public  void CheckStartShootObstacles()
+    public void CheckStartShootObstacles()
     {
-        foreach(TowerAttack element in towerAttacks)
+        isUnderAttack = !isUnderAttack;
+        if (towerAttacks.Count > 0)
         {
-            CheckIsShootObstacle(element);
+            foreach (TowerAttack element in towerAttacks)
+            {
+                CheckIsShootObstacle(element);
+            }
         }
     }
     public void CheckIsShootObstacle(TowerAttack towerAttack)
     {
         if (!towerAttack.gun.isShootingObstacle)
         {
-            towerAttack.StartShootObstacle(transform);
+            towerAttack.ShootObstacle(transform);
         }
         else
         {
-            towerAttack.StopShootObstacle();
+            towerAttack.ShootObstacle(transform, false);
         }
     }
 
@@ -52,22 +57,35 @@ public class Obstacle : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(col.CompareTag("Tower")) {
-            TowerAttack towerAttack = col.gameObject.GetComponentInParent<TowerAttack>();
-            if(towerAttack != null)
-            {
-                towerAttacks.Add(towerAttack);
-            }
-        }
+        AddOrRemove(col);
     }
     private void OnTriggerExit2D(Collider2D col)
     {
-        if(col.CompareTag("Tower")) {
+        AddOrRemove(col, false);
+    }
+
+    private void AddOrRemove(Collider2D col, bool value = true)
+    {
+        if (col.CompareTag("Tower"))
+        {
             TowerAttack towerAttack = col.gameObject.GetComponentInParent<TowerAttack>();
-            if(towerAttack != null)
+            if (towerAttack != null)
             {
+                if (value)
+                {
+                    AddTowerAttack(towerAttack);
+                    return;
+                }
                 towerAttacks.Remove(towerAttack);
             }
+        }
+    }
+    private void AddTowerAttack(TowerAttack towerAttack)
+    {
+        towerAttacks.Add(towerAttack);
+        if (isUnderAttack)
+        {
+            towerAttack.ShootObstacle(transform);
         }
     }
 
@@ -77,6 +95,7 @@ public class Obstacle : MonoBehaviour
     }
     private void SetDie()
     {
+        CheckStartShootObstacles();
         SpawnEffectDie();
         ReturnToPool();
     }
