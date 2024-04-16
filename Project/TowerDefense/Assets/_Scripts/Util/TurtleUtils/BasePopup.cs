@@ -16,6 +16,7 @@ public class BasePopup : MonoBehaviour
         {
             btnClose.onClick.AddListener(Hide);
         }
+        Hide();
     }
 
     public virtual void Show(object data = null)

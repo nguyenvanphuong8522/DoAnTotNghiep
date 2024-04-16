@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public virtual void TurnOn()
     {
-        
+        gameObject.SetActive(true);
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual void TurnOff()
     {
-        
+        gameObject.SetActive(false);
     }
 }
