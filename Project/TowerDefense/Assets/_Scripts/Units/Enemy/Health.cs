@@ -6,13 +6,14 @@ public class Health : MonoBehaviour
 {
     public int health;
     public CircleCollider2D circleCollider;
+    public EnemyName enemyName;
     private void OnEnable()
     {
         Init();
     }
     private void Init()
     {
-        int index = (int)EnemyName.SmallSolider;
+        int index = (int)enemyName;
         health = GameManager.instance.enemiesData.enemies[index].health;
         EnableCollider();
     }
@@ -36,6 +37,22 @@ public class Health : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Boom"))
+        {
+            TakeDamage(10);
+        }
+        else if(col.gameObject.CompareTag("Bullet"))
+        {
+            ProjectileExplore bulletExplore = col.gameObject.GetComponent<ProjectileExplore>();
+            if (bulletExplore != null)
+            {
+                TakeDamage(bulletExplore.damage);
+            }
+        }
+    }
     public void ReturnToPool()
     {
         WaveManager.instance.curWave.ReduceCountEnemy();
@@ -53,7 +70,8 @@ public class Health : MonoBehaviour
     }
     private void SpawnEffectDie()
     {
-        GameObject die = ObjectPool.instance.Get(ObjectPool.instance.enemyDies[0], transform.position);
+        int index = (int)enemyName;
+        GameObject die = ObjectPool.instance.Get(ObjectPool.instance.enemyDies[index], transform.position);
         die.transform.up = transform.GetChild(0).up;
     }
 }

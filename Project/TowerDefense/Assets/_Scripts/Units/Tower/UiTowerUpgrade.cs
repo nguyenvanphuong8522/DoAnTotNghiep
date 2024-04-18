@@ -4,29 +4,21 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class UiTowerUpgrade : Singleton<UiTowerUpgrade>
+public class UiTowerUpgrade : BasePopup
 {
-    public bool isShowing = false;
-    public Transform indicator;
-    public Transform canvas;
+    public static UiTowerUpgrade instance;
     public Transform range;
-
     public Button btnUpgrade, btnSell;
 
-    public void SetShowHide()
+    protected override void Awake()
     {
-        isShowing = !isShowing;
-        SetActiveUiBuilder(isShowing);
-    }
-    public void SetActiveUiBuilder(bool value)
-    {
-        indicator.gameObject.SetActive(value);
-        canvas.gameObject.SetActive(value);
-        isShowing = value;
+        instance = this;
+        base.Awake();
+        Hide();
     }
     public void SetPos(Vector3 pos)
     {
-        indicator.position = canvas.position = pos;
+        main.position = pos;
     }
     public void UpdateRange(Vector3 range)
     {
@@ -36,7 +28,6 @@ public class UiTowerUpgrade : Singleton<UiTowerUpgrade>
     {
         SetPos(pos);
         UpdateRange(range);
-        SetShowHide();
     }
 
     public void RemoveListener()

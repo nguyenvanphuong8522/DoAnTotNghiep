@@ -17,16 +17,16 @@ MonoBehaviour:
   - {x: 0, y: 0, z: 0}
   paths:
   - path:
-    - {x: 5.46, y: -5.57}
-    - {x: 5.46, y: -1.54}
-    - {x: -3.46, y: -1.54}
-    - {x: -3.46, y: -1.54}
-    - {x: -3.57, y: 4.81}
+    - {x: 5.5, y: -5.5}
+    - {x: 5.5, y: -1.5}
+    - {x: -3.5, y: -1.5}
+    - {x: -3.5, y: -1.5}
+    - {x: -3.5, y: 5}
   - path:
-    - {x: 5.46, y: 0.43}
-    - {x: 5.46, y: 2.41}
-    - {x: -3.46, y: 2.41}
-    - {x: -3.57, y: 4.81}
+    - {x: 5.5, y: 0.5}
+    - {x: 5.5, y: 2.5}
+    - {x: -3.5, y: 2.5}
+    - {x: -3.5, y: 5}
   listWave:
   - gates:
     - amount: 1
@@ -38,56 +38,28 @@ MonoBehaviour:
   - gates:
     - amount: 2
       rate: 0.5
-      type: 0
+      type: 1
     - amount: 4
       rate: 0.5
-      type: 0
+      type: 1
   - gates:
     - amount: 4
       rate: 0.5
-      type: 0
+      type: 1
     - amount: 8
       rate: 0.5
-      type: 0
+      type: 1
   - gates:
+    - amount: 4
+      rate: 2
+      type: 2
     - amount: 8
-      rate: 0.5
-      type: 0
-    - amount: 16
-      rate: 0.5
-      type: 0
+      rate: 2
+      type: 2
   - gates:
-    - amount: 8
-      rate: 0.5
-      type: 0
-    - amount: 16
-      rate: 0.5
-      type: 0
-  - gates:
-    - amount: 8
-      rate: 0.5
-      type: 0
-    - amount: 16
-      rate: 0.5
-      type: 0
-  - gates:
-    - amount: 8
-      rate: 0.5
-      type: 0
-    - amount: 16
-      rate: 0.5
-      type: 0
-  - gates:
-    - amount: 8
-      rate: 0.5
-      type: 0
-    - amount: 16
-      rate: 0.5
-      type: 0
-  - gates:
-    - amount: 8
-      rate: 0.5
-      type: 0
-    - amount: 16
-      rate: 0.5
-      type: 0
+    - amount: 3
+      rate: 2
+      type: 3
+    - amount: 3
+      rate: 2
+      type: 3

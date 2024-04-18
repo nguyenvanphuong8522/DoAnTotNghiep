@@ -16,9 +16,12 @@ MonoBehaviour:
   - name: Small Solider
     health: 10
     speedMove: 1.5
-  - name: 
-    health: 0
-    speedMove: 0
-  - name: 
-    health: 0
-    speedMove: 0
+  - name: Big Solider
+    health: 15
+    speedMove: 1.5
+  - name: Small Car
+    health: 20
+    speedMove: 4
+  - name: Big Car
+    health: 30
+    speedMove: 2

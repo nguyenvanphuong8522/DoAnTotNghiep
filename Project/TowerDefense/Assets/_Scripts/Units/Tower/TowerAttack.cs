@@ -4,46 +4,52 @@ using UnityEngine;
 
 public class TowerAttack : MonoBehaviour
 {
-    private Queue<Transform> queueEnemies = new Queue<Transform>();
+    private List<Transform> listEnemy = new List<Transform>();
     public Gun gun;
 
     //Add an enemy to the queue and start attack
     private void AddEnemy(Transform enemy)
     {
-        queueEnemies.Enqueue(enemy);
-        UpdateTargetInQueue();
+        listEnemy.Add(enemy);
+        if(listEnemy.Count == 1) 
+        {
+            SetTargetGun();
+        }
         StartAttack();
     }
     public void StartAttack()
     {
-        if (!gun.isShootingObstacle)
+        if (!gun.isShootingObstacle && !gun.isAttacking)
         {
             gun.StartShoot();
         }
     }
-    private void RemoveEnemy()
+    private void RemoveEnemy(Transform enemy)
     {
-        queueEnemies.Dequeue();
-        CheckRemoveEnemy();
+        listEnemy.Remove(enemy);
+        if(enemy == gun.target)
+        {
+            CheckRemoveEnemy();
+        }
     }
-    public void CheckRemoveEnemy()
+    public void CheckRemoveEnemy() 
     {
         if (gun.isShootingObstacle) return;
 
-        if (queueEnemies.Count > 0)
+        if (listEnemy.Count > 0)
         {
-            UpdateTargetInQueue();
+            SetTargetGun();
             return;
         }
         gun.StopShoot();
     }
 
     //Update the target if not shooting an obstacle
-    private void UpdateTargetInQueue()
+    private void SetTargetGun()
     {
         if (!gun.isShootingObstacle)
         {
-            gun.target = queueEnemies.Peek();
+            gun.target = listEnemy[0];
         }
     }
 
@@ -65,7 +71,7 @@ public class TowerAttack : MonoBehaviour
             AddEnemy(enemy.transform);
             return;
         }
-        RemoveEnemy();
+        RemoveEnemy(enemy.transform);
     }
     //Shoot or Stop shoot an obstacle
     public void ShootObstacle(Transform newTarget, bool value = true)
@@ -77,9 +83,9 @@ public class TowerAttack : MonoBehaviour
             gun.StartShoot();
             return;
         }
-        if (queueEnemies.Count > 0)
+        if (listEnemy.Count > 0)
         {
-            UpdateTargetInQueue();
+            SetTargetGun();
             gun.StartShoot();
         }
     }

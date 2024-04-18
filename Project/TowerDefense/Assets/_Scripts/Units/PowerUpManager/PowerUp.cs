@@ -13,4 +13,8 @@ public class PowerUp : MonoBehaviour
     {
         gameObject.SetActive(false);
     }
+    public virtual void SetPos(Vector3 pos)
+    {
+        transform.position = pos;
+    }
 }

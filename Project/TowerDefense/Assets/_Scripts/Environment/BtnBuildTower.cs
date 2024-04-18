@@ -14,8 +14,8 @@ public class BtnBuildTower : MonoBehaviour
     }
     public void BuildTower()
     {
-        uiBuilder.SetShowHide();
-        ObjectPool.instance.Get(ObjectPool.instance.towers[indexTower].pools[0], uiBuilder.indicator.position);
+        ObjectPool.instance.Get(ObjectPool.instance.towers[indexTower].pools[0], uiBuilder.main.position);
+        uiBuilder.Hide();
     }
 
 }

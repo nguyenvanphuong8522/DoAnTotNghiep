@@ -4,27 +4,30 @@ using UnityEngine;
 
 public class ProjectileMovement : MonoBehaviour
 {
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private Transform target;
-    [SerializeField] private float speed;
-    [SerializeField] private ProjectileExplore explore;
-    private Vector2 direction;
+    [SerializeField] protected Rigidbody2D rb;
+    [SerializeField] protected Transform target;
+    [SerializeField] protected float speed;
+    protected Vector2 direction;
     public Transform sprite;
 
-    private void FixedUpdate()
+    public virtual void FixedUpdate()
+    {
+        UpdateDirection();
+        Rotate();
+        Move();
+    }
+    public virtual void Move()
+    {
+        rb.velocity = direction.normalized * speed;
+    }
+    protected void UpdateDirection()
     {
         if (target.gameObject.activeSelf)
         {
             direction = target.position - transform.position;
         }
-        Move();
     }
-    private void Move()
-    {
-        Rotate();
-        rb.velocity = direction.normalized * speed;
-    }
-    public void Rotate()
+    protected virtual void Rotate()
     {
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
         sprite.rotation = Quaternion.Euler(0, 0, angle);

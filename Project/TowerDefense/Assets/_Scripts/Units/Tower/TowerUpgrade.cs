@@ -9,6 +9,7 @@ public class TowerUpgrade : MonoBehaviour
     public Level curLevel;
     public Transform range;
     public int indexTower;
+    public int indexLevel;
     private UiTowerUpgrade uiTowerUpgrade;
     public CircleCollider2D rangeCollider;
     private void OnEnable()
@@ -30,15 +31,9 @@ public class TowerUpgrade : MonoBehaviour
     }
     public void Show()
     {
-        if (Ground.instance.uiBuildTower.isShowing)
-        {
-            Ground.instance.uiBuildTower.SetActiveUiBuilder(false);
-        }
-        else
-        {
-            uiTowerUpgrade.AddListener(UpdateTower, Sell);
-            uiTowerUpgrade.UpDateUi(transform.position, range.localScale);
-        }
+        uiTowerUpgrade.AddListener(UpdateTower, Sell);
+        uiTowerUpgrade.UpDateUi(transform.position, range.localScale);
+        uiTowerUpgrade.Show();
     }
     public void CheckEnoughCoin()
     {
@@ -50,17 +45,16 @@ public class TowerUpgrade : MonoBehaviour
     }
     public void ReturnToPool()
     {
-        indexTower = 0;
-        uiTowerUpgrade.SetShowHide();
+        uiTowerUpgrade.Hide();
         EnableRange(false);
         ObjectPool.instance.Return(gameObject);
     }
     public void UpdateTower()
     {
-        ObjectPool.instance.Get(ObjectPool.instance.towers[0].pools[++indexTower], transform.position);
+        int index = indexLevel + 1;
+        ObjectPool.instance.Get(ObjectPool.instance.towers[indexTower].pools[index], transform.position);
         ReturnToPool();
     }
-
     public void Sell()
     {
         curLevel.SetCoin(coinSell, false);

@@ -72,9 +72,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingLayerID: 1539563763
+  m_SortingLayer: 4
+  m_SortingOrder: 10
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -4814,7 +4814,6 @@ MonoBehaviour:
   rb: {fileID: 6525510425608785380}
   target: {fileID: 6525510425608785386}
   speed: 100
-  explore: {fileID: 0}
   sprite: {fileID: 5736504776222143563}
 --- !u!1 &8857526805436277448
 GameObject:

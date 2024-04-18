@@ -18,6 +18,13 @@ public class ProjectileExplore : MonoBehaviour
             Explore();
         }
     }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.CompareTag("Bound"))
+        {
+            Explore();
+        }
+    }
 
     public void Explore()
     {

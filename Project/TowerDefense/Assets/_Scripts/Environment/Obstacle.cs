@@ -18,7 +18,8 @@ public class Obstacle : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        CheckStartShootObstacles();
+        if (!Utils.IsPointerOverUIElement())
+            CheckStartShootObstacles();
     }
     public void CheckStartShootObstacles()
     {
@@ -50,6 +51,14 @@ public class Obstacle : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
         AddOrRemove(col);
+
+        if (!col.gameObject.CompareTag("Bullet")) return;
+
+        ProjectileExplore bulletExplore = col.gameObject.GetComponent<ProjectileExplore>();
+        if (bulletExplore != null)
+        {
+            TakeDamage(bulletExplore.damage);
+        }
     }
     private void OnTriggerExit2D(Collider2D col)
     {

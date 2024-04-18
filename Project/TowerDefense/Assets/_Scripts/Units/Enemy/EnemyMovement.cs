@@ -18,7 +18,7 @@ public class EnemyMovement : MonoBehaviour
         curIndex = 0;
         curTarget = path[curIndex];
         transform.position = curTarget;
-        int index = (int)EnemyName.SmallSolider;
+        int index = (int)health.enemyName;
         speed = GameManager.instance.enemiesData.enemies[index].speedMove;
         RotateFace();
     }

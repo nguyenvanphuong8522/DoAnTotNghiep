@@ -9,6 +9,7 @@ TagManager:
   - Bound
   - Tower
   - Teleport
+  - Boom
   layers:
   - Default
   - TransparentFX

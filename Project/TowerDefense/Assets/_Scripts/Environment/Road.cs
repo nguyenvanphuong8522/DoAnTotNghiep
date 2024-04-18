@@ -12,16 +12,24 @@ public class Road : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        popUp.SetPos(ConvertToGridPos.instance.GetPosToBuild());
-        popUp.Show();
+        if (!Utils.IsPointerOverUIElement())
+        {
+            popUp.SetPos(ConvertToGridPos.instance.GetPosToBuild());
+            popUp.Show();
+        }
     }
+
     public void ActionBtnTeleport()
     {
+        powerUps[0].SetPos(popUp.transform.position);  
         powerUps[0].TurnOn();
+        popUp.Hide();
     }
     public void ActionBtnBoom()
     {
+        powerUps[1].SetPos(popUp.transform.position);
         powerUps[1].TurnOn();
+        popUp.Hide();
     }
 
 }

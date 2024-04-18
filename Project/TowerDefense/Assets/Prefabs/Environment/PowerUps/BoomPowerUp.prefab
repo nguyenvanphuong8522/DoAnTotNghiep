@@ -12,6 +12,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1849006333172952264, guid: 8ee05ce2edd678f44b523fd94e38a599, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849006333172952264, guid: 8ee05ce2edd678f44b523fd94e38a599, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849006333172952264, guid: 8ee05ce2edd678f44b523fd94e38a599, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849006333172952264, guid: 8ee05ce2edd678f44b523fd94e38a599, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -51,9 +63,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1849006333172952264, guid: 8ee05ce2edd678f44b523fd94e38a599, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1849006333172952277, guid: 8ee05ce2edd678f44b523fd94e38a599, type: 3}
       propertyPath: m_Name
       value: BoomPowerUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849006333172952277, guid: 8ee05ce2edd678f44b523fd94e38a599, type: 3}
+      propertyPath: m_TagString
+      value: Boom
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849006333172952278, guid: 8ee05ce2edd678f44b523fd94e38a599, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1849006333172952279, guid: 8ee05ce2edd678f44b523fd94e38a599, type: 3}
+      propertyPath: m_Color.a
+      value: 0.5686275
       objectReference: {fileID: 0}
     - target: {fileID: 1849006333172952279, guid: 8ee05ce2edd678f44b523fd94e38a599, type: 3}
       propertyPath: m_Color.b
@@ -86,3 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8450bee3057ebd4d8bbdacbd8cf4f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colliderRange: {fileID: 8436285459351581443}
+--- !u!58 &8436285459351581443 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1849006333172952278, guid: 8ee05ce2edd678f44b523fd94e38a599, type: 3}
+  m_PrefabInstance: {fileID: 7834936907351531477}
+  m_PrefabAsset: {fileID: 0}

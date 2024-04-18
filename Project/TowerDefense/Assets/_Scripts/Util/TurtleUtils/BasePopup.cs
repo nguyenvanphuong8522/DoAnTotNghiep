@@ -16,7 +16,6 @@ public class BasePopup : MonoBehaviour
         {
             btnClose.onClick.AddListener(Hide);
         }
-        Hide();
     }
 
     public virtual void Show(object data = null)
@@ -24,8 +23,7 @@ public class BasePopup : MonoBehaviour
         _isShow = true;
         if (main != null)
         {
-            //main.transform.localScale = Vector3.one * 0.7f;
-            main.transform.DOScale(1, timeShow).From(Vector3.one * .5f);
+            main.transform.DOScale(1, timeShow).From(Vector3.one * 0.5f);
         }
         gameObject.SetActive(true);
     }
