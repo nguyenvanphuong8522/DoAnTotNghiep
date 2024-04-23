@@ -2,29 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class EnvirInfor
+{
+    public Sprite home;
+    public Sprite bg;
+    public List<ObstacleScriptable> listObstacle;
+}
 public class Environment : MonoBehaviour
 {
     public ObstacleManager obstacleManager;
+    public RoadTile roadTile;
+
     public SpriteRenderer homeSprite;
-    public SpriteRenderer bg;
+    public SpriteRenderer bgSprite;
 
-    private LevelManager lvManager;
-    private LevelScriptable dataCurLevel;
-
-    public void Init()
+    public void Init(EnvirInfor data)
     {
-        lvManager = LevelManager.instance;
-        dataCurLevel = lvManager.listLevel.levelList[lvManager.curIndex];
-        Sprite spriteHome = lvManager.listLevel.homeSprites[dataCurLevel.homeSpriteIndex];
-        homeSprite.sprite = spriteHome;
-        Sprite spriteBg = lvManager.listLevel.bgColors[dataCurLevel.bgSpriteIndex];
-        bg.sprite = spriteBg;
-
-        SetupObstacles();
+        UpdateSpriteBG(data.bg);
+        UpdateSpriteHome(data.home);
+        obstacleManager.SpawnListObstacle(data.listObstacle);
     }
-    public void SetupObstacles()
+
+    public void UpdateSpriteBG(Sprite sprite)
     {
-        obstacleManager.SetListObstacle(lvManager.curIndex);
-        obstacleManager.SpawnListObstacle();
+        bgSprite.sprite = sprite;
+    }
+    public void UpdateSpriteHome(Sprite sprite)
+    {
+        homeSprite.sprite = sprite;
     }
 }

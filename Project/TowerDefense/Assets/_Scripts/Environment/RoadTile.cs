@@ -5,17 +5,18 @@ using UnityEngine.Tilemaps;
 
 public class RoadTile : MonoBehaviour
 {
-    public Tilemap tileMap;
-    public TileBase tileBase;
+    [SerializeField]
+    private Tilemap tileMap;
+    private TileBase tileBase;
 
-    public Vector3Int pos;
-    [Button]
-    public void SetTile()
+    public List<Vector3Int> listPos;
+
+    public void SetTile(Vector3Int pos)
     {
         tileMap.SetTile(pos, tileBase);
     }
-    [Button]
-    public void RemoveTile()
+
+    public void RemoveTile(Vector3Int pos)
     {
         tileMap.SetTile(pos, null);
     }

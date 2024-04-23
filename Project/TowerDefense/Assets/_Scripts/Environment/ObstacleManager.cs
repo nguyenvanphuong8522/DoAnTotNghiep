@@ -5,21 +5,14 @@ using UnityEngine;
 public class ObstacleManager : MonoBehaviour
 {
     private ObjectPool pool;
-    private List<ObstacleScriptable> listObstacle;
 
-    private void Start()
-    {
-        pool = ObjectPool.instance;
-    }
-    public void SetListObstacle(int indexLevel)
-    {
-        listObstacle = LevelManager.instance.listLevel.levelList[indexLevel].listObstacle;
-    }
+    private void Start() => pool = ObjectPool.instance;
+
     public void SpawnAObstacle(ObstacleScriptable data)
     {
         pool.Get(pool.obstacles[(int)data.name].pools[data.type], data.pos);
     }
-    public void SpawnListObstacle()
+    public void SpawnListObstacle(List<ObstacleScriptable> listObstacle)
     {
         foreach (var data in listObstacle)
         {

@@ -5,9 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Levels", menuName = "Data/Levels")]
 public class ListLevelScriptable : ScriptableObject
 {
-    public List<LevelScriptable> levelList;
+    public List<LevelScriptable> levels;
     public Sprite[] homeSprites;
-    public Sprite[] bgColors;
+    public Sprite[] bgSprites;
+    public RuleTile[] rules;
 }
 
 [Serializable]

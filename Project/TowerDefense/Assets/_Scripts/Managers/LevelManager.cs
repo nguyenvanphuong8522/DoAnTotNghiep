@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class LevelManager : Singleton<LevelManager>
 {
-    public ListLevelScriptable listLevel;
+    public ListLevelScriptable listLevelData;
     public Level curLevel;
-    public int curIndex;
-    private void Start()
+
+
+    [Button]
+    public void Test()
     {
-        curLevel.InitLevel();
+        InitLevel(0);
+    }
+    public void InitLevel(int index)
+    {
+        curLevel.InitLevel(index, listLevelData);
     }
 }

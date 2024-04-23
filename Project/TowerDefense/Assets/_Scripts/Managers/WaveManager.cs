@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WaveManager : Singleton<WaveManager>
 {
-    //Data
     private ListWaveScriptable listWaveData;
 
     private List<Path> paths;
@@ -12,14 +11,9 @@ public class WaveManager : Singleton<WaveManager>
     public Wave curWave;
     private int waveIndex;
     public float timeDelayNextWave = 1.5f;
-    private void Start()
+    public void Init(ListWaveScriptable waves)
     {
-        Init();
-        NextWave();
-    }
-    private void Init()
-    {
-        listWaveData = LevelManager.instance.listLevel.levelList[0].waves;
+        listWaveData = waves;
         InitGate();
         curWave = new Wave();
         paths = listWaveData.paths;

@@ -141,12 +141,12 @@ public class ObjectPool : Singleton<ObjectPool>
 #if UNITY_EDITOR
     private void Update()
     {
-        foreach (var p in pools)
-        {
-            var activeCount = p.actives.Count;
-            var deactiveCount = p.deactives.Count;
-            p.name = $"total: {activeCount + deactiveCount} | active: {activeCount} | deactive: {deactiveCount}";
-        }
+        //foreach (var p in pools)
+        //{
+        //    var activeCount = p.actives.Count;
+        //    var deactiveCount = p.deactives.Count;
+        //    p.name = $"total: {activeCount + deactiveCount} | active: {activeCount} | deactive: {deactiveCount}";
+        //}
     }
 #endif
     #endregion

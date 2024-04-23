@@ -1,3 +1,5 @@
+using DG.Tweening.Core.Easing;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,15 +7,30 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
     public int coin;
+    public LevelScriptable dataLevel;
     public WaveManager waveManager;
     public Environment environment;
-    
-    private LevelScriptable dataCurLevel;
-    private LevelManager lvManager;
-    
-    public void InitLevel()
+
+    public void InitLevel(int indexLevel, ListLevelScriptable data)
     {
-        environment.Init();
+        dataLevel = data.levels[indexLevel];
+        SetUpWaveManager();
+        SetEnvironmentData(data);
+    }
+    private void SetUpWaveManager()
+    {
+        waveManager.Init(dataLevel.waves);
+        waveManager.NextWave();
+    }
+    private void SetEnvironmentData(ListLevelScriptable data)
+    {
+        EnvirInfor infor =  new EnvirInfor()
+        {
+            listObstacle = dataLevel.listObstacle,
+            home = data.homeSprites[dataLevel.homeSpriteIndex],
+            bg = data.bgSprites[dataLevel.bgSpriteIndex]
+        };
+        environment.Init(infor);
     }
     public void EndLevel()
     {
