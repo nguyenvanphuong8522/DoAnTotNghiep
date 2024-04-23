@@ -49,7 +49,7 @@ public class TowerAttack : MonoBehaviour
     {
         if (!gun.isShootingObstacle)
         {
-            gun.target = listEnemy[0];
+            gun.SetTarget(listEnemy[0]);
         }
     }
 
@@ -79,7 +79,7 @@ public class TowerAttack : MonoBehaviour
         gun.StartPinTarget();
         if (value)
         {
-            gun.target = newTarget;
+            gun.SetTarget(newTarget);
             gun.StartShoot();
             return;
         }

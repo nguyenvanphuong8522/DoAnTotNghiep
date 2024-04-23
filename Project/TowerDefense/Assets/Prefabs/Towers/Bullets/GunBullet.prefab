@@ -7,6 +7,66 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Time
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Autodestruct
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_MinVertexDistance
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 42d3a7d3883b6494ab105e9d25c7910b, type: 2}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0.008879015
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
+      value: 0.5083253
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.34124976
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
+      value: 0.01500082
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922506701218043975, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5068025254508596131, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: speed
       value: 30
@@ -49,7 +109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5736504776222143563, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.086
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5736504776222143563, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_LocalRotation.w
@@ -179,7 +239,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0014027804, y: -0.004322231}
+  m_Offset: {x: 0.0014027804, y: -0.073822774}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -190,7 +250,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.149093, y: 0.27337146}
+  m_Size: {x: 0.149093, y: 0.25538307}
   m_EdgeRadius: 0
 --- !u!114 &-3800390128178605913
 MonoBehaviour:

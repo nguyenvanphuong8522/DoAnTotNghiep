@@ -5,20 +5,22 @@ using UnityEngine;
 public class Gun : MonoBehaviour
 {
     public float rate;
-    private Coroutine coroutineAttack;
+    protected Coroutine coroutineAttack;
     public bool isAttacking = false;
     public Transform target;
     public Transform[] pointShoots;
     public int typeBullet;
     public bool isShootingObstacle = false;
-    private int indexPointShoot = 0;
-    public void StartShoot()
+    protected int indexPointShoot = 0;
+
+    public ParticleSystem[] effectShoots;
+    public virtual void StartShoot()
     {
         StopShoot();
         isAttacking = true;
         coroutineAttack = StartCoroutine(RateShoot());
     }
-    public void StopShoot()
+    public virtual void StopShoot()
     {
         if (coroutineAttack != null)
         {
@@ -26,7 +28,7 @@ public class Gun : MonoBehaviour
             isAttacking = false;
         }
     }
-    public IEnumerator RateShoot()
+    public virtual IEnumerator RateShoot()
     {
         float curTime = Time.time;
         while (isAttacking)
@@ -40,11 +42,12 @@ public class Gun : MonoBehaviour
             yield return null;
         }
     }
-    private void Shoot()
+    public virtual void Shoot()
     {
         PlaySound();
         indexPointShoot = indexPointShoot < pointShoots.Length - 1 ? ++indexPointShoot : 0;
         GameObject bullet = ObjectPool.instance.Get(ObjectPool.instance.bullets[typeBullet], pointShoots[indexPointShoot].position);
+        effectShoots[indexPointShoot].Play();
         ProjectileMovement movement = bullet.GetComponent<ProjectileMovement>();
         if (movement != null)
         {
@@ -55,7 +58,7 @@ public class Gun : MonoBehaviour
     {
         AudioManager.instance.PlayShot(AudioManager.instance.gunShoots[0]);
     }
-    private void RotateToDirection()
+    protected void RotateToDirection()
     {
         Vector3 look = target.position - transform.position;
         float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg - 90;
@@ -65,5 +68,9 @@ public class Gun : MonoBehaviour
     {
         StopShoot();
         isShootingObstacle = !isShootingObstacle;
+    }
+    public virtual void SetTarget(Transform target)
+    {
+        this.target = target;
     }
 }

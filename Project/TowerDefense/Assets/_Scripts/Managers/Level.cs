@@ -7,12 +7,14 @@ public class Level : MonoBehaviour
     public int coin;
     public WaveManager waveManager;
     public Environment environment;
-    public ObstacleManager obstacleManager;
-    public void StartLevel()
+    
+    private LevelScriptable dataCurLevel;
+    private LevelManager lvManager;
+    
+    public void InitLevel()
     {
-
+        environment.Init();
     }
-
     public void EndLevel()
     {
 

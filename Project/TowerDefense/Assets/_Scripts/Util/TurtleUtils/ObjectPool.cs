@@ -74,6 +74,7 @@ public class ObjectPool : Singleton<ObjectPool>
     public List<Pool> enemyDies = new List<Pool>();
     public List<Pool> obstacleDestroys = new List<Pool>();
     public List<ArrayPool> towers = new List<ArrayPool>();
+    public List<ArrayPool> obstacles = new List<ArrayPool>();
 
     public Pool gate;
     protected override void Awake()
@@ -84,6 +85,7 @@ public class ObjectPool : Singleton<ObjectPool>
         AddToPools(enemyDies);
         AddToPools(obstacleDestroys);
         InitArrayPool(towers);
+        InitArrayPool(obstacles);
         InitPools();
         base.Awake();
     }

@@ -22,6 +22,7 @@ public class ProjectileMovement : MonoBehaviour
     }
     protected void UpdateDirection()
     {
+        if (target == null) return;
         if (target.gameObject.activeSelf)
         {
             direction = target.position - transform.position;

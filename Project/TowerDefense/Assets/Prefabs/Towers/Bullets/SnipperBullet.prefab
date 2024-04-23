@@ -7,6 +7,82 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Time
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Autodestruct
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1539563763
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_MinVertexDistance
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 42d3a7d3883b6494ab105e9d25c7910b, type: 2}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
+      value: 0.008879015
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
+      value: 0.5083253
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.34124976
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].value
+      value: 0.01500082
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].inWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].outWeight
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922506701218043975, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5184847961776077844, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Sprite
       value: 

@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class ObstacleManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private ObjectPool pool;
+    private List<ObstacleScriptable> listObstacle;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        pool = ObjectPool.instance;
+    }
+    public void SetListObstacle(int indexLevel)
+    {
+        listObstacle = LevelManager.instance.listLevel.levelList[indexLevel].listObstacle;
+    }
+    public void SpawnAObstacle(ObstacleScriptable data)
+    {
+        pool.Get(pool.obstacles[(int)data.name].pools[data.type], data.pos);
+    }
+    public void SpawnListObstacle()
+    {
+        foreach (var data in listObstacle)
+        {
+            SpawnAObstacle(data);
+        }
     }
 }

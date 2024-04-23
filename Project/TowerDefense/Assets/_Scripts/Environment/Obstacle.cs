@@ -2,15 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : MonoBehaviour
+public class Obstacle : MonoBehaviour, Ihealth
 {
-    public int health;
     public Animator animator;
     public List<TowerAttack> towerAttacks;
     public bool isUnderAttack = false;
-    private void TakeDamage(int damage)
+
+    public float health { get; set; }
+
+    private void OnEnable()
     {
-        health -= damage;
+        isUnderAttack = false;
+        health = 100;
+    }
+    private void Update()
+    {
         if (health <= 0)
         {
             SetDie();
@@ -32,11 +38,24 @@ public class Obstacle : MonoBehaviour
             }
         }
     }
+    public void CheckDie()
+    {
+        if(isUnderAttack)
+        {
+            foreach (TowerAttack element in towerAttacks)
+            {
+                CheckIsShootObstacle(element);
+            }
+        }
+    }
     public void CheckIsShootObstacle(TowerAttack towerAttack)
     {
         towerAttack.ShootObstacle(transform, !towerAttack.gun.isShootingObstacle);
     }
-
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+    }
     private void OnCollisionEnter2D(Collision2D col)
     {
         if (!col.gameObject.CompareTag("Bullet")) return;
@@ -48,6 +67,7 @@ public class Obstacle : MonoBehaviour
             bulletExplore.Explore();
         }
     }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         AddOrRemove(col);
@@ -58,6 +78,7 @@ public class Obstacle : MonoBehaviour
         if (bulletExplore != null)
         {
             TakeDamage(bulletExplore.damage);
+            Debug.Log("die" + (decimal)Time.time);
         }
     }
     private void OnTriggerExit2D(Collider2D col)
@@ -87,18 +108,21 @@ public class Obstacle : MonoBehaviour
             towerAttack.ShootObstacle(transform);
         }
     }
-    public void ReturnToPool()
-    {
-        ObjectPool.instance.Return(gameObject);
-    }
+
     private void SetDie()
     {
-        CheckStartShootObstacles();
+        CheckDie();
         SpawnEffectDie();
         ReturnToPool();
     }
     private void SpawnEffectDie()
     {
+        Debug.Log("die");
         GameObject die = ObjectPool.instance.Get(ObjectPool.instance.obstacleDestroys[0], transform.position);
+    }
+    public void ReturnToPool()
+    {
+        Destroy(gameObject);
+        //ObjectPool.instance.Return(gameObject);
     }
 }

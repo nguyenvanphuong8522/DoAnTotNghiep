@@ -19,7 +19,7 @@ public class WaveManager : Singleton<WaveManager>
     }
     private void Init()
     {
-        listWaveData = LevelManager.instance.levelsData.levelList[0].waves;
+        listWaveData = LevelManager.instance.listLevel.levelList[0].waves;
         InitGate();
         curWave = new Wave();
         paths = listWaveData.paths;

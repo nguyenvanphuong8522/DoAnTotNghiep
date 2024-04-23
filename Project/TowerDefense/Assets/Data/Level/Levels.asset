@@ -13,4 +13,29 @@ MonoBehaviour:
   m_Name: Levels
   m_EditorClassIdentifier: 
   levelList:
-  - waves: {fileID: 11400000, guid: 6f16998704ee5a74fb9470ec555816a8, type: 2}
+  - bgSpriteIndex: 0
+    homeSpriteIndex: 0
+    waves: {fileID: 11400000, guid: 6f16998704ee5a74fb9470ec555816a8, type: 2}
+    listObstacle:
+    - pos: {x: -2.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -1.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -0.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 0.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+  homeSprites:
+  - {fileID: 21300000, guid: 2d4a5c5954a54ab45999ec8b022754b7, type: 3}
+  - {fileID: 21300000, guid: 69993b0d5f7f2b94b9e6c9ac3c34591b, type: 3}
+  - {fileID: 21300000, guid: b57ec4cb4760e18458863744fb313486, type: 3}
+  - {fileID: 0}
+  bgColors:
+  - {fileID: 21300000, guid: 9d33b3f225e288446aca965fd9acd939, type: 3}
+  - {fileID: 21300000, guid: 277e134f50c71914090839cda1eef617, type: 3}
+  - {fileID: 21300000, guid: 4585a15c584afc846bff8df0bb115313, type: 3}
+  - {fileID: 0}

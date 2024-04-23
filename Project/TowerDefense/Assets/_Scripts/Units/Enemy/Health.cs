@@ -2,14 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Health : MonoBehaviour, Ihealth
 {
-    public int health;
     public CircleCollider2D circleCollider;
     public EnemyName enemyName;
+    public float health { get; set; }
+
     private void OnEnable()
     {
         Init();
+    }
+    private void Update()
+    {
+        if (health <= 0)
+        {
+            SetDie();
+        }
     }
     private void Init()
     {
@@ -17,13 +25,9 @@ public class Health : MonoBehaviour
         health = GameManager.instance.enemiesData.enemies[index].health;
         EnableCollider();
     }
-    private void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         health -= damage;
-        if (health <= 0)
-        {
-            SetDie();
-        }
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
@@ -74,4 +78,5 @@ public class Health : MonoBehaviour
         GameObject die = ObjectPool.instance.Get(ObjectPool.instance.enemyDies[index], transform.position);
         die.transform.up = transform.GetChild(0).up;
     }
+
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -18,8 +19,7 @@ public class EnemyMovement : MonoBehaviour
         curIndex = 0;
         curTarget = path[curIndex];
         transform.position = curTarget;
-        int index = (int)health.enemyName;
-        speed = GameManager.instance.enemiesData.enemies[index].speedMove;
+        InitSpeed();
         RotateFace();
     }
     private void FixedUpdate()
@@ -84,5 +84,28 @@ public class EnemyMovement : MonoBehaviour
         {
             Teleport();
         }
+        else if(col.CompareTag("TimeWraper"))
+        {
+            TowerAttackTimer towerAttack = col.GetComponentInParent<TowerAttackTimer>();
+            if (towerAttack == null) return;
+            Slow(towerAttack.percentSlow);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D col)
+    {
+        if (col.CompareTag("TimeWraper"))
+        {
+            InitSpeed();
+        }
+    }
+    public void InitSpeed()
+    {
+        int index = (int)health.enemyName;
+        speed = GameManager.instance.enemiesData.enemies[index].speedMove;
+    }
+
+    private void Slow(float value)
+    {
+        speed -= speed * (value * 0.01f);
     }
 }
