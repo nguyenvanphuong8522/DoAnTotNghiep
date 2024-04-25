@@ -78,7 +78,6 @@ public class Obstacle : MonoBehaviour, Ihealth
         if (bulletExplore != null)
         {
             TakeDamage(bulletExplore.damage);
-            Debug.Log("die" + (decimal)Time.time);
         }
     }
     private void OnTriggerExit2D(Collider2D col)

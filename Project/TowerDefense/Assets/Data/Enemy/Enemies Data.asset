@@ -25,3 +25,9 @@ MonoBehaviour:
   - name: Big Car
     health: 30
     speedMove: 2
+  - name: Small Tank
+    health: 70
+    speedMove: 2
+  - name: Big Tank
+    health: 200
+    speedMove: 2

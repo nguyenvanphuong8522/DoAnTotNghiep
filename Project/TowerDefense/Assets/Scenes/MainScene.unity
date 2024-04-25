@@ -500,7 +500,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listLevelData: {fileID: 11400000, guid: 1addd2d3c1d6b574cb6f03342b031ba4, type: 2}
   curLevel: {fileID: 174391193}
-  curIndex: 0
 --- !u!1 &226021479
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,6 +1176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileMap: {fileID: 311117465}
   listPos: []
+  arr: []
 --- !u!4 &328209369 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1335345619055590172, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
@@ -1303,6 +1303,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355872061}
   m_CullTransparentMesh: 1
+--- !u!1 &370041911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 370041912}
+  m_Layer: 0
+  m_Name: DataPersist
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &370041912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370041911}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 371312037}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &371312036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1363,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1720613482}
+  - {fileID: 370041912}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1830,6 +1862,7 @@ GameObject:
   - component: {fileID: 983142029}
   - component: {fileID: 983142028}
   - component: {fileID: 983142027}
+  - component: {fileID: 983142030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1903,6 +1936,19 @@ Transform:
   m_Father: {fileID: 64439425}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &983142030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983142026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45195674b63525b4580f9895fedda96c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 983142028}
 --- !u!1 &1021999298
 GameObject:
   m_ObjectHideFlags: 0
@@ -3984,7 +4030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
       propertyPath: enemyDies.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
       propertyPath: obstacles.Array.size
@@ -3992,7 +4038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
       propertyPath: enemyLives.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
       propertyPath: bullets.Array.data[2].name
@@ -4019,6 +4065,14 @@ PrefabInstance:
       value: SmallSoliderDie
       objectReference: {fileID: 0}
     - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
+      propertyPath: enemyDies.Array.data[4].name
+      value: SmallSoliderDie
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
+      propertyPath: enemyDies.Array.data[5].name
+      value: SmallSoliderDie
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
       propertyPath: enemyDies.Array.data[1].prefab
       value: 
       objectReference: {fileID: 7106028535645343485, guid: a4c8d20b21da2cc4ab46a0736ed3df8e, type: 3}
@@ -4028,6 +4082,14 @@ PrefabInstance:
       objectReference: {fileID: 3530367152716365765, guid: f69410eea38df5246bd90241b4f083f5, type: 3}
     - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
       propertyPath: enemyDies.Array.data[3].prefab
+      value: 
+      objectReference: {fileID: 3530367152716365765, guid: f69410eea38df5246bd90241b4f083f5, type: 3}
+    - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
+      propertyPath: enemyDies.Array.data[4].prefab
+      value: 
+      objectReference: {fileID: 3530367152716365765, guid: f69410eea38df5246bd90241b4f083f5, type: 3}
+    - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
+      propertyPath: enemyDies.Array.data[5].prefab
       value: 
       objectReference: {fileID: 3530367152716365765, guid: f69410eea38df5246bd90241b4f083f5, type: 3}
     - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
@@ -4042,6 +4104,14 @@ PrefabInstance:
       propertyPath: enemyLives.Array.data[3].prefab
       value: 
       objectReference: {fileID: 1436917404280547587, guid: 8174150b285d08d4eb34501bfcc3f49c, type: 3}
+    - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
+      propertyPath: enemyLives.Array.data[4].prefab
+      value: 
+      objectReference: {fileID: 1436917404280547587, guid: 3f8121b70305faf4c9013bf6be4bbb8f, type: 3}
+    - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
+      propertyPath: enemyLives.Array.data[5].prefab
+      value: 
+      objectReference: {fileID: 1436917404280547587, guid: c47d041e23eac4141b1dddb722997c5f, type: 3}
     - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
       propertyPath: obstacleDestroys.Array.data[0].prefab
       value: 

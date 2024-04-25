@@ -21,5 +21,7 @@ public enum EnemyName
     SmallSolider,
     BigSolider,
     SmallCar,
-    BigCar
+    BigCar,
+    SmallTank,
+    BigTank
 }

@@ -71,17 +71,25 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3249363587664252974, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}
+      propertyPath: indexLevel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3547412408990114034, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8b57dcdffcc66be4eabbdb2a06affb25, type: 3}
     - target: {fileID: 3547412408990114034, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3547412408990114034, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}
       propertyPath: m_Color.g
-      value: 0.13762544
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3547412408990114034, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}
       propertyPath: m_Color.r
-      value: 0.5245282
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}

@@ -14,7 +14,7 @@ public class ConvertToGridPos : Singleton<ConvertToGridPos>
         posToBuild.z = -1;
         return posToBuild;
     }
-    private Vector3 GetMousePos()
+    public Vector3 GetMousePos()
     {
         Vector3 mousePos = Input.mousePosition;
         mousePos = cam.ScreenToWorldPoint(mousePos);

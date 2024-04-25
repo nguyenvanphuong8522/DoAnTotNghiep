@@ -44,14 +44,12 @@ public class EnemyMovement : MonoBehaviour
         {
             Vector2 dir = directionToward * stepMove;
             rb.MovePosition(rb.position + dir);
+            return;
         }
-        else
-        {
-            rb.MovePosition(curTarget);
-            NextTarget();
-            float offset = stepMove - distance;
-            rb.MovePosition(rb.position + directionToward * offset);
-        }
+        rb.MovePosition(curTarget);
+        NextTarget();
+        float offset = stepMove - distance;
+        rb.MovePosition(rb.position + directionToward * offset);
     }
     private void NextTarget()
     {

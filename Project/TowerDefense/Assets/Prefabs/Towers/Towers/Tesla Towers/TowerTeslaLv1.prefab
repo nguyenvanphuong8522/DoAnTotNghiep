@@ -30,10 +30,10 @@ PrefabInstance:
     - target: {fileID: 4696677080953311680, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 908cb66025d7445499fbaab25481cd70, type: 3}
+      objectReference: {fileID: 21300000, guid: 8cc582281195c59438bf819d70e4462c, type: 3}
     - target: {fileID: 4696677080953311680, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_Color.b
-      value: 0.06359196
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4696677080953311680, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_Color.g
@@ -41,7 +41,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4696677080953311680, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4696677080953311680, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -235,7 +235,6 @@ MonoBehaviour:
   isShootingObstacle: 0
   effectShoots:
   - {fileID: 5308544888504506671}
-  enemyHealth: {fileID: 0}
   line: {fileID: 1312474082960904782}
 --- !u!4 &1082401990158358028 stripped
 Transform:

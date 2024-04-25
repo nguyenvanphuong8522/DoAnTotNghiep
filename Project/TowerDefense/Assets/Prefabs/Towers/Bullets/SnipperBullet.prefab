@@ -86,22 +86,30 @@ PrefabInstance:
     - target: {fileID: 5184847961776077844, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+      objectReference: {fileID: 21300000, guid: b0c05220fb1c02c4da30cb9035741ca7, type: 3}
     - target: {fileID: 5184847961776077844, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 0.6707369
       objectReference: {fileID: 0}
     - target: {fileID: 5184847961776077844, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 0.6707369
       objectReference: {fileID: 0}
     - target: {fileID: 5184847961776077844, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Color.r
-      value: 0.6377357
+      value: 0.85660374
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736504776222143563, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5736504776222143563, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.37
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736504776222143563, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5736504776222143563, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_LocalPosition.y
@@ -257,7 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4534448992619034430}
-  damage: 200
+  damage: 50
 --- !u!50 &4534448992619034430 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 6525510425608785380, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
