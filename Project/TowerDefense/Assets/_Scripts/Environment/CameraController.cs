@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
 {
     public Camera cam;
     private Vector3 hitPos;
+    private float screenAspect = (float)Screen.width / Screen.height;
 
     private void Update()
     {
@@ -18,7 +19,11 @@ public class CameraController : MonoBehaviour
         {
             Vector3 direction = cam.ScreenToWorldPoint(Input.mousePosition) - hitPos;
             Vector3 newPos = transform.position - direction;
-            newPos.x = Mathf.Clamp(newPos.x, -2.5f, 4.5f);
+            
+            float camHalfHeight = cam.orthographicSize;
+            float camHalfWidth = camHalfHeight * screenAspect;
+            newPos.x = Mathf.Clamp(newPos.x, -14 + camHalfWidth, 14 - camHalfWidth);
+            newPos.y = Mathf.Clamp(newPos.y, -10 + camHalfHeight, 5 - camHalfHeight);
             transform.position = newPos;
         }
 

@@ -14,8 +14,8 @@ public class Level : MonoBehaviour
     public void InitLevel(int indexLevel, ListLevelScriptable data)
     {
         dataLevel = data.levels[indexLevel];
-        SetUpWaveManager();
         SetEnvironmentData(data);
+        SetUpWaveManager();
     }
     private void SetUpWaveManager()
     {
@@ -24,11 +24,12 @@ public class Level : MonoBehaviour
     }
     private void SetEnvironmentData(ListLevelScriptable data)
     {
-        EnvirInfor infor =  new EnvirInfor()
+        EnvirInfor infor = new EnvirInfor()
         {
             listObstacle = dataLevel.listObstacle,
             home = data.homeSprites[dataLevel.homeSpriteIndex],
-            bg = data.bgSprites[dataLevel.bgSpriteIndex]
+            bg = data.bgSprites[dataLevel.bgSpriteIndex],
+            arr = dataLevel.waves.paths[0].path
         };
         environment.Init(infor);
     }
