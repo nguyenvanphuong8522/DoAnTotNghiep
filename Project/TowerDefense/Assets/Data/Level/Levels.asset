@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Levels
   m_EditorClassIdentifier: 
   levels:
-  - posHouse: {x: -3.5, y: 3.5, z: 0}
+  - posHouse: {x: -3.5, y: 3, z: -5}
     bgSpriteIndex: 0
     homeSpriteIndex: 0
     waves: {fileID: 11400000, guid: 6f16998704ee5a74fb9470ec555816a8, type: 2}

@@ -6,7 +6,25 @@ public class CameraController : MonoBehaviour
 {
     public Camera cam;
     private Vector3 hitPos;
-    private float screenAspect = (float)Screen.width / Screen.height;
+    public BoxCollider2D box;
+    private float screenAspect; 
+    private float maxRight;
+    private float maxHeight;
+    private float minZoom;
+    private float maxZoom;
+
+    private void Awake()
+    {
+        screenAspect = (float)Screen.width / Screen.height;
+        float y = (float)16 / 9;
+        float size = 3.8f / (screenAspect / y);
+        cam.orthographicSize = size;
+        maxZoom = size;
+        minZoom = size - 1;
+
+        maxRight = box.size.x / 2;
+        maxHeight = box.size.y / 2;
+    }
 
     private void Update()
     {
@@ -22,11 +40,12 @@ public class CameraController : MonoBehaviour
             
             float camHalfHeight = cam.orthographicSize;
             float camHalfWidth = camHalfHeight * screenAspect;
-            newPos.x = Mathf.Clamp(newPos.x, -14 + camHalfWidth, 14 - camHalfWidth);
-            newPos.y = Mathf.Clamp(newPos.y, -10 + camHalfHeight, 5 - camHalfHeight);
+            newPos.x = Mathf.Clamp(newPos.x, -maxRight + camHalfWidth, maxRight - camHalfWidth);
+            newPos.y = Mathf.Clamp(newPos.y, -maxHeight + camHalfHeight, maxHeight - camHalfHeight);
             transform.position = newPos;
         }
-
-        cam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel");
+        float size = cam.orthographicSize - Input.GetAxis("Mouse ScrollWheel");
+        size = Mathf.Clamp(size, minZoom, maxZoom);
+        cam.orthographicSize = size;
     }
 }

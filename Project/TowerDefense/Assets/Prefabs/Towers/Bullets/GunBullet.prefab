@@ -12,6 +12,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7277606066648466892, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Autodestruct
       value: 1
       objectReference: {fileID: 0}
@@ -65,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1922506701218043975, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5068025254508596131, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: speed
