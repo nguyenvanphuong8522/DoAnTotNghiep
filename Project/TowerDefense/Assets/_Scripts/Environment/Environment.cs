@@ -8,6 +8,7 @@ public class EnvirInfor
     public Sprite bg;
     public List<ObstacleScriptable> listObstacle;
     public Vector2[] arr;
+    public Vector3 posHouse;
 }
 public class Environment : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Environment : MonoBehaviour
     {
         UpdateSpriteBG(data.bg);
         UpdateSpriteHome(data.home);
+        homeSprite.transform.position = data.posHouse;
         obstacleManager.SpawnListObstacle(data.listObstacle);
         roadTile.InitRoad(data.arr);
     }

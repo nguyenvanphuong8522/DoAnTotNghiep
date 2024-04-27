@@ -166,7 +166,7 @@ public static class Vibration
     public static AndroidJavaObject currentActivity;
     public static AndroidJavaObject vibrator;
 #endif
-
+#if UNITY_EDITOR
     public static void Vibrate()
     {
         if (isAndroid())
@@ -191,6 +191,7 @@ public static class Vibration
             Handheld.Vibrate();
         }
     }
+#endif
 
     public static bool HasVibrator()
     {

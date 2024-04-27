@@ -13,11 +13,192 @@ MonoBehaviour:
   m_Name: Levels
   m_EditorClassIdentifier: 
   levels:
-  - bgSpriteIndex: 0
+  - posHouse: {x: -3.5, y: 3.5, z: 0}
+    bgSpriteIndex: 0
     homeSpriteIndex: 0
     waves: {fileID: 11400000, guid: 6f16998704ee5a74fb9470ec555816a8, type: 2}
     listObstacle:
-    - pos: {x: 0.5, y: 0.5, z: 0}
+    - pos: {x: 2.5, y: 0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 3.5, y: 0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 5.5, y: 0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -4.5, y: 0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -5.5, y: 0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -5.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -4.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -3.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -2.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -1.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -0.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 0.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 1.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 2.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 3.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 5.5, y: -0.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -5.5, y: -3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -5.5, y: -2.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -5.5, y: -1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -5.5, y: 3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -5.5, y: 2.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -5.5, y: 1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -1.5, y: 2.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -1.5, y: 1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -1.5, y: 3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -0.5, y: 3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -0.5, y: 2.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -0.5, y: 1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 0.5, y: 3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 0.5, y: 2.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 0.5, y: 1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 1.5, y: 3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 2.5, y: 3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 2.5, y: 1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 3.5, y: 3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -4.5, y: -1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -4.5, y: -2.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -4.5, y: -3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -3.5, y: -1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -3.5, y: -2.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -3.5, y: -3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -2.5, y: -1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -2.5, y: -2.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -2.5, y: -3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -1.5, y: -1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: -0.5, y: -1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 0.5, y: -1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 0.5, y: -3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 1.5, y: -1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 1.5, y: -3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 2.5, y: -1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 2.5, y: -3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 3.5, y: -3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 4.5, y: -3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 5.5, y: -1.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 5.5, y: -2.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 5.5, y: -3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 4.5, y: 3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 5.5, y: 3.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 5.5, y: 2.5, z: -1}
+      name: 0
+      type: 0
+    - pos: {x: 5.5, y: 1.5, z: -1}
       name: 0
       type: 0
   homeSprites:

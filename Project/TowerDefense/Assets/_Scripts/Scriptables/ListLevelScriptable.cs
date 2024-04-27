@@ -14,6 +14,7 @@ public class ListLevelScriptable : ScriptableObject
 [Serializable]
 public class LevelScriptable
 {
+    public Vector3 posHouse;
     public int bgSpriteIndex;
     public int homeSpriteIndex;
     public ListWaveScriptable waves;
