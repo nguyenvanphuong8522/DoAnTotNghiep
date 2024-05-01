@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd718d228f8a44f42ab388e184f12587, type: 3}
+  m_Name: WavesLv2
+  m_EditorClassIdentifier: 
+  gatesPos:
+  - {x: 0, y: 0, z: 0}
+  paths:
+  - path:
+    - {x: -1.5, y: -4.5}
+    - {x: -1.5, y: -2.5}
+    - {x: 4.5, y: -2.5}
+    - {x: 4.5, y: 2.5}
+    - {x: 1.5, y: 2.5}
+    - {x: 1.5, y: 2.5}
+    - {x: 1.5, y: 0.5}
+    - {x: -3.5, y: 0.5}
+    - {x: -3.5, y: 3.5}
+  listWave:
+  - gates:
+    - amount: 1
+      rate: 0.5
+      type: 0
+  - gates:
+    - amount: 2
+      rate: 0.5
+      type: 1
+  - gates:
+    - amount: 4
+      rate: 0.5
+      type: 1
+  - gates:
+    - amount: 4
+      rate: 2
+      type: 2
+  - gates:
+    - amount: 3
+      rate: 2
+      type: 3
+  - gates:
+    - amount: 3
+      rate: 2
+      type: 4
+  - gates:
+    - amount: 3
+      rate: 2
+      type: 5
+  - gates:
+    - amount: 5
+      rate: 2
+      type: 1
