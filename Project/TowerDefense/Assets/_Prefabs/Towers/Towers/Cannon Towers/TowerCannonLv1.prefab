@@ -7,17 +7,53 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 828184311286113534, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1065134498569980840, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: typeBullet
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645374536174241857, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645374536174241857, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645374536174241857, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645374536174241857, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645374536174241857, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167376975614619975, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 4167376975614619975, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.87
       objectReference: {fileID: 0}
     - target: {fileID: 4696677080953311680, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: a89c3a3077d99fb4598522e50474cff2, type: 3}
     - target: {fileID: 5323506431846595108, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a762e5d10fae4984bb982f12b0cba2df, type: 3}
+    - target: {fileID: 5323506431846595108, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6705592484036796700, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: indexTower
