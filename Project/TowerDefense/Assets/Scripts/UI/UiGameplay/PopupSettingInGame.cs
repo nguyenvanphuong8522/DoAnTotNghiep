@@ -28,8 +28,8 @@ public class PopupSettingInGame : BasePopup
     }
     private void Exit()
     {
-        Uihome.instance.ShowHome();
         LevelManager.instance.RemoveOldLevel();
+        Uihome.instance.ShowHome();
         Hide();
     }
 }

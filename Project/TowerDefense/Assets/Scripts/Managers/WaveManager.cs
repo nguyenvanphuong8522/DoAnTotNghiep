@@ -11,6 +11,7 @@ public class WaveManager : Singleton<WaveManager>
     public Wave curWave;
     private int waveIndex;
     public float timeDelayNextWave = 1.5f;
+    private Coroutine coroutine;
     private void OnEnable()
     {
         GameEvent.returnLevel += RestartWave;
@@ -18,6 +19,7 @@ public class WaveManager : Singleton<WaveManager>
     public void RestartWave()
     {
         waveIndex = 0;
+        StopCoroutineNextWave();
     }
     public void Init(ListWaveScriptable waves)
     {
@@ -28,7 +30,14 @@ public class WaveManager : Singleton<WaveManager>
     }
     public void NextWave()
     {
-        StartCoroutine(DelayNextWave());
+        coroutine = StartCoroutine(DelayNextWave());
+    }
+    private void StopCoroutineNextWave()
+    {
+        if(coroutine != null)
+        {
+            StopCoroutine(coroutine);
+        }
     }
     public void UpToDateWave()
     {

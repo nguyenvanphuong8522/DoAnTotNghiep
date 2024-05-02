@@ -22,9 +22,17 @@ public class TowerUpgrade : MonoBehaviour
         uiTowerUpgrade = UiTowerUpgrade.instance;
         curLevel = LevelManager.instance.curLevel;
     }
+    private Vector3 preClick;
+    private void OnMouseDown()
+    {
+        preClick = ConvertToGridPos.instance.GetMousePos();
+    }
     private void OnMouseUp()
     {
-        if(!Utils.IsPointerOverUIElement())
+        Vector3 curClick = ConvertToGridPos.instance.GetMousePos();
+        float distance = Vector3.Distance(curClick, preClick);
+
+        if (!Utils.IsPointerOverUIElement() && distance <= 0.00001f)
         {
             Show();
         }
