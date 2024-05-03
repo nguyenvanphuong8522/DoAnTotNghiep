@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class PopupUpgrade : BasePopup
 {
-    // Start is called before the first frame update
-    void Start()
+    public static PopupUpgrade instance;
+    public List<UpgradeBoardScriptable> upgradeBoard;
+    public ListIconBtnUpgradeScriptable listIconBtnUpgrade;
+    protected override void Awake()
     {
-        
+        base.Awake();   
+        instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

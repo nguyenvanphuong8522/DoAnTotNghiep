@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1133571472196284623, guid: f5586f5caece36e408eced8527d6bc91, type: 3}
+      propertyPath: m_Color.b
+      value: 0.20164466
+      objectReference: {fileID: 0}
+    - target: {fileID: 1133571472196284623, guid: f5586f5caece36e408eced8527d6bc91, type: 3}
+      propertyPath: m_Color.g
+      value: 0.20164466
+      objectReference: {fileID: 0}
+    - target: {fileID: 1133571472196284623, guid: f5586f5caece36e408eced8527d6bc91, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8415094
+      objectReference: {fileID: 0}
     - target: {fileID: 4562439634336210634, guid: f5586f5caece36e408eced8527d6bc91, type: 3}
       propertyPath: m_Name
       value: btnSnipperTower
