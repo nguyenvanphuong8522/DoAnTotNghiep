@@ -71,6 +71,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3757250981273417035, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Autodestruct
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5068025254508596131, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: speed
       value: 20
@@ -129,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6525510425608785380, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_CollisionDetection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6525510425608785384, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Name
@@ -269,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 4534448992619034430}
-  damage: 2
+  damage: 10
 --- !u!50 &4534448992619034430 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 6525510425608785380, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}

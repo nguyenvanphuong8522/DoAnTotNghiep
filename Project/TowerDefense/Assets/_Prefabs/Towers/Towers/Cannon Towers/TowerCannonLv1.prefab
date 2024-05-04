@@ -12,6 +12,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1065134498569980840, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: atk
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1065134498569980840, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: rate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1065134498569980840, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: typeBullet
       value: 1
       objectReference: {fileID: 0}

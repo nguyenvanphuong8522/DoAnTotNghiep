@@ -6,7 +6,7 @@ public class ProjectileExplore : MonoBehaviour
 {
     private ObjectPool objectPool;
     [SerializeField] private Rigidbody2D rb;
-    public int damage;
+    [HideInInspector]public int damage;
     private void Start()
     { 
         objectPool = ObjectPool.instance;

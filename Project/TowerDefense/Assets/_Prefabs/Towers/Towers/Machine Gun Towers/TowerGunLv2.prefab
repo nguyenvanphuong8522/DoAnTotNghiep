@@ -12,8 +12,12 @@ PrefabInstance:
       value: 0.004
       objectReference: {fileID: 0}
     - target: {fileID: 1065134498569980840, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: atk
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1065134498569980840, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: rate
-      value: 0.2
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 1656726429102964945, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_LocalPosition.y

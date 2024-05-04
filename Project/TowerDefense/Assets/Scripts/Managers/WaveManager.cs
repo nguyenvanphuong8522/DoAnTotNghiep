@@ -12,6 +12,7 @@ public class WaveManager : Singleton<WaveManager>
     private int waveIndex;
     public float timeDelayNextWave = 1.5f;
     private Coroutine coroutine;
+    private int maxWave;
     private void OnEnable()
     {
         GameEvent.returnLevel += RestartWave;
@@ -27,14 +28,21 @@ public class WaveManager : Singleton<WaveManager>
         InitGate();
         curWave = new Wave();
         paths = listWaveData.paths;
+        maxWave = listWaveData.listWave.Count;
     }
     public void NextWave()
     {
-        coroutine = StartCoroutine(DelayNextWave());
+        if (waveIndex < maxWave)
+        {
+            coroutine = StartCoroutine(DelayNextWave());
+            return;
+        }
+        UiGameplay.instance.popupWin.Show();
+
     }
     private void StopCoroutineNextWave()
     {
-        if(coroutine != null)
+        if (coroutine != null)
         {
             StopCoroutine(coroutine);
         }
@@ -46,13 +54,14 @@ public class WaveManager : Singleton<WaveManager>
         curWave.SetAmountEnemy();
         curWave.StartWave(paths);
         waveIndex++;
+        UiGameplay.instance.UpdatTxtWave(waveIndex, maxWave);
     }
 
     private void InitGate()
     {
         int length = listWaveData.gatesPos.Length;
         gates = new Gate[length];
-        for(int i = 0; i < length; i++)
+        for (int i = 0; i < length; i++)
         {
             GameObject newGate = ObjectPool.instance.Get(ObjectPool.instance.gate);
             newGate.SetActive(true);

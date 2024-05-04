@@ -32,8 +32,16 @@ PrefabInstance:
       value: 1408234663
       objectReference: {fileID: 0}
     - target: {fileID: 2330800040941479201, guid: 1fa45a7bc81d39e4baa0f109e2ded5c2, type: 3}
+      propertyPath: coin
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2330800040941479201, guid: 1fa45a7bc81d39e4baa0f109e2ded5c2, type: 3}
       propertyPath: health
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2334407188700971555, guid: 1fa45a7bc81d39e4baa0f109e2ded5c2, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3924942737718875282, guid: 1fa45a7bc81d39e4baa0f109e2ded5c2, type: 3}
       propertyPath: m_Name
@@ -85,7 +93,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3924942737718875284, guid: 1fa45a7bc81d39e4baa0f109e2ded5c2, type: 3}
       propertyPath: m_Radius
-      value: 0.2
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4908761896700189295, guid: 1fa45a7bc81d39e4baa0f109e2ded5c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7060679813896047870, guid: 1fa45a7bc81d39e4baa0f109e2ded5c2, type: 3}
       propertyPath: speed

@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour
     public int typeBullet;
     public bool isShootingObstacle;
     protected int indexPointShoot;
+    [SerializeField]private int atk;
 
     public ParticleSystem[] effectShoots;
     private void OnEnable()
@@ -52,12 +53,15 @@ public class Gun : MonoBehaviour
     {
         PlaySound();
         indexPointShoot = indexPointShoot < pointShoots.Length - 1 ? ++indexPointShoot : 0;
-        GameObject bullet = ObjectPool.instance.Get(ObjectPool.instance.bullets[typeBullet], pointShoots[indexPointShoot].position);
+        GameObject bullet = ObjectPool.instance.Get(ObjectPool.instance.bullets[typeBullet]);
+        bullet.transform.position =  pointShoots[indexPointShoot].position;
         effectShoots[indexPointShoot].Play();
         ProjectileMovement movement = bullet.GetComponent<ProjectileMovement>();
+        ProjectileExplore explore = bullet.GetComponent<ProjectileExplore>();
         if (movement != null)
         {
             movement.SetTarget(target);
+            explore.damage = atk;
         }
     }
     private void PlaySound()

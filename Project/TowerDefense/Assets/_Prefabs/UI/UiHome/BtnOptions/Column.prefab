@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9540a49824322f24fb6b4ad3f1062074, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: 0
   btnOptions:
   - {fileID: 6792373746279533720}
   - {fileID: 3634968160449076387}
@@ -105,6 +106,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 384044467707783771}
     m_Modifications:
+    - target: {fileID: 3973976012882485084, guid: 8a9248ef5fec2264796fe810bb465579, type: 3}
+      propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7796113204196464630, guid: 8a9248ef5fec2264796fe810bb465579, type: 3}
       propertyPath: m_Name
       value: BtnOptionDame
@@ -218,6 +223,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 384044467707783771}
     m_Modifications:
+    - target: {fileID: 3973976012882485084, guid: 552aef433ca4ae54ab22aa91ddb3fb2a, type: 3}
+      propertyPath: id
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7796113204196464630, guid: 552aef433ca4ae54ab22aa91ddb3fb2a, type: 3}
       propertyPath: m_Name
       value: BtnOptionRange
@@ -331,6 +340,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 384044467707783771}
     m_Modifications:
+    - target: {fileID: 3973976012882485084, guid: ba7b51c53de2a484a982ed97794a2c6f, type: 3}
+      propertyPath: id
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7796113204196464630, guid: ba7b51c53de2a484a982ed97794a2c6f, type: 3}
       propertyPath: m_Name
       value: BtnOptionRate
@@ -531,6 +544,18 @@ PrefabInstance:
     - target: {fileID: 3221641043106794017, guid: b7d36182adc2e8b4693b1d00d2ca097b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221641044243532112, guid: b7d36182adc2e8b4693b1d00d2ca097b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221641044243532112, guid: b7d36182adc2e8b4693b1d00d2ca097b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221641044243532112, guid: b7d36182adc2e8b4693b1d00d2ca097b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7d36182adc2e8b4693b1d00d2ca097b, type: 3}

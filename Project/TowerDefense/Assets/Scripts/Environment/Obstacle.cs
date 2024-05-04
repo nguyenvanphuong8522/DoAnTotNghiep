@@ -12,12 +12,14 @@ public class Obstacle : MonoBehaviour, Ihealth
     public bool isUnderAttack = false;
 
     public float health { get; set; }
+    public HealBar healBar { get; set; }
 
     private void OnEnable()
     {
         towerAttacks.Clear();
         isUnderAttack = false;
-        health = 100;
+        health = 1600;
+        healBar = GetComponent<HealBar>();
         GameEvent.returnLevel += ReturnToPool;
     }
     private void Update()
@@ -27,9 +29,16 @@ public class Obstacle : MonoBehaviour, Ihealth
             SetDie();
         }
     }
+    private Vector3 preClick;
+    private void OnMouseDown()
+    {
+        preClick = ConvertToGridPos.instance.GetMousePos();
+    }
     private void OnMouseUp()
     {
-        if (!Utils.IsPointerOverUIElement())
+        Vector3 curClick = ConvertToGridPos.instance.GetMousePos();
+        float distance = Vector3.Distance(curClick, preClick);
+        if (!Utils.IsPointerOverUIElement() && distance <= 0.00001f)
             CheckStartShootObstacles();
     }
     public void CheckStartShootObstacles()
@@ -51,6 +60,7 @@ public class Obstacle : MonoBehaviour, Ihealth
     public void TakeDamage(float damage)
     {
         health -= damage;
+        healBar.UpdateHealBar();
     }
     private void OnCollisionEnter2D(Collision2D col)
     {

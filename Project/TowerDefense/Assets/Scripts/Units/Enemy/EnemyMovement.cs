@@ -30,6 +30,7 @@ public class EnemyMovement : MonoBehaviour
     {
         if (curIndex > path.Length - 1)
         {
+            health.ReduceHealth();
             health.ReturnToPool();
             return;
         }

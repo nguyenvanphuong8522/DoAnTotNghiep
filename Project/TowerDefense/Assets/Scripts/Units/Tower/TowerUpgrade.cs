@@ -45,7 +45,7 @@ public class TowerUpgrade : MonoBehaviour
     }
     public void CheckEnoughCoin()
     {
-        int curCoin = curLevel.coin;
+        int curCoin = curLevel.money;
         if(curCoin >= coinUpdate)
         {
 
@@ -65,7 +65,7 @@ public class TowerUpgrade : MonoBehaviour
     }
     public void Sell()
     {
-        curLevel.SetCoin(coinSell, false);
+        curLevel.IncreaseCoin(coinSell, false);
         ReturnToPool();
     }
     private void EnableRange(bool value = true)

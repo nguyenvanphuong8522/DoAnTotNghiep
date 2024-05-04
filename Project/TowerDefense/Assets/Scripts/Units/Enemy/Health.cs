@@ -6,7 +6,9 @@ public class Health : MonoBehaviour, Ihealth
 {
     public CircleCollider2D circleCollider;
     public EnemyName enemyName;
+    public int coin;
     public float health { get; set; }
+    public HealBar healBar { get; set ; }
 
     private void OnEnable()
     {
@@ -22,12 +24,14 @@ public class Health : MonoBehaviour, Ihealth
     private void Init()
     {
         int index = (int)enemyName;
+        healBar = GetComponent<HealBar>();
         health = GameManager.instance.enemiesData.enemies[index].health;
         EnableCollider();
     }
     public void TakeDamage(float damage)
     {
         health -= damage;
+        healBar.UpdateHealBar();
     }
     private void OnCollisionEnter2D(Collision2D col)
     {
@@ -60,11 +64,18 @@ public class Health : MonoBehaviour, Ihealth
     public void ReturnToPool()
     {
         WaveManager.instance.curWave.ReduceCountEnemy();
+        
+        
         ObjectPool.instance.Return(gameObject);
+    }
+    public void ReduceHealth()
+    {
+        LevelManager.instance.curLevel.ReduceHeal();
     }
     private void SetDie()
     {
         EnableCollider(false);
+        LevelManager.instance.curLevel.IncreaseCoin(coin);
         SpawnEffectDie();
         ReturnToPool();
     }
@@ -75,7 +86,7 @@ public class Health : MonoBehaviour, Ihealth
     private void SpawnEffectDie()
     {
         int index = (int)enemyName;
-        GameObject die = ObjectPool.instance.Get(ObjectPool.instance.enemyDies[index], transform.position);
+        GameObject die = ObjectPool.instance.Get(ObjectPool.instance.enemyDies[index], transform.position, 0.7f);
         die.transform.up = transform.GetChild(0).up;
     }
 

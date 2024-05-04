@@ -5,5 +5,6 @@ using UnityEngine;
 public interface Ihealth
 {
     public float health { get; set;}
+    public HealBar healBar {  get; set;}
     public void TakeDamage(float damage);
 }

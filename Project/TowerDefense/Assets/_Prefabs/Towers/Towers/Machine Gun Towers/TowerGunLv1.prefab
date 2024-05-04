@@ -146,6 +146,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5059292285781466979, guid: 9f740db4e0dc25c49acd134bc013dc5b, type: 3}
+      propertyPath: atk
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059292285781466979, guid: 9f740db4e0dc25c49acd134bc013dc5b, type: 3}
+      propertyPath: rate
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059292285781466979, guid: 9f740db4e0dc25c49acd134bc013dc5b, type: 3}
       propertyPath: effectShoot
       value: 
       objectReference: {fileID: 5787992467143479282}

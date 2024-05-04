@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class Level : MonoBehaviour
 {
-    public int coin;
+    public int health;
+    public int money;
     public LevelScriptable dataLevel;
     public WaveManager waveManager;
     public Environment environment;
@@ -14,6 +15,9 @@ public class Level : MonoBehaviour
     public void InitLevel(int indexLevel, ListLevelScriptable data)
     {
         dataLevel = data.levels[indexLevel];
+        health = 10;
+        UiGameplay.instance.UpdatTxtHealth(health);
+        IncreaseCoin(dataLevel.initMoney);
         SetEnvironmentData(data);
         SetUpWaveManager();
     }
@@ -38,8 +42,17 @@ public class Level : MonoBehaviour
     {
 
     }
-    public void SetCoin(int value, bool increase = true)
+    public void IncreaseCoin(int value, bool increase = true)
     {
-        coin += increase ? value : -value;
+        money += increase ? value : -value;
+        UiGameplay.instance.UpdatTxtMoney();
+    }
+    public void ReduceHeal()
+    {
+        UiGameplay.instance.UpdatTxtHealth(--health);
+        if(health == 0)
+        {
+            UiGameplay.instance.popupLose.Show();
+        }
     }
 }

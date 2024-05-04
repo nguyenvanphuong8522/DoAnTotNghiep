@@ -38,23 +38,3 @@ MonoBehaviour:
     - amount: 4
       rate: 0.5
       type: 1
-  - gates:
-    - amount: 4
-      rate: 2
-      type: 2
-  - gates:
-    - amount: 3
-      rate: 2
-      type: 3
-  - gates:
-    - amount: 3
-      rate: 2
-      type: 4
-  - gates:
-    - amount: 3
-      rate: 2
-      type: 5
-  - gates:
-    - amount: 5
-      rate: 2
-      type: 1
