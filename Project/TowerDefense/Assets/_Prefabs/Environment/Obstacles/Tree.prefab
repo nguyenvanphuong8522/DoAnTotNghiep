@@ -271,6 +271,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UiHealBar
       objectReference: {fileID: 0}
+    - target: {fileID: 4909205782301189277, guid: 6820ae7c7df96664eab57996aa75aa51, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9002603507633983396, guid: 6820ae7c7df96664eab57996aa75aa51, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -301,11 +305,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9002603507633983396, guid: 6820ae7c7df96664eab57996aa75aa51, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0.5
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 9002603507633983396, guid: 6820ae7c7df96664eab57996aa75aa51, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0.1
+      value: 0.09
       objectReference: {fileID: 0}
     - target: {fileID: 9002603507633983396, guid: 6820ae7c7df96664eab57996aa75aa51, type: 3}
       propertyPath: m_LocalPosition.x

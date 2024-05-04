@@ -103,5 +103,13 @@ PrefabInstance:
       propertyPath: speed
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8994181555998372182, guid: 1fa45a7bc81d39e4baa0f109e2ded5c2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8994181555998372182, guid: 1fa45a7bc81d39e4baa0f109e2ded5c2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.085
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fa45a7bc81d39e4baa0f109e2ded5c2, type: 3}
