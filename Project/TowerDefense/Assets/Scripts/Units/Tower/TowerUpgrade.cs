@@ -41,15 +41,8 @@ public class TowerUpgrade : MonoBehaviour
     {
         uiTowerUpgrade.AddListener(UpdateTower, Sell);
         uiTowerUpgrade.UpDateUi(transform.position, range.localScale);
+        uiTowerUpgrade.UpdatePrice(coinUpdate, coinSell);
         uiTowerUpgrade.Show();
-    }
-    public void CheckEnoughCoin()
-    {
-        int curCoin = curLevel.money;
-        if(curCoin >= coinUpdate)
-        {
-
-        }
     }
     public void ReturnToPool()
     {
@@ -59,13 +52,17 @@ public class TowerUpgrade : MonoBehaviour
     }
     public void UpdateTower()
     {
-        int index = indexLevel + 1;
-        ObjectPool.instance.Get(ObjectPool.instance.towers[indexTower].pools[index], transform.position);
-        ReturnToPool();
+        if(curLevel.money >= coinUpdate)
+        {
+            int index = indexLevel + 1;
+            curLevel.IncreaseCoin(coinUpdate, false);
+            ObjectPool.instance.Get(ObjectPool.instance.towers[indexTower].pools[index], transform.position);
+            ReturnToPool();
+        }
     }
     public void Sell()
     {
-        curLevel.IncreaseCoin(coinSell, false);
+        curLevel.IncreaseCoin(coinSell);
         ReturnToPool();
     }
     private void EnableRange(bool value = true)

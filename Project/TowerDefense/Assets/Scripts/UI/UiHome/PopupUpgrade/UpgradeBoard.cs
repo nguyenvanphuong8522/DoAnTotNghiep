@@ -7,6 +7,9 @@ public class UpgradeBoard : Singleton<UpgradeBoard>
     public int idTower;
     [SerializeField] private List<Column> columns;
     public UpgradeBoardScriptable upgradeBoardData;
+    public ListInforTowerSctipTable data;
+    public ListInforTowerSctipTable dataBtnTower;
+    public List<ListInforTowerSctipTable> listDataBtnUpgrade;
 
     private void Start()
     {
@@ -15,7 +18,7 @@ public class UpgradeBoard : Singleton<UpgradeBoard>
     public void SetData(int id)
     {
         idTower = id;
-        upgradeBoardData = PopupUpgrade.instance.upgradeBoard[idTower];
+        upgradeBoardData = PopupUpgrade.instance.upgradeBoardData[idTower];
         foreach(Column col in columns)
         {
             col.SetData();

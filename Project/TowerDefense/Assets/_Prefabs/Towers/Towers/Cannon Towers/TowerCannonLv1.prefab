@@ -64,6 +64,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6705592484036796700, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: coinSell
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6705592484036796700, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: coinUpdate
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6705592484036796700, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: indexTower
       value: 1
       objectReference: {fileID: 0}
