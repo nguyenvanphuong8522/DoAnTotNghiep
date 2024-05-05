@@ -17,38 +17,11 @@ MonoBehaviour:
     - price: 0
       type: 0
       index: 0
-    - price: 0
-      type: 1
-      index: 1
-    - price: 0
-      type: 1
-      index: 0
-    - price: 0
-      type: 1
-      index: 2
   - column:
     - price: 0
       type: 0
-      index: 0
-    - price: 0
-      type: 1
       index: 1
-    - price: 0
-      type: 1
-      index: 0
-    - price: 0
-      type: 1
-      index: 2
   - column:
     - price: 0
       type: 0
-      index: 0
-    - price: 0
-      type: 1
-      index: 1
-    - price: 0
-      type: 1
-      index: 0
-    - price: 0
-      type: 1
       index: 2

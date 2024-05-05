@@ -29,7 +29,7 @@ MonoBehaviour:
   - column:
     - price: 0
       type: 0
-      index: 0
+      index: 1
     - price: 100
       type: 1
       index: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
   - column:
     - price: 200
       type: 0
-      index: 0
+      index: 2
     - price: 150
       type: 1
       index: 0

@@ -8,9 +8,11 @@ public class BoomPowerUp : PowerUp
     private float timer = 3f;
     public CircleCollider2D colliderRange;
     public GameObject particle;
+    public GameObject icon;
     public override void TurnOn()
     {
         base.TurnOn();
+        icon.SetActive(true);
         StartCoroutine(DelayExplore());
     }
     private IEnumerator DelayExplore()
@@ -25,6 +27,7 @@ public class BoomPowerUp : PowerUp
 
     private void Explore()
     {
+        icon.SetActive(false);
         colliderRange.enabled = true;
         particle.SetActive(true);
     }

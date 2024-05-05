@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 828184311286113534}
     m_Modifications:
+    - target: {fileID: 7745211918906939162, guid: a4ae97c85035f774cafe82d8e13d8b93, type: 3}
+      propertyPath: m_SortingLayer
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745211918906939162, guid: a4ae97c85035f774cafe82d8e13d8b93, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1539563763
+      objectReference: {fileID: 0}
     - target: {fileID: 7745211918924882316, guid: a4ae97c85035f774cafe82d8e13d8b93, type: 3}
       propertyPath: m_Name
       value: EffectShoot
@@ -17,15 +25,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7745211918925166510, guid: a4ae97c85035f774cafe82d8e13d8b93, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7745211918925166510, guid: a4ae97c85035f774cafe82d8e13d8b93, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7745211918925166510, guid: a4ae97c85035f774cafe82d8e13d8b93, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 7745211918925166510, guid: a4ae97c85035f774cafe82d8e13d8b93, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33,7 +41,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7745211918925166510, guid: a4ae97c85035f774cafe82d8e13d8b93, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.44
+      value: 0.604
       objectReference: {fileID: 0}
     - target: {fileID: 7745211918925166510, guid: a4ae97c85035f774cafe82d8e13d8b93, type: 3}
       propertyPath: m_LocalPosition.z

@@ -14,41 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listColumn:
   - column:
-    - price: 0
-      type: 0
+    - price: 100
+      type: 2
       index: 0
-    - price: 0
-      type: 1
+    - price: 100
+      type: 2
       index: 1
-    - price: 0
-      type: 1
-      index: 0
-    - price: 0
-      type: 1
-      index: 2
   - column:
-    - price: 0
-      type: 0
+    - price: 200
+      type: 2
       index: 0
-    - price: 0
-      type: 1
+    - price: 200
+      type: 2
       index: 1
-    - price: 0
-      type: 1
-      index: 0
-    - price: 0
-      type: 1
-      index: 2
-  - column:
-    - price: 0
-      type: 0
-      index: 0
-    - price: 0
-      type: 1
-      index: 1
-    - price: 0
-      type: 1
-      index: 0
-    - price: 0
-      type: 1
-      index: 2
