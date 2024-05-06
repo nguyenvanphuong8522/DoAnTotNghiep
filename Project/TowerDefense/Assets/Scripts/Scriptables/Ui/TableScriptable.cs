@@ -14,12 +14,13 @@ public class CellScriptable
 {
     public int price;
     public CellType type;
-    public int index;
+    public int indexColumn;
+    public int indexCell;
 }
 
 
 [CreateAssetMenu(fileName = "TableData", menuName = "Data/Table")]
 public class TableScriptable : ScriptableObject
 {
-    public List<ColumnSctiptable> listColumn;
+    public List<ColumnSctiptable> list;
 }

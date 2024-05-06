@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,12 +12,18 @@ public class Cell : BtnTowerSelect
     {
         btn.onClick.AddListener(UpdateInfor);
     }
-    public void SetData(Sprite sprite, int price, CellType cellType, int id)
+
+    public void SetData(Sprite sprite, string price, CellType cellType, int indexColumn, int indexCell)
     {
         imgIcon.sprite = sprite;
-        txtPrice.text = $"{price} $";
+        txtPrice.text = price;
         this.cellType = cellType;
-        this.id = id;
+        this.indexColumn = indexColumn;
+        this.indexCell = indexCell;
+        Active();
+    }
+    private void Active()
+    {
         gameObject.SetActive(true);
     }
     public override void UpdateInfor() 
@@ -31,16 +35,17 @@ public class Cell : BtnTowerSelect
     private InforTowerSctiptable GetData(CellType cellType)
     {
         InforTowerSctiptable data = new InforTowerSctiptable();
+        PopupUpgrade popupUpgrade = PopupUpgrade.instance;
         switch (cellType)
         {
             case CellType.TOWER:
-                data = PopupUpgrade.instance.childrenInforTowerData[PopupUpgrade.instance.table.idTable].list[id];
+                data = popupUpgrade.childrenInforTowerData[indexColumn].list[indexCell];
                 break;
             case CellType.UPGRADE:
-                data = PopupUpgrade.instance.inforUpgradeTypeData.list[id];
+                data = popupUpgrade.inforUpgradeTypeData.list[indexCell];
                 break;
             default:
-                data = PopupUpgrade.instance.inforAbilitiesData[indexColumn].list[id];
+                data = popupUpgrade.inforAbilitiesData[indexColumn].list[indexCell];
                 break;
         }
         return data;

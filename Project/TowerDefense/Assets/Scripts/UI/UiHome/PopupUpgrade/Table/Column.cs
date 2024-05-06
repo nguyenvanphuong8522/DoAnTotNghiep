@@ -6,40 +6,30 @@ public class Column : MonoBehaviour
 {
     public int id;
     [SerializeField] private List<Cell> cells;
-    private ColumnSctiptable columnData;
-    public void SetData()
+    private CellScriptable[] cellsData;
+    public void UpdateColumn()
     {
         HideCells();
-        columnData = Table.instance.tableData.listColumn[id];
-        int length = columnData.column.Length;
-        for (int i = 0; i < length; i++)
-        {
-            CellScriptable cellData = columnData.column[i];
-            int price = cellData.price;
-            Sprite sprite = CellTypeToSprite(cellData.type, cellData.index);
-            cells[i].SetData(sprite, price, cellData.type, cellData.index);
-            cells[i].indexColumn = id;
-        }
+        SetData();
+        Active();
+    }
+    private void Active()
+    {
         gameObject.SetActive(true);
     }
-    private Sprite CellTypeToSprite(CellType type, int index = 0)
+    private void SetData()
     {
-        Sprite newSprite;
-        IconsCellScriptable data = PopupUpgrade.instance.iconsCellData;
-        int _index = Table.instance.idTable;
-        switch (type)
+        cellsData = Table.instance.tableData.list[id].column;
+        int length = cellsData.Length;
+
+        for (int i = 0; i < length; i++)
         {
-            case CellType.TOWER:
-                newSprite = data.towerSprites[_index].array[id];
-                break;
-            case CellType.UPGRADE:
-                newSprite = data.optionSprites[index];
-                break;
-            default:
-                newSprite = data.abilitySprites[id].array[index];
-                break;
+            CellScriptable data = cellsData[i];
+
+            string price = data.price.ToString();
+            Sprite sprite = ConvertTypeToSprite.CellTypeToSprite(data.type, data.indexColumn, data.indexCell);
+            cells[i].SetData(sprite, price, data.type, data.indexColumn, data.indexCell);
         }
-        return newSprite;
     }
 
     private void HideCells()
@@ -61,7 +51,7 @@ public class Column : MonoBehaviour
             if (btnOption == null) return;
 
             cells.Add(btnOption);
-            btnOption.id = index++;
+            btnOption.indexCell = index++;
         }
     }
     #endregion

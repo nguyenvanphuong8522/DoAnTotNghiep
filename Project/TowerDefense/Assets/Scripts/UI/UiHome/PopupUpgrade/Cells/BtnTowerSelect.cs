@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BtnTowerSelect : MonoBehaviour
 {
-    public int id;
+    public int indexCell;
     public Button btn;
     public virtual void Start()
     {
@@ -14,9 +14,9 @@ public class BtnTowerSelect : MonoBehaviour
 
     public virtual void UpdateInfor()
     {
-        InforTowerSctiptable data = PopupUpgrade.instance.inforTowersData.list[id];
+        InforTowerSctiptable data = PopupUpgrade.instance.inforTowersData.list[indexCell];
 
         Board.instance.UpdateInfor(data.Name, data.Description);
-        PopupUpgrade.instance.table.SetData(id);
+        PopupUpgrade.instance.table.UpdateTable(indexCell);
     }
 }

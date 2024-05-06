@@ -17,13 +17,13 @@ public class CellTower : BtnTowerSelect
     {
         imgIcon.sprite = PopupUpgrade.instance.iconsCellData.towerSprites[indexColumn].array[id];
         txtPrice.text = $"{price} $";
-        this.id = id;
+        this.indexCell = id;
         this.indexColumn = indexColumn;
         gameObject.SetActive(true);
     }
     public override void UpdateInfor()
     {
-        InforTowerSctiptable data = PopupUpgrade.instance.childrenInforTowerData[indexColumn].list[id];
+        InforTowerSctiptable data = PopupUpgrade.instance.childrenInforTowerData[indexColumn].list[indexCell];
         PopupUpgrade.instance.board.UpdateInfor(data.Name, data.Description);
     }
 }

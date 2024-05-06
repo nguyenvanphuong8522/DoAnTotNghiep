@@ -10,20 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0965fb145db1474d835fd56bec47f8d, type: 3}
-  m_Name: AbilityBoard
+  m_Name: TableTimer
   m_EditorClassIdentifier: 
   listColumn:
   - column:
-    - price: 100
-      type: 2
+    - price: 0
+      type: 0
       index: 0
-    - price: 100
-      type: 2
+  - column:
+    - price: 0
+      type: 0
       index: 1
   - column:
-    - price: 200
-      type: 2
-      index: 0
-    - price: 200
-      type: 2
-      index: 1
+    - price: 0
+      type: 0
+      index: 2

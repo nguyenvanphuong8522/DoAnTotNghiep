@@ -1,18 +1,41 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DataPersist : MonoBehaviour
+[Serializable]
+public class DataColumn
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool unLocked;
+    public bool dame;
+    public bool range;
+    public bool rate;
+}
+[Serializable]
+public class DataTable
+{
+    public DataColumn[] list;
+}
 
-    // Update is called once per frame
-    void Update()
+public class DataPersist
+{
+    public static int Level
     {
-        
+        get => PlayerPrefs.GetInt("LEVEL", 0);
+        set => PlayerPrefs.SetInt("LEVEL", value);
+    }
+    public static int TeleportLevel
+    {
+        get => PlayerPrefs.GetInt("TELEPORT", 0);
+        set => PlayerPrefs.SetInt("TELEPORT", value);
+    }
+    public static int BoomLevel
+    {
+        get => PlayerPrefs.GetInt("BOOM", 0);
+        set => PlayerPrefs.SetInt("BOOM", value);
+    }
+    public static string StringJsonTables
+    {
+        get => PlayerPrefs.GetString("TABLE");
+        set => PlayerPrefs.SetString("TABLE", value);
     }
 }

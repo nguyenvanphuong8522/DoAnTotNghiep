@@ -15,11 +15,34 @@ public class PopupUpgrade : BasePopup
     public InforTowersScriptable inforUpgradeTypeData;
     public List<InforTowersScriptable> inforAbilitiesData;
 
+    public List<DataTable> tables;
 
     protected override void Awake()
     {
         base.Awake();   
         instance = this;
+        if(!PlayerPrefs.HasKey("TABLE"))
+        {
+            Debug.Log("null");
+            InitJsonTables();
+        }
+        else
+        {
+            tables = JsonUtility.FromJson<List<DataTable>>(DataPersist.StringJsonTables);
+            Debug.Log(tables.Count);
+            Debug.Log(DataPersist.StringJsonTables);
+        }
     }
+
+    private void InitJsonTables()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            DataTable dataTable = new DataTable();
+            dataTable.list = new DataColumn[3];
+            tables.Add(dataTable);
+        }
+    }
+
 
 }

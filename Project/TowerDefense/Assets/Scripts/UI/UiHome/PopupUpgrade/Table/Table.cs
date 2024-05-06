@@ -11,23 +11,29 @@ public class Table : Singleton<Table>
 
     private void Start()
     {
-        SetData(0);
+        UpdateTable(0);
     }
-    public void SetData(int id)
+    public void UpdateTable(int id)
     {
         HideColumns();
+        SetData(id);
+    }
+    private void SetData(int id)
+    {
         idTable = id;
         tableData = PopupUpgrade.instance.tableData[idTable];
-        for (int i = 0; i < tableData.listColumn.Count; i++)
+        int count = tableData.list.Count;
+
+        for (int i = 0; i < count; i++)
         {
-            columns[i].SetData();
+            columns[i].UpdateColumn();
         }
     }
     private void HideColumns()
     {
-        foreach (Column column in columns)
+        foreach (Column col in columns)
         {
-            column.gameObject.SetActive(false);
+            col.gameObject.SetActive(false);
         }
     }
     #region Validate

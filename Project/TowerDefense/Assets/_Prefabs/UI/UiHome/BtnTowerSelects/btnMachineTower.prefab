@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 751360999495447419e21e18358c4115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
+  indexCell: 0
   btn: {fileID: 4562439634336210646}
 --- !u!1 &4562439635604792600
 GameObject:
@@ -204,13 +204,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4562439635604792600}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.12698466, g: 0.7735849, b: 0.37996492, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -293,7 +293,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 908cb66025d7445499fbaab25481cd70, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5a4f23ee7939fed42b1c83d907fcddde, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

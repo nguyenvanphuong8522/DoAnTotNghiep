@@ -58,7 +58,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384044467707783770}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 0
-  btnOptions:
+  cells:
   - {fileID: 6792373746279533720}
   - {fileID: 3634968160449076387}
   - {fileID: 3634968158754328609}
@@ -108,6 +108,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3973976012882485084, guid: 8a9248ef5fec2264796fe810bb465579, type: 3}
       propertyPath: id
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973976012882485084, guid: 8a9248ef5fec2264796fe810bb465579, type: 3}
+      propertyPath: indexCell
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7796113204196464630, guid: 8a9248ef5fec2264796fe810bb465579, type: 3}
@@ -227,6 +231,10 @@ PrefabInstance:
       propertyPath: id
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3973976012882485084, guid: 552aef433ca4ae54ab22aa91ddb3fb2a, type: 3}
+      propertyPath: indexCell
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7796113204196464630, guid: 552aef433ca4ae54ab22aa91ddb3fb2a, type: 3}
       propertyPath: m_Name
       value: BtnOptionRange
@@ -342,6 +350,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3973976012882485084, guid: ba7b51c53de2a484a982ed97794a2c6f, type: 3}
       propertyPath: id
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3973976012882485084, guid: ba7b51c53de2a484a982ed97794a2c6f, type: 3}
+      propertyPath: indexCell
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7796113204196464630, guid: ba7b51c53de2a484a982ed97794a2c6f, type: 3}
