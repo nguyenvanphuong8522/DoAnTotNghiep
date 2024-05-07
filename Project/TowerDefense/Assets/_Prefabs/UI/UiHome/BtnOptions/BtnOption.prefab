@@ -389,6 +389,7 @@ MonoBehaviour:
   txtPrice: {fileID: 6186805026457157580}
   cellType: 0
   indexColumn: 0
+  locked: {fileID: 1673619305034418884}
 --- !u!1 &3221641044243532114
 GameObject:
   m_ObjectHideFlags: 0

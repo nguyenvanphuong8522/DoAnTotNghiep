@@ -12,16 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0965fb145db1474d835fd56bec47f8d, type: 3}
   m_Name: TableTimer
   m_EditorClassIdentifier: 
-  listColumn:
+  list:
   - column:
     - price: 0
       type: 0
-      index: 0
+      indexColumn: 3
+      indexCell: 0
   - column:
     - price: 0
       type: 0
-      index: 1
+      indexColumn: 3
+      indexCell: 1
   - column:
     - price: 0
       type: 0
-      index: 2
+      indexColumn: 3
+      indexCell: 2

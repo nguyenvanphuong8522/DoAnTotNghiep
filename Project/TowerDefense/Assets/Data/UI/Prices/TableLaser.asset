@@ -12,43 +12,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0965fb145db1474d835fd56bec47f8d, type: 3}
   m_Name: TableLaser
   m_EditorClassIdentifier: 
-  listColumn:
+  list:
   - column:
     - price: 0
       type: 0
-      index: 0
+      indexColumn: 4
+      indexCell: 0
     - price: 0
       type: 1
-      index: 1
+      indexColumn: 4
+      indexCell: 0
     - price: 0
       type: 1
-      index: 0
+      indexColumn: 4
+      indexCell: 1
     - price: 0
       type: 1
-      index: 2
+      indexColumn: 4
+      indexCell: 2
   - column:
     - price: 0
       type: 0
-      index: 1
+      indexColumn: 4
+      indexCell: 1
     - price: 0
       type: 1
-      index: 1
+      indexColumn: 4
+      indexCell: 0
     - price: 0
       type: 1
-      index: 0
+      indexColumn: 4
+      indexCell: 1
     - price: 0
       type: 1
-      index: 2
+      indexColumn: 4
+      indexCell: 2
   - column:
     - price: 0
       type: 0
-      index: 2
+      indexColumn: 4
+      indexCell: 2
     - price: 0
       type: 1
-      index: 1
+      indexColumn: 4
+      indexCell: 0
     - price: 0
       type: 1
-      index: 0
+      indexColumn: 4
+      indexCell: 1
     - price: 0
       type: 1
-      index: 2
+      indexColumn: 4
+      indexCell: 2

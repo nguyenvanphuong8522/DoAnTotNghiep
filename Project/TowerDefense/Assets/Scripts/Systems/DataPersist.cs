@@ -1,20 +1,5 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
-
-[Serializable]
-public class DataColumn
-{
-    public bool unLocked;
-    public bool dame;
-    public bool range;
-    public bool rate;
-}
-[Serializable]
-public class DataTable
-{
-    public DataColumn[] list;
-}
 
 public class DataPersist
 {

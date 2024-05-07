@@ -12,18 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0965fb145db1474d835fd56bec47f8d, type: 3}
   m_Name: TableAbility
   m_EditorClassIdentifier: 
-  listColumn:
+  list:
   - column:
-    - price: 100
+    - price: 0
       type: 2
-      index: 0
-    - price: 100
+      indexColumn: 0
+      indexCell: 0
+    - price: 0
       type: 2
-      index: 1
+      indexColumn: 0
+      indexCell: 1
   - column:
-    - price: 200
+    - price: 0
       type: 2
-      index: 0
-    - price: 200
+      indexColumn: 1
+      indexCell: 0
+    - price: 0
       type: 2
-      index: 1
+      indexColumn: 1
+      indexCell: 1

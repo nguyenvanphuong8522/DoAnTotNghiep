@@ -7,6 +7,8 @@ public class Cell : BtnTowerSelect
     [SerializeField] private Text txtPrice;
     public CellType cellType;
     public int indexColumn;
+    public GameObject locked;
+    public bool purchased;
 
     public override void Start()
     {
@@ -20,6 +22,7 @@ public class Cell : BtnTowerSelect
         this.cellType = cellType;
         this.indexColumn = indexColumn;
         this.indexCell = indexCell;
+
         Active();
     }
     private void Active()
@@ -49,5 +52,10 @@ public class Cell : BtnTowerSelect
                 break;
         }
         return data;
+    }
+
+    private void CheckUnLock()
+    {
+
     }
 }

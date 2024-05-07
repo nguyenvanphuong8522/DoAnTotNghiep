@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Newtonsoft.Json;
 
 public class PopupUpgrade : BasePopup
 {
@@ -15,34 +16,41 @@ public class PopupUpgrade : BasePopup
     public InforTowersScriptable inforUpgradeTypeData;
     public List<InforTowersScriptable> inforAbilitiesData;
 
-    public List<DataTable> tables;
+    public List<StrategyTower> tables;
 
     protected override void Awake()
     {
-        base.Awake();   
+        base.Awake();
         instance = this;
-        if(!PlayerPrefs.HasKey("TABLE"))
-        {
-            Debug.Log("null");
-            InitJsonTables();
-        }
-        else
-        {
-            tables = JsonUtility.FromJson<List<DataTable>>(DataPersist.StringJsonTables);
-            Debug.Log(tables.Count);
-            Debug.Log(DataPersist.StringJsonTables);
-        }
+        InitTables();
     }
 
+    private void InitTables()
+    {
+        if (!PlayerPrefs.HasKey("TABLE"))
+        {
+            InitJsonTables();
+            return;
+        }
+        tables = JsonToObj();
+        Debug.Log(tables.Count);
+    }
     private void InitJsonTables()
     {
         for (int i = 0; i < 5; i++)
         {
-            DataTable dataTable = new DataTable();
-            dataTable.list = new DataColumn[3];
-            tables.Add(dataTable);
+            int amountCol = tableData[i].list.Count;
+            int amountCell = tableData[i].list[0].column.Length;
+            tables.Add(new StrategyTower(amountCol, amountCell));
         }
+        DataPersist.StringJsonTables = ObjToJson();
     }
-
-
+    private List<StrategyTower> JsonToObj()
+    {
+        return JsonConvert.DeserializeObject<List<StrategyTower>>(DataPersist.StringJsonTables);
+    }
+    private string ObjToJson()
+    {
+        return JsonConvert.SerializeObject(tables);
+    }
 }

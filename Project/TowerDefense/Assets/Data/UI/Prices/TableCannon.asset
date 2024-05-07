@@ -18,3 +18,49 @@ MonoBehaviour:
       type: 0
       indexColumn: 1
       indexCell: 0
+    - price: 0
+      type: 1
+      indexColumn: 1
+      indexCell: 0
+    - price: 0
+      type: 1
+      indexColumn: 1
+      indexCell: 1
+    - price: 0
+      type: 1
+      indexColumn: 1
+      indexCell: 2
+  - column:
+    - price: 0
+      type: 0
+      indexColumn: 1
+      indexCell: 1
+    - price: 0
+      type: 1
+      indexColumn: 1
+      indexCell: 0
+    - price: 0
+      type: 1
+      indexColumn: 1
+      indexCell: 1
+    - price: 0
+      type: 1
+      indexColumn: 1
+      indexCell: 2
+  - column:
+    - price: 0
+      type: 0
+      indexColumn: 1
+      indexCell: 2
+    - price: 0
+      type: 1
+      indexColumn: 1
+      indexCell: 0
+    - price: 0
+      type: 1
+      indexColumn: 1
+      indexCell: 1
+    - price: 0
+      type: 1
+      indexColumn: 1
+      indexCell: 2

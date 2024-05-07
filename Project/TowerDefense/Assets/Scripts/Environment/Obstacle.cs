@@ -129,6 +129,7 @@ public class Obstacle : MonoBehaviour, Ihealth
                 element.ShootObstacle(transform, false);
             }
         }
+        LevelManager.instance.curLevel.IncreaseCoin(10);
     }
     private void SpawnEffectDie()
     {

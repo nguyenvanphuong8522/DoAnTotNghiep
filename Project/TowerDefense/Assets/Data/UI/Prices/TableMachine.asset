@@ -37,15 +37,15 @@ MonoBehaviour:
       indexCell: 1
     - price: 100
       type: 1
-      indexColumn: 0
+      indexColumn: 1
       indexCell: 0
     - price: 100
       type: 1
-      indexColumn: 0
+      indexColumn: 1
       indexCell: 1
     - price: 100
       type: 1
-      indexColumn: 0
+      indexColumn: 1
       indexCell: 2
   - column:
     - price: 50
@@ -54,13 +54,13 @@ MonoBehaviour:
       indexCell: 2
     - price: 100
       type: 1
-      indexColumn: 0
+      indexColumn: 2
       indexCell: 0
     - price: 100
       type: 1
-      indexColumn: 0
+      indexColumn: 2
       indexCell: 1
     - price: 100
       type: 1
-      indexColumn: 0
+      indexColumn: 2
       indexCell: 2
