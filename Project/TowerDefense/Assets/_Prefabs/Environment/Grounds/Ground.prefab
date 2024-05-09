@@ -638,8 +638,8 @@ RectTransform:
   m_GameObject: {fileID: 8856975171194139735}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 596722574484141115}
   - {fileID: 802339664}
@@ -969,6 +969,38 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5421018000709328960}
     m_Modifications:
+    - target: {fileID: 1578986298193893573, guid: 5d47720511ca05b499a500dc7cb8ab74, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2357312021838183778, guid: 5d47720511ca05b499a500dc7cb8ab74, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2357312021838183778, guid: 5d47720511ca05b499a500dc7cb8ab74, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2357312021838183778, guid: 5d47720511ca05b499a500dc7cb8ab74, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2357312021838183778, guid: 5d47720511ca05b499a500dc7cb8ab74, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 2357312021838183778, guid: 5d47720511ca05b499a500dc7cb8ab74, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2357312021838183778, guid: 5d47720511ca05b499a500dc7cb8ab74, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000000103376806
+      objectReference: {fileID: 0}
+    - target: {fileID: 2357312021838183778, guid: 5d47720511ca05b499a500dc7cb8ab74, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.395
+      objectReference: {fileID: 0}
     - target: {fileID: 2856667437096688415, guid: 5d47720511ca05b499a500dc7cb8ab74, type: 3}
       propertyPath: m_Sprite
       value: 

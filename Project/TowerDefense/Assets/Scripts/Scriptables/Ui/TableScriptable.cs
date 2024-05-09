@@ -3,24 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum CellType
+public enum UpgradeType
 {
-    TOWER,
-    UPGRADE,
-    ABILITY
-}
-[Serializable]
-public class CellScriptable
-{
-    public int price;
-    public CellType type;
-    public int indexColumn;
-    public int indexCell;
+    DAME,
+    RANGE,
+    RATE
 }
 
 
 [CreateAssetMenu(fileName = "TableData", menuName = "Data/Table")]
 public class TableScriptable : ScriptableObject
 {
-    public List<ColumnSctiptable> list;
+    public List<ColumnSctiptable> columns;
 }

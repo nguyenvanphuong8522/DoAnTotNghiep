@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f3e7d36c3883904a8da9028f7243c54, type: 3}
+  m_Name: IconsCell
+  m_EditorClassIdentifier: 
+  optionSprites: {fileID: 11400000, guid: c4601da6aebb5dd4aa49a42d5ddf7169, type: 2}
+  towerSprites:
+  - {fileID: 11400000, guid: 670c2b33909309641bb71f1fdefd7ec5, type: 2}
+  - {fileID: 11400000, guid: 81e5d613b73690a4db617d54c7d618e0, type: 2}
+  - {fileID: 11400000, guid: ae0406a3e3ab0204896f2c58787211b0, type: 2}
+  - {fileID: 11400000, guid: 2814c2f760d89c5488c9b802dc5ed9a3, type: 2}
+  - {fileID: 11400000, guid: db729bd9a4a638b4997205e0deb55170, type: 2}
+  abilitySprites:
+  - {fileID: 11400000, guid: c30e85ccbe1a16945a8d0a37e2cf6331, type: 2}
+  - {fileID: 11400000, guid: 97bf7014cc94d6340a622aed0057e8ab, type: 2}

@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Column : MonoBehaviour
 {
     public int id;
-    [SerializeField] private List<Cell> cells;
-    private CellScriptable[] cellsData;
+    [SerializeField] private List<CellUpgrade> cells;
+    [SerializeField] private CellTower cellColumn;
+    [HideInInspector] public ColumnSctiptable colData;
     public void UpdateColumn()
     {
         HideCells();
@@ -19,40 +21,18 @@ public class Column : MonoBehaviour
     }
     private void SetData()
     {
-        cellsData = Table.instance.tableData.list[id].column;
-        int length = cellsData.Length;
-
-        for (int i = 0; i < length; i++)
+        cellColumn.SetData(colData.indexTower, colData.level);
+        for (int i = 0; i < colData.upgradeTypes.Length; i++)
         {
-            CellScriptable data = cellsData[i];
-
-            string price = data.price.ToString();
-            Sprite sprite = ConvertTypeToSprite.CellTypeToSprite(data.type, data.indexColumn, data.indexCell);
-            cells[i].SetData(sprite, price, data.type, data.indexColumn, data.indexCell);
+            cells[i].SetData(colData.indexTower, colData.level, colData.upgradeTypes[i]);
         }
     }
 
     private void HideCells()
     {
-        foreach(var cell in cells)
+        foreach (var cell in cells)
         {
             cell.gameObject.SetActive(false);
         }
     }
-
-    #region Validate
-    private void OnValidate()
-    {
-        cells.Clear();
-        int index = 0;
-        foreach (Transform child in transform)
-        {
-            Cell btnOption = child.GetComponent<Cell>();
-            if (btnOption == null) return;
-
-            cells.Add(btnOption);
-            btnOption.indexCell = index++;
-        }
-    }
-    #endregion
 }

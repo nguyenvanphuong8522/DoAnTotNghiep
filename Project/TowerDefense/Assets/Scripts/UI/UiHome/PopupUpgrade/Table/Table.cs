@@ -9,23 +9,20 @@ public class Table : Singleton<Table>
 
     [HideInInspector]public TableScriptable tableData;
 
-    private void Start()
-    {
-        UpdateTable(0);
-    }
-    public void UpdateTable(int id)
+    public void UpdateTable(int id, TableScriptable tableDat)
     {
         HideColumns();
-        SetData(id);
+        SetData(id, tableDat);
     }
-    private void SetData(int id)
+    private void SetData(int id, TableScriptable tableData)
     {
         idTable = id;
-        tableData = PopupUpgrade.instance.tableData[idTable];
-        int count = tableData.list.Count;
+        this.tableData = tableData;
+        int count = tableData.columns.Count;
 
         for (int i = 0; i < count; i++)
         {
+            columns[i].colData = tableData.columns[i];
             columns[i].UpdateColumn();
         }
     }
@@ -36,20 +33,4 @@ public class Table : Singleton<Table>
             col.gameObject.SetActive(false);
         }
     }
-    #region Validate
-    private void OnValidate()
-    {
-        columns.Clear();
-        int index = 0;
-        foreach(Transform t in transform)
-        {
-            Column col = t.GetComponent<Column>();
-            if (col != null)
-            {
-                columns.Add(col);
-                col.id = index++;
-            }
-        }
-    }
-    #endregion
 }

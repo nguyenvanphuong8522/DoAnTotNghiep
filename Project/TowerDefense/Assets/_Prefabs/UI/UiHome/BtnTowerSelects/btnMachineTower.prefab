@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4562439634336210646}
   - component: {fileID: 4562439634336210645}
   - component: {fileID: 4562439634336210644}
-  - component: {fileID: 7257483354033932036}
+  - component: {fileID: 3651047971792051630}
   m_Layer: 0
   m_Name: btnMachineTower
   m_TagString: Untagged
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7257483354033932036
+--- !u!114 &3651047971792051630
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,11 +146,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4562439634336210634}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 751360999495447419e21e18358c4115, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e468f3bf49137246ae98b08a02927a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  indexCell: 0
-  btn: {fileID: 4562439634336210646}
 --- !u!1 &4562439635604792600
 GameObject:
   m_ObjectHideFlags: 0

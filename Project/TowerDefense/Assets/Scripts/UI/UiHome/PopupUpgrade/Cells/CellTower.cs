@@ -5,25 +5,25 @@ using UnityEngine.UI;
 
 public class CellTower : BtnTowerSelect
 {
-    [SerializeField] private Image imgIcon;
-    [SerializeField] private Text txtPrice;
+    [SerializeField] protected Image imgIcon;
+    [SerializeField] protected Text txtPrice;
     public int indexColumn;
 
     public override void Start()
     {
-        btn.onClick.AddListener(UpdateInfor);
+        btn.onClick.AddListener(UpdateBoard);
     }
-    public void SetData(int price, int indexColumn, int id)
+    public virtual void SetData(int indexColumn, int indexCell)
     {
-        imgIcon.sprite = PopupUpgrade.instance.iconsCellData.towerSprites[indexColumn].array[id];
-        txtPrice.text = $"{price} $";
-        this.indexCell = id;
+        imgIcon.sprite = PopupUpgrade.instance.iconsCellData.towerSprites[indexColumn].array[indexCell];
+        txtPrice.text = PopupUpgrade.instance.pricesTower[indexColumn].list[indexCell].priceUnlock.ToString();
+        this.indexCell = indexCell;
         this.indexColumn = indexColumn;
         gameObject.SetActive(true);
     }
-    public override void UpdateInfor()
+    public override void UpdateBoard()
     {
-        InforTowerSctiptable data = PopupUpgrade.instance.childrenInforTowerData[indexColumn].list[indexCell];
+        DescTowerSctiptable data = PopupUpgrade.instance.descTowersData[indexColumn].list[indexCell];
         PopupUpgrade.instance.board.UpdateInfor(data.Name, data.Description);
     }
 }

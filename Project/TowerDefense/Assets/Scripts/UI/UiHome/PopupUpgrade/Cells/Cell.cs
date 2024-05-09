@@ -5,17 +5,17 @@ public class Cell : BtnTowerSelect
 {
     [SerializeField] private Image imgIcon;
     [SerializeField] private Text txtPrice;
-    public CellType cellType;
+    public UpgradeType cellType;
     public int indexColumn;
     public GameObject locked;
     public bool purchased;
 
     public override void Start()
     {
-        btn.onClick.AddListener(UpdateInfor);
+        btn.onClick.AddListener(UpdateBoard);
     }
 
-    public void SetData(Sprite sprite, string price, CellType cellType, int indexColumn, int indexCell)
+    public void SetData(Sprite sprite, string price, UpgradeType cellType, int indexColumn, int indexCell)
     {
         imgIcon.sprite = sprite;
         txtPrice.text = price;
@@ -29,33 +29,9 @@ public class Cell : BtnTowerSelect
     {
         gameObject.SetActive(true);
     }
-    public override void UpdateInfor() 
-    {
-        InforTowerSctiptable data = GetData(cellType);
-        PopupUpgrade.instance.board.UpdateInfor(data.Name, data.Description);
-    }
-
-    private InforTowerSctiptable GetData(CellType cellType)
-    {
-        InforTowerSctiptable data = new InforTowerSctiptable();
-        PopupUpgrade popupUpgrade = PopupUpgrade.instance;
-        switch (cellType)
-        {
-            case CellType.TOWER:
-                data = popupUpgrade.childrenInforTowerData[indexColumn].list[indexCell];
-                break;
-            case CellType.UPGRADE:
-                data = popupUpgrade.inforUpgradeTypeData.list[indexCell];
-                break;
-            default:
-                data = popupUpgrade.inforAbilitiesData[indexColumn].list[indexCell];
-                break;
-        }
-        return data;
-    }
-
-    private void CheckUnLock()
+    public override void UpdateBoard() 
     {
 
     }
+
 }

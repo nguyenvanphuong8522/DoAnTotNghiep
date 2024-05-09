@@ -8,7 +8,7 @@ public class DataTower
     public bool range;
     public bool rate;
     public DataTower() { }
-
+ 
     public DataTower(bool unLocked, bool dame, bool range, bool rate)
     {
         this.unLocked = unLocked;

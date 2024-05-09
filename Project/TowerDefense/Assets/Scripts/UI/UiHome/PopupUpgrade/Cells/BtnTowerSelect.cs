@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BtnTowerSelect : MonoBehaviour
+public abstract class BtnTowerSelect : MonoBehaviour
 {
     public int indexCell;
     public Button btn;
     public virtual void Start()
     {
-        btn.onClick.AddListener(UpdateInfor); 
+        btn.onClick.AddListener(UpdateBoard); 
     }
 
-    public virtual void UpdateInfor()
+    public abstract void UpdateBoard();
+    #region Validate
+    private void OnValidate()
     {
-        InforTowerSctiptable data = PopupUpgrade.instance.inforTowersData.list[indexCell];
-
-        Board.instance.UpdateInfor(data.Name, data.Description);
-        PopupUpgrade.instance.table.UpdateTable(indexCell);
+        btn = GetComponent<ButtonEffectLogic>();
     }
+    #endregion
 }

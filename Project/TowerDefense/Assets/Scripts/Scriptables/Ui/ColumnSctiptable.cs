@@ -3,5 +3,7 @@
 [Serializable]
 public class ColumnSctiptable
 {
-    public CellScriptable[] column;
+    public int indexTower;
+    public int level;
+    public UpgradeType[] upgradeTypes;
 }
