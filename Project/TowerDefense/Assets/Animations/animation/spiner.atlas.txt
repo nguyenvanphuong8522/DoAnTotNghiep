@@ -1,0 +1,48 @@
+
+spiner.png
+size: 103,152
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 2, 2
+  size: 73, 47
+  orig: 75, 49
+  offset: 1, 1
+  index: -1
+lv2/body
+  rotate: true
+  xy: 2, 77
+  size: 73, 54
+  orig: 73, 54
+  offset: 0, 0
+  index: -1
+lv2/nong
+  rotate: false
+  xy: 72, 4
+  size: 20, 41
+  orig: 20, 41
+  offset: 0, 0
+  index: -1
+lv3/body
+  rotate: false
+  xy: 58, 92
+  size: 43, 58
+  orig: 43, 58
+  offset: 0, 0
+  index: -1
+lv3/nong
+  rotate: false
+  xy: 51, 7
+  size: 19, 68
+  orig: 19, 68
+  offset: 0, 0
+  index: -1
+nong
+  rotate: false
+  xy: 72, 47
+  size: 22, 43
+  orig: 22, 43
+  offset: 0, 0
+  index: -1

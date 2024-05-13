@@ -15,15 +15,15 @@ public class CellTower : BtnTowerSelect
     }
     public virtual void SetData(int indexColumn, int indexCell)
     {
-        imgIcon.sprite = PopupUpgrade.instance.iconsCellData.towerSprites[indexColumn].array[indexCell];
-        txtPrice.text = PopupUpgrade.instance.pricesTower[indexColumn].list[indexCell].priceUnlock.ToString();
+        imgIcon.sprite = PopupUpgrade.instance.tableTower.iconsCellData.towerSprites[indexColumn].array[indexCell];
+        txtPrice.text = PopupUpgrade.instance.tableTower.pricesTower[indexColumn].list[indexCell].priceUnlock.ToString();
         this.indexCell = indexCell;
         this.indexColumn = indexColumn;
         gameObject.SetActive(true);
     }
     public override void UpdateBoard()
     {
-        DescTowerSctiptable data = PopupUpgrade.instance.descTowersData[indexColumn].list[indexCell];
+        DescTowerSctiptable data = PopupUpgrade.instance.tableTower.descTowersData[indexColumn].list[indexCell];
         PopupUpgrade.instance.board.UpdateInfor(data.Name, data.Description);
     }
 }

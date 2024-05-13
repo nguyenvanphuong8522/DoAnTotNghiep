@@ -7,79 +7,55 @@ using System;
 public class DesignLevel : Singleton<DesignLevel>
 {
     public ListLevelScriptable data;
-    public int levelIndex;
-    public int type;
-    public NameObstacle nameObstacle;
-    public GameObject prefabIndicator;
-    private void Start()
+    public int level;
+    public int typeWeather;
+    public List<ObstacleScriptable> obstacles;
+    public Transform tileObstacles;
+    public Transform tileRoad;
+    private ListWaveScriptable listWave;
+
+    protected override void Awake()
     {
-        foreach (var item in data.levels[levelIndex].listObstacle)
-        {
-            AddObstacle(item.pos);
-        }
+        base.Awake();
+        listWave = data.levels[level].waves;
     }
 
-    public List<ObstacleScriptable> obstacles;
-    public List<GameObject> indicators;
+
 #if UNITY_EDITOR
     [Button]
     public void Save()
     {
-        data.levels[levelIndex].listObstacle = obstacles;
+        data.levels[level].listObstacle = obstacles;
+        data.levels[level].waves = listWave;
         EditorUtility.SetDirty(data);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }
 #endif
-    private void OnMouseUp()
+
+    [Button]
+    public void ChangeObstacles()
     {
-        Vector3 newPos = ConvertToGridPos.instance.GetPosToBuild();
-        if (Input.GetKey(KeyCode.D))
+        obstacles.Clear();
+        foreach (Transform element in tileObstacles)
         {
-            Delete(newPos);
-            return;
-        }
-        AddObstacle(newPos);
-    }
-    private void Delete(Vector3 pos)
-    {
-        ObstacleScriptable x = obstacles.Find(x => x.pos == pos);
-        GameObject indicator = indicators.Find(x => x.transform.position == pos);
-        if (x != null)
-        {
-            obstacles.Remove(x);
-        }
-        if (indicator != null)
-        {
-            indicators.Remove(indicator);
-            Destroy(indicator);
+            ObstacleScriptable newData = new ObstacleScriptable();
+            newData.pos = element.position;
+            newData.type = typeWeather;
+            int intName = Convert.ToInt32(element.name);
+            newData.name = (NameObstacle)intName;
+            obstacles.Add(newData);
         }
     }
-
-    private void AddObstacle(Vector3 pos)
+    [Button]
+    public void ChangeRoad()
     {
-        ObstacleScriptable newObstacle = new ObstacleScriptable();
-        newObstacle.type = type;
-        newObstacle.name = nameObstacle;
-        newObstacle.pos = pos;
-
-        CheckAdd(newObstacle);
-    }
-
-    private void CheckAdd(ObstacleScriptable newObstacle)
-    {
-        ObstacleScriptable x = obstacles.Find(x => x.pos == newObstacle.pos);
-        if (x == null)
+        listWave.paths[0] = new Path();
+        listWave.paths[0].path = new Vector2[tileRoad.childCount];
+        for (int i = 0; i < tileRoad.childCount; i++)
         {
-            obstacles.Add(newObstacle);
-            Indicator(newObstacle.pos);
+            listWave.paths[0].path[i] = (Vector2)tileRoad.GetChild(i).position;
         }
     }
-    public void Indicator(Vector3 pos)
-    {
-        GameObject indicator = Instantiate(prefabIndicator, pos, Quaternion.identity);
-        indicators.Add(indicator);
-    }
-
 
 }

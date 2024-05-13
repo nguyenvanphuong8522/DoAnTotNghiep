@@ -20,6 +20,7 @@ public class LevelScriptable
     public int homeSpriteIndex;
     public ListWaveScriptable waves;
     public List<ObstacleScriptable> listObstacle;
+    public int heightCamBound;
 }
 
 

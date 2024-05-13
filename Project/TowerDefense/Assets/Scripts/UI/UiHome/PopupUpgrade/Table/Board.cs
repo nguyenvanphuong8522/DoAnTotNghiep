@@ -16,7 +16,7 @@ public class Board : Singleton<Board>
 
     private void Start()
     {
-        DescTowerSctiptable data = PopupUpgrade.instance.descStrategyData.list[0];
+        DescTowerSctiptable data = PopupUpgrade.instance.tableTower.descStrategyData.list[0];
 
         UpdateInfor(data.Name, data.Description);
     }

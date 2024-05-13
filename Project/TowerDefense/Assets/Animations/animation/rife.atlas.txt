@@ -1,0 +1,48 @@
+
+rife.png
+size: 103,160
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 2, 83
+  size: 75, 50
+  orig: 77, 52
+  offset: 1, 1
+  index: -1
+lv2/body
+  rotate: true
+  xy: 54, 99
+  size: 59, 45
+  orig: 59, 45
+  offset: 0, 0
+  index: -1
+lv2/nong
+  rotate: false
+  xy: 83, 2
+  size: 18, 41
+  orig: 18, 41
+  offset: 0, 0
+  index: -1
+lv3/body
+  rotate: true
+  xy: 2, 19
+  size: 62, 57
+  orig: 62, 57
+  offset: 0, 0
+  index: -1
+lv3/nong
+  rotate: true
+  xy: 61, 45
+  size: 52, 38
+  orig: 52, 38
+  offset: 0, 0
+  index: -1
+nong
+  rotate: false
+  xy: 61, 3
+  size: 20, 40
+  orig: 20, 40
+  offset: 0, 0
+  index: -1

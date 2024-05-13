@@ -13,15 +13,15 @@ public class CellUpgrade : CellTower
     public void SetData(int indexColumn, int indexCell, UpgradeType type)
     {
         upgradeType = type;
-        imgIcon.sprite = PopupUpgrade.instance.iconsCellData.optionSprites.array[(int)type];
-        txtPrice.text = PopupUpgrade.instance.pricesTower[indexColumn].list[indexCell].priceUpgrades[indexCell].ToString();
+        imgIcon.sprite = PopupUpgrade.instance.tableTower.iconsCellData.optionSprites.array[(int)type];
+        txtPrice.text = PopupUpgrade.instance.tableTower.pricesTower[indexColumn].list[indexCell].priceUpgrades[indexCell].ToString();
         this.indexCell = indexCell;
         this.indexColumn = indexColumn;
         gameObject.SetActive(true);
     }
     public override void UpdateBoard()
     {
-        DescTowerSctiptable data = PopupUpgrade.instance.descUpgradeData.list[(int)upgradeType];
+        DescTowerSctiptable data = PopupUpgrade.instance.tableTower.descUpgradeData.list[(int)upgradeType];
         PopupUpgrade.instance.board.UpdateInfor(data.Name, data.Description);
     }
 }

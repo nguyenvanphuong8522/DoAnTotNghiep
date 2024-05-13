@@ -6,9 +6,12 @@ public class BtnStrategyTower : BtnTowerSelect
 {
     public override void UpdateBoard()
     {
-        DescTowerSctiptable data = PopupUpgrade.instance.descStrategyData.list[indexCell];
-        PopupUpgrade.instance.board.UpdateInfor(data.Name, data.Description);
-        PopupUpgrade.instance.table.UpdateTable(indexCell, PopupUpgrade.instance.towerTableData[indexCell]);
+        PopupUpgrade popUpgrade = PopupUpgrade.instance;
+        DescTowerSctiptable data = popUpgrade.tableTower.descStrategyData.list[indexCell];
+        popUpgrade.board.UpdateInfor(data.Name, data.Description);
+        popUpgrade.tableTower.UpdateTable(indexCell);
+        popUpgrade.tableAbility.gameObject.SetActive(false);
+        popUpgrade.tableTower.gameObject.SetActive(true);
     }
     
 }

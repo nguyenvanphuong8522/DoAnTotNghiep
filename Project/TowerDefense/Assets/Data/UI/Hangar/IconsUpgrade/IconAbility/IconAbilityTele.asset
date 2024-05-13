@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: IconAbilityTele
   m_EditorClassIdentifier: 
   array:
-  - {fileID: 21300000, guid: df9f772ff128bf749a07cbd1cc1503a9, type: 3}
-  - {fileID: 21300000, guid: ab4bd58e69d1e40459b1f3d80653f333, type: 3}
+  - {fileID: 21300000, guid: 588d3329d4fadbf47b11463b7996a90d, type: 3}
+  - {fileID: 21300000, guid: 588d3329d4fadbf47b11463b7996a90d, type: 3}

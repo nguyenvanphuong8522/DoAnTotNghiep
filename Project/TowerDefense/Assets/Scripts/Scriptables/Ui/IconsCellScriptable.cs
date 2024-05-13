@@ -7,6 +7,5 @@ public class IconsCellScriptable : ScriptableObject
 {
     public ArraySprite optionSprites;
     public List<ArraySprite> towerSprites;
-    public List<ArraySprite> abilitySprites;
 }
 
