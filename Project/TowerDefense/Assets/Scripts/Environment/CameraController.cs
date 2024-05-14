@@ -43,7 +43,7 @@ public class CameraController : MonoBehaviour
             float camHalfHeight = cam.orthographicSize;
             float camHalfWidth = camHalfHeight * screenAspect;
             newPos.x = Mathf.Clamp(newPos.x, -maxRight + camHalfWidth, maxRight - camHalfWidth);
-            newPos.y = Mathf.Clamp(newPos.y, -maxHeight + camHalfHeight, maxHeight - camHalfHeight);
+            newPos.y = Mathf.Clamp(newPos.y, -maxHeight + camHalfHeight + box.offset.y, maxHeight - camHalfHeight + box.offset.y);
             transform.position = newPos;
         }
         float size = cam.orthographicSize - Input.GetAxis("Mouse ScrollWheel");

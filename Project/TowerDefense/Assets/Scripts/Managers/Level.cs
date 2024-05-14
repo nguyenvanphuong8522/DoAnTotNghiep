@@ -33,7 +33,7 @@ public class Level : MonoBehaviour
             listObstacle = dataLevel.listObstacle,
             home = data.homeSprites[dataLevel.homeSpriteIndex],
             bg = data.bgSprites[dataLevel.bgSpriteIndex],
-            arr = dataLevel.waves.paths[0].path,
+            arr = dataLevel.waves.paths,
             posHouse = dataLevel.posHouse
         };
         environment.Init(infor);

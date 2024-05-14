@@ -12,12 +12,11 @@ public class DesignLevel : Singleton<DesignLevel>
     public List<ObstacleScriptable> obstacles;
     public Transform tileObstacles;
     public Transform tileRoad;
-    private ListWaveScriptable listWave;
+    public ListWaveScriptable listWave;
 
     protected override void Awake()
     {
         base.Awake();
-        listWave = data.levels[level].waves;
     }
 
 
@@ -28,6 +27,7 @@ public class DesignLevel : Singleton<DesignLevel>
         data.levels[level].listObstacle = obstacles;
         data.levels[level].waves = listWave;
         EditorUtility.SetDirty(data);
+        EditorUtility.SetDirty(listWave);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }

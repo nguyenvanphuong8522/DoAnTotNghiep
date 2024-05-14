@@ -15,7 +15,12 @@ MonoBehaviour:
   gatesPos:
   - {x: 0, y: 0, z: 0}
   paths:
-  - path: []
+  - path:
+    - {x: 7.5, y: -3.5}
+    - {x: -3.5, y: -3.5}
+    - {x: -3.5, y: -0.5}
+    - {x: 4.5, y: -0.5}
+    - {x: 4.5, y: 1.5}
   listWave:
   - gates:
     - amount: 1

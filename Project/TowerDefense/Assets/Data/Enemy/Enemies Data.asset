@@ -15,19 +15,19 @@ MonoBehaviour:
   enemies:
   - name: Small Solider
     health: 40
-    speedMove: 1
+    speedMove: 0.75
   - name: Big Solider
     health: 160
-    speedMove: 1
+    speedMove: 0.75
   - name: Small Car
-    health: 240
-    speedMove: 2
+    health: 200
+    speedMove: 1
   - name: Big Car
-    health: 30
-    speedMove: 2
+    health: 400
+    speedMove: 0.75
   - name: Small Tank
-    health: 70
-    speedMove: 2
+    health: 1000
+    speedMove: 0.75
   - name: Big Tank
     health: 200
-    speedMove: 2
+    speedMove: 1

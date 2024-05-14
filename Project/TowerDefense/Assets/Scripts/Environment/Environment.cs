@@ -7,7 +7,7 @@ public class EnvirInfor
     public Sprite home;
     public Sprite bg;
     public List<ObstacleScriptable> listObstacle;
-    public Vector2[] arr;
+    public List<Path> arr;
     public Vector3 posHouse;
 }
 public class Environment : MonoBehaviour

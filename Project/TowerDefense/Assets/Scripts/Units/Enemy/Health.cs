@@ -7,6 +7,7 @@ public class Health : MonoBehaviour, Ihealth
     public CircleCollider2D circleCollider;
     public EnemyName enemyName;
     public int coin;
+    public Transform sprite;
     public float health { get; set; }
     public HealBar healBar { get; set ; }
 
@@ -87,7 +88,7 @@ public class Health : MonoBehaviour, Ihealth
     {
         int index = (int)enemyName;
         GameObject die = ObjectPool.instance.Get(ObjectPool.instance.enemyDies[index], transform.position, 0.7f);
-        die.transform.up = transform.GetChild(0).up;
+        die.transform.up = sprite.up;
     }
 
 }

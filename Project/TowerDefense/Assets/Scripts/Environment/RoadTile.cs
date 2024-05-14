@@ -22,9 +22,13 @@ public class RoadTile : MonoBehaviour
         RemoveListTile();
         listPos.Clear();
     }
-    public void InitRoad(Vector2[] path)
+    public void InitRoad(List<Path> listPath)
     {
-        SetTilesPos(path);
+        foreach(var item in listPath)
+        {
+            SetTilesPos(item.path);
+        }
+        
         SetListTile();
     }
 
