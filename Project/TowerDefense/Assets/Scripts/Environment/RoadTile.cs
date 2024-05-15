@@ -10,7 +10,7 @@ public class RoadTile : MonoBehaviour
     [SerializeField]
     private Tilemap tileMap;
 
-    public TileBase tileBase;
+    public TileBase[] tileBase;
 
     public List<Vector3Int> listPos;
     private void OnEnable()
@@ -34,7 +34,7 @@ public class RoadTile : MonoBehaviour
 
     public void SetTile(Vector3Int pos)
     {
-        tileMap.SetTile(pos, tileBase);
+        tileMap.SetTile(pos, tileBase[LevelManager.instance.listLevelData.levels[LevelManager.instance.indexLevel].bgSpriteIndex]);
     }
 
     public void RemoveTile(Vector3Int pos)

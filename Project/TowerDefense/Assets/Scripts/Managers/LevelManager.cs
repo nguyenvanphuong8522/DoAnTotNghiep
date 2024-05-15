@@ -6,7 +6,7 @@ public class LevelManager : Singleton<LevelManager>
 {
     public ListLevelScriptable listLevelData;
     public Level curLevel;
-    private int indexLevel;
+    public int indexLevel;
 
     [Button]
     public void Test()

@@ -16,6 +16,11 @@ public class Level : MonoBehaviour
     {
         dataLevel = data.levels[indexLevel];
         health = 10;
+        Vector2 size = new Vector2(14.4f, 10 + data.levels[indexLevel].heightBound);
+        Vector2 offset = new Vector2(0,-1 - (data.levels[indexLevel].heightBound / 2));
+        CameraController.instance.box.size = size;
+        CameraController.instance.box.offset = offset;
+        CameraController.instance.UpdataContraint();
         UiGameplay.instance.UpdatTxtHealth(health);
         IncreaseCoin(dataLevel.initMoney);
         SetEnvironmentData(data);

@@ -18,9 +18,9 @@ public class LevelScriptable
     public Vector3 posHouse;
     public int bgSpriteIndex;
     public int homeSpriteIndex;
+    public int heightBound;
     public ListWaveScriptable waves;
     public List<ObstacleScriptable> listObstacle;
-    public int heightCamBound;
 }
 
 

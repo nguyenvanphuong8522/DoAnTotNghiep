@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class CameraController : Singleton<CameraController>
 {
     public Camera cam;
     private Vector3 hitPos;
@@ -13,8 +13,9 @@ public class CameraController : MonoBehaviour
     private float minZoom;
     private float maxZoom;
 
-    private void Awake()
+    protected override void Awake()
     {
+        base.Awake();
         screenAspect = (float)Screen.width / Screen.height;
         float y = (float)16 / 9;
         float size = 4f / (screenAspect / y);
@@ -22,6 +23,10 @@ public class CameraController : MonoBehaviour
         maxZoom = size;
         minZoom = size - 1;
 
+        
+    }
+    public void UpdataContraint()
+    {
         maxRight = box.size.x / 2;
         maxHeight = box.size.y / 2;
     }

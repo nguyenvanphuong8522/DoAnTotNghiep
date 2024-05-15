@@ -8,7 +8,6 @@ public class DesignLevel : Singleton<DesignLevel>
 {
     public ListLevelScriptable data;
     public int level;
-    public int typeWeather;
     public List<ObstacleScriptable> obstacles;
     public Transform tileObstacles;
     public Transform tileRoad;
@@ -17,6 +16,7 @@ public class DesignLevel : Singleton<DesignLevel>
     protected override void Awake()
     {
         base.Awake();
+        obstacles = data.levels[level].listObstacle;
     }
 
 
@@ -36,25 +36,31 @@ public class DesignLevel : Singleton<DesignLevel>
     [Button]
     public void ChangeObstacles()
     {
-        obstacles.Clear();
         foreach (Transform element in tileObstacles)
         {
+            string OBname = element.name;
+            NameObstacle intName = (NameObstacle)Convert.ToInt32(element.name.Substring(0, 1));
+            int type = Convert.ToInt32(element.name.Substring(1,1));
+
             ObstacleScriptable newData = new ObstacleScriptable();
             newData.pos = element.position;
-            newData.type = typeWeather;
-            int intName = Convert.ToInt32(element.name);
-            newData.name = (NameObstacle)intName;
-            obstacles.Add(newData);
+            newData.type = type;
+            newData.name = intName;
+            ObstacleScriptable nx = obstacles.Find(x => x.pos == newData.pos);
+            if (nx == null)
+            {
+                obstacles.Add(newData);
+            }
         }
     }
     [Button]
     public void ChangeRoad()
     {
-        listWave.paths[0] = new Path();
-        listWave.paths[0].path = new Vector2[tileRoad.childCount];
+
         for (int i = 0; i < tileRoad.childCount; i++)
         {
-            listWave.paths[0].path[i] = (Vector2)tileRoad.GetChild(i).position;
+            int indexPath = Convert.ToInt32(tileRoad.GetChild(i).name.Substring(4, 1));
+            listWave.paths[indexPath].path[i] = (Vector2)tileRoad.GetChild(i).position;
         }
     }
 
