@@ -184,6 +184,8 @@ MonoBehaviour:
   animator: {fileID: 0}
   towerAttacks: []
   isUnderAttack: 0
+  maxHeal: 1600
+  coinDestroy: 10
 --- !u!114 &9040772714820705212
 MonoBehaviour:
   m_ObjectHideFlags: 0

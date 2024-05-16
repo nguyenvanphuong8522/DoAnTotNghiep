@@ -19,7 +19,6 @@ public class BtnLevel : MonoBehaviour
     public void EventClick()
     {
         Uihome.instance.HideHome();
-        Uihome.instance.popUpManager.popUpLevel.Hide();
         LevelManager.instance.InitLevel(lv);
     }
 }

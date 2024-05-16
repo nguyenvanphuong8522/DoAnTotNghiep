@@ -13,12 +13,14 @@ public class Obstacle : MonoBehaviour, Ihealth
 
     public float health { get; set; }
     public HealBar healBar { get; set; }
+    public int maxHeal;
+    public int coinDestroy;
 
     private void OnEnable()
     {
         towerAttacks.Clear();
         isUnderAttack = false;
-        health = 1600;
+        health = maxHeal;
         healBar = GetComponent<HealBar>();
         GameEvent.returnLevel += ReturnToPool;
     }
@@ -129,7 +131,7 @@ public class Obstacle : MonoBehaviour, Ihealth
                 element.ShootObstacle(transform, false);
             }
         }
-        LevelManager.instance.curLevel.IncreaseCoin(10);
+        LevelManager.instance.curLevel.IncreaseCoin(coinDestroy);
     }
     private void SpawnEffectDie()
     {

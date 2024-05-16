@@ -20,14 +20,23 @@ MonoBehaviour:
     health: 160
     speedMove: 0.75
   - name: Small Car
-    health: 200
-    speedMove: 1
+    health: 280
+    speedMove: 1.7
   - name: Big Car
-    health: 400
-    speedMove: 0.75
+    health: 1500
+    speedMove: 1
   - name: Small Tank
-    health: 1000
-    speedMove: 0.75
+    health: 5500
+    speedMove: 1
   - name: Big Tank
-    health: 200
+    health: 10000
+    speedMove: 1
+  - name: Big Tank2
+    health: 10000
+    speedMove: 1
+  - name: Big Tank3
+    health: 10000
+    speedMove: 1
+  - name: Big Tank4
+    health: 10000
     speedMove: 1

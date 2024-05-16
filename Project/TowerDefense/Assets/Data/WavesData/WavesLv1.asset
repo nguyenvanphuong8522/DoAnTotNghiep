@@ -43,31 +43,31 @@ MonoBehaviour:
       type: 1
   - gates:
     - amount: 5
-      rate: 1
+      rate: 4
       type: 2
   - gates:
     - amount: 10
-      rate: 1
+      rate: 4
       type: 2
   - gates:
     - amount: 15
-      rate: 1
+      rate: 3
       type: 2
   - gates:
     - amount: 20
-      rate: 1
+      rate: 2
       type: 2
   - gates:
     - amount: 5
-      rate: 1
+      rate: 4
       type: 3
   - gates:
     - amount: 5
-      rate: 1
+      rate: 4
       type: 3
   - gates:
     - amount: 5
-      rate: 1
+      rate: 3.5
       type: 3
   - gates:
     - amount: 1
