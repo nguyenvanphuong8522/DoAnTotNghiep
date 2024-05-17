@@ -1,0 +1,25 @@
+<mxfile host="Electron" modified="2024-05-17T14:01:06.784Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="J9nyBZ0U8Ok_UIo7min-" version="24.4.0" type="device">
+  <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
+    <mxGraphModel dx="1450" dy="629" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-2" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="-33" y="51" width="20" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-3" value="Ui Home" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="69" y="45" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-4" value="Ui Upgrade" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="213" y="45" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-5" value="Data Towers" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="374" y="47" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-6" value="Data Player" style="html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="519" y="47" width="110" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

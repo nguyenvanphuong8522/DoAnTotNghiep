@@ -1,0 +1,154 @@
+<mxfile host="Electron" modified="2024-05-17T14:11:23.973Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.0 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="Rd5Bl8pP8mjj-8GT6KuP" version="24.4.0" type="device">
+  <diagram name="Page-1" id="2YBvvXClWsGukQMizWep">
+    <mxGraphModel dx="1900" dy="899" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-2" value="" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};participant=umlActor;" vertex="1" parent="1">
+          <mxGeometry x="-33" y="51" width="20" height="622" as="geometry" />
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-7" value="Ui Home" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="70" y="51" width="100" height="627" as="geometry" />
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-9" value="Ui Upgrade" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="217" y="54" width="100" height="626" as="geometry" />
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-10" value="Data Towers" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="365" y="54" width="100" height="629" as="geometry" />
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-11" value="Data Player" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="504" y="51" width="100" height="627" as="geometry" />
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-16" value="Ấn vào nút Upgrade" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="-21.99965517241395" y="135" as="sourcePoint" />
+            <mxPoint x="120.69" y="135" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-17" value="Tải lên danh sách tháp" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="119.00034482758628" y="158" as="sourcePoint" />
+            <mxPoint x="265.6900000000002" y="158" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-18" value="Kiểm tra tồn tại dữ liệu" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0.51;exitY=0.347;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="266" y="176.00000000000003" as="sourcePoint" />
+            <mxPoint x="412.5000000000002" y="176.00000000000003" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-19" value="Có dữ liệu" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="413.6900000000002" y="206.0000000000001" as="sourcePoint" />
+            <mxPoint x="266.0003448275863" y="206.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-20" value="Tải lên danh sách tháp" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="267" y="222" as="sourcePoint" />
+            <mxPoint x="119" y="222" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-21" value="Hiển thị danh sách" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="240" as="sourcePoint" />
+            <mxPoint x="-28" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-22" value="Ấn chọn tháp" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="-23.99965517241395" y="289" as="sourcePoint" />
+            <mxPoint x="118.69" y="289" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-23" value="Kiểm tra thông tin tháp" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="124.00034482758605" y="311" as="sourcePoint" />
+            <mxPoint x="266.69" y="311" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-24" value="Kiểm tra tồn tại dữ liệu" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;exitX=0.51;exitY=0.347;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="267" y="322.31000000000006" as="sourcePoint" />
+            <mxPoint x="413.5000000000002" y="322.31000000000006" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-25" value="Có dữ liệu" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="416" y="350.31" as="sourcePoint" />
+            <mxPoint x="268" y="350.31" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-26" value="Trả về thông tin" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="270" y="384" as="sourcePoint" />
+            <mxPoint x="122" y="384" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-27" value="HIển thị thông tin tháp" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="119" y="402" as="sourcePoint" />
+            <mxPoint x="-29" y="402" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-28" value="Ấn chọn tháp" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="-22.99965517241395" y="447" as="sourcePoint" />
+            <mxPoint x="119.69" y="447" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-30" value="Kiểm tra có đủ tiền không" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="120.00034482758605" y="465" as="sourcePoint" />
+            <mxPoint x="262.69" y="465" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-31" value="Kiểm tra có đủ tiền không" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" target="sfjG-DWCoehXRHjB1xbL-11">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="266.00034482758605" y="505" as="sourcePoint" />
+            <mxPoint x="408.69" y="505" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-32" value="Không đủ" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="554.69" y="540" as="sourcePoint" />
+            <mxPoint x="268.0003448275863" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-33" value="Không đủ" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="265.5000000000002" y="556.3099999999998" as="sourcePoint" />
+            <mxPoint x="115.00034482758628" y="556.31" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-34" value="Thông báo thất bại" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="122" y="570" as="sourcePoint" />
+            <mxPoint x="-28.999655172413725" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-35" value="Đủ tiền" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="561.69" y="584" as="sourcePoint" />
+            <mxPoint x="275.0003448275863" y="584" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-36" value="Đủ" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="272.5000000000002" y="600.3099999999998" as="sourcePoint" />
+            <mxPoint x="122.00034482758628" y="600.31" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-37" value="Thông báo thành công" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="129" y="614" as="sourcePoint" />
+            <mxPoint x="-21.999655172413725" y="614" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="sfjG-DWCoehXRHjB1xbL-40" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;Player&lt;/span&gt;" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-63" y="19" width="80" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
