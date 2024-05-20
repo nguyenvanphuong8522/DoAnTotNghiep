@@ -20160,6 +20160,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
+      propertyPath: effectDollar.prefab
+      value: 
+      objectReference: {fileID: 6825296262737552551, guid: 0ee2f11d048cbc54492d36e13e1a45e7, type: 3}
+    - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
       propertyPath: enemyDies.Array.size
       value: 9
       objectReference: {fileID: 0}
@@ -20170,6 +20174,10 @@ PrefabInstance:
     - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
       propertyPath: enemyLives.Array.size
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
+      propertyPath: effectDollar.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
       propertyPath: bullets.Array.data[2].name
@@ -20283,6 +20291,10 @@ PrefabInstance:
       propertyPath: enemyLives.Array.data[8].prefab
       value: 
       objectReference: {fileID: 1436917404280547587, guid: ea9a740013516f345826c0d9add79dbf, type: 3}
+    - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
+      propertyPath: effectDollar.Array.data[0].prefab
+      value: 
+      objectReference: {fileID: 6825296262737552551, guid: 0ee2f11d048cbc54492d36e13e1a45e7, type: 3}
     - target: {fileID: 7301663379209718095, guid: 1a6e8bba899d1c741a61bc7598169b7f, type: 3}
       propertyPath: obstacleDestroys.Array.data[0].prefab
       value: 

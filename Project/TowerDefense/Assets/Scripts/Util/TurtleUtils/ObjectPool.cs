@@ -75,11 +75,13 @@ public class ObjectPool : Singleton<ObjectPool>
     public List<Pool> obstacleDestroys = new List<Pool>();
     public List<ArrayPool> towers = new List<ArrayPool>();
     public List<ArrayPool> obstacles = new List<ArrayPool>();
+    public Pool effectDollar;
 
     public Pool gate;
     protected override void Awake()
     {
         pools.Add(gate);
+        pools.Add(effectDollar);
         AddToPools(bullets);
         AddToPools(enemyLives);
         AddToPools(enemyDies);
