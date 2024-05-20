@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: ChildrenCannon
   m_EditorClassIdentifier: 
   list:
-  - Name: c1
-    Description: 
-  - Name: c2
-    Description: 
-  - Name: c3
-    Description: 
+  - Name: Single Cannon
+    Description: Basic cannon with short range and moderate firepower, mainly used
+      for close defense.
+  - Name: Ironclad Blaster
+    Description: Enhanced cannon with extended range and stronger firepower, capable
+      of accurately targeting medium and long-distance threats.
+  - Name: Vortex Cannon
+    Description: Advanced cannon with wide range, powerful firepower, and integrated
+      automated targeting and firing systems for moving targets.

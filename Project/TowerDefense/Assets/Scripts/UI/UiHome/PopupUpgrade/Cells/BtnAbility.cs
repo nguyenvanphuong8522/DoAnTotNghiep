@@ -9,9 +9,12 @@ public class BtnAbility : BtnTowerSelect
         PopupUpgrade popUpgrade = PopupUpgrade.instance;
         DescTowerSctiptable data = popUpgrade.tableAbility.descAbilityData.list[indexCell];
         popUpgrade.board.UpdateInfor(data.Name, data.Description);
-        popUpgrade.tableAbility.SetData();
         popUpgrade.tableAbility.gameObject.SetActive(true);
         popUpgrade.tableTower.gameObject.SetActive(false);
+        popUpgrade.tableAbility.SetData();
+        RectTransform myRect = GetComponent<RectTransform>();
+        Vector3 newPos = new Vector3(0, myRect.anchoredPosition.y + 23, 0);
+        popUpgrade.SetBoundMove(newPos);
     }
 
 }

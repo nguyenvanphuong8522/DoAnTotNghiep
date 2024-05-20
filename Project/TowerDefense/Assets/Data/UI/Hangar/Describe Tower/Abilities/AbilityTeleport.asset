@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AbilityTeleport
   m_EditorClassIdentifier: 
   list:
-  - Name: tele1
+  - Name: Teleport
     Description: 
-  - Name: tele2
-    Description: 
+  - Name: Teleport Longer
+    Description: + 5 second

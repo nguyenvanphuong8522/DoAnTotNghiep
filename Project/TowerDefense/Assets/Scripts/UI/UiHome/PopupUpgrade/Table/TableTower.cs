@@ -15,6 +15,8 @@ public class TableTower : Singleton<TableTower>
     public List<DescTowersScriptable> descTowersData;
     public DescTowersScriptable descStrategyData;
     public DescTowersScriptable descUpgradeData;
+    public LineEffect lineEffect;
+
 
     public void UpdateTable(int id)
     {
@@ -25,9 +27,10 @@ public class TableTower : Singleton<TableTower>
     {
         idTable = id;
         int count = towerTableData[id].columns.Count;
-
+        lineEffect.ClearPoints();
         for (int i = 0; i < count; i++)
         {
+            lineEffect.AddPoint(columns[i].rect0.position);
             columns[i].SetDataColumn(towerTableData[id].columns[i]);
             columns[i].UpdateColumn();
         }

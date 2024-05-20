@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
-    public ListWaveScriptable listWaveScriptable;
+    public RectTransform rect;
 
     [Button]
     public void Set()
     {
+        Vector2 screenPosition = RectTransformUtility.WorldToScreenPoint(Camera.main, rect.position);
+
+        Vector3 worldPosition = Camera.main.ScreenToWorldPoint(new Vector3(screenPosition.x, screenPosition.y, Camera.main.nearClipPlane));
+        transform.position = worldPosition;
     }
 }

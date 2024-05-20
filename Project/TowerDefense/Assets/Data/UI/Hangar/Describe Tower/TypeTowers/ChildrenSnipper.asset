@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: ChildrenSnipper
   m_EditorClassIdentifier: 
   list:
-  - Name: s1
-    Description: 
-  - Name: s2
-    Description: 
-  - Name: s3
-    Description: 
+  - Name: Shadow Sentinel
+    Description: Basic sniper rifle capable of penetrating multiple light targets
+      at medium range.
+  - Name: Phantom Marksman
+    Description: Enhanced sniper rifle with extended range, able to penetrate multiple
+      harder and thicker targets.
+  - Name: Eagle Eye Perch
+    Description: Advanced sniper rifle with very long range, capable of penetrating
+      multiple heavy and armored targets, integrated with recoil reduction and advanced
+      sensors.

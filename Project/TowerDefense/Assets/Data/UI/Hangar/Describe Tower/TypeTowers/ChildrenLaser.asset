@@ -13,9 +13,13 @@ MonoBehaviour:
   m_Name: ChildrenLaser
   m_EditorClassIdentifier: 
   list:
-  - Name: l1
-    Description: 
-  - Name: l2
-    Description: 
-  - Name: l3
-    Description: 
+  - Name: 'Luminous Laser '
+    Description: Basic continuous damage laser, suitable for lowering target resistance
+      at close range.
+  - Name: Radiant Blaster
+    Description: Enhanced laser with increased energy, capable of dealing greater
+      continuous damage and longer range.
+  - Name: Ray Emitter
+    Description: Extremely powerful laser, able to inflict significant continuous
+      damage on heavily armored targets, integrated with automatic target detection
+      and control systems.

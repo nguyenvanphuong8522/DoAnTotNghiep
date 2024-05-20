@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   list:
   - Name: machine gun
-    Description: 
+    Description: The machine gun defense tower is a fortified structure with automated
+      machine guns, strategically positioned to protect critical areas.
   - Name: cannon
-    Description: 
+    Description: Slow-firing but high damage.
   - Name: snipper
-    Description: 
-  - Name: time wraper
-    Description: 
+    Description: Move through multiple enemies.
+  - Name: Time-wraper
+    Description: Slow down the running speed of enemies within range.
   - Name: laser
-    Description: 
+    Description: Inflict continuous damage within range

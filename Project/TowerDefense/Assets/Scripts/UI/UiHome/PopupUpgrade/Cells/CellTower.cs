@@ -16,6 +16,9 @@ public class CellTower : BtnTowerSelect
     public virtual void SetData(int indexColumn, int indexCell)
     {
         imgIcon.sprite = PopupUpgrade.instance.tableTower.iconsCellData.towerSprites[indexColumn].array[indexCell];
+        imgIcon.SetNativeSize();
+        imgIcon.transform.localScale = Vector3.one * 0.65f;
+
         txtPrice.text = PopupUpgrade.instance.tableTower.pricesTower[indexColumn].list[indexCell].priceUnlock.ToString();
         this.indexCell = indexCell;
         this.indexColumn = indexColumn;

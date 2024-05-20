@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: ChildrenMachineGun
   m_EditorClassIdentifier: 
   list:
-  - Name: g1
-    Description: 
-  - Name: g2
-    Description: 
-  - Name: g3
-    Description: 
+  - Name: MG-1
+    Description: Basic defense tower with small-caliber automated machine guns, capable
+      of protecting nearby areas.
+  - Name: MG-2
+    Description: Enhanced defense tower equipped with medium-caliber machine guns,
+      with extended range and improved durability.
+  - Name: MG-3
+    Description: Advanced defense tower with heavy-caliber machine guns, wide range,
+      and integrated automated target detection and elimination systems.

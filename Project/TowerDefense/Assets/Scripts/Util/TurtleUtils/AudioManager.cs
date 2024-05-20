@@ -11,6 +11,7 @@ public class AudioManager : Singleton<AudioManager>
     private Queue<AudioSource> _queueSources;
 
     public AudioClip[] gunShoots;
+    public AudioClip[] btn;
 
     protected override void Awake()
     {

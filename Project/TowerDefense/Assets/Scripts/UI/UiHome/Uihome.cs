@@ -6,11 +6,13 @@ public class Uihome : Singleton<Uihome>
 {
     public ButtonEffectLogic btnPlay;
     public ButtonEffectLogic btnSetting;
+    public ButtonEffectLogic btnInforGame;
     public PopUpManager popUpManager;
     private void Start()
     {
         btnPlay.onClick.AddListener(ShowPopUpLevel);
         btnSetting.onClick.AddListener(ShowPopUpSetting);
+        btnInforGame.onClick.AddListener(ShowPopUpInforGame);
     }
     private void ShowPopUpLevel()
     {
@@ -19,6 +21,10 @@ public class Uihome : Singleton<Uihome>
     private void ShowPopUpSetting()
     {
         popUpManager.popupSetting.Show();
+    }
+    private void ShowPopUpInforGame()
+    {
+        popUpManager.popupInforGame.Show();
     }
 
     public void HideHome()

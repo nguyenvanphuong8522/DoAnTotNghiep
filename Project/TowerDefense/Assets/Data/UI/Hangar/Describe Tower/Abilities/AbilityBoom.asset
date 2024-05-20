@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AbilityBoom
   m_EditorClassIdentifier: 
   list:
-  - Name: boom1
+  - Name: Mine
     Description: 
-  - Name: boom2
-    Description: 
+  - Name: Mine Power
+    Description: + 20% dame

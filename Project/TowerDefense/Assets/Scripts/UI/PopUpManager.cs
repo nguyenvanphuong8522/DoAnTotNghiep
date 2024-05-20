@@ -7,6 +7,7 @@ public class PopUpManager : MonoBehaviour
     public PopupLevel popUpLevel;
     public PopupSetting popupSetting;
     public PopupUpgrade popupUpgrade;
+    public PopUpInforGame popupInforGame;
 
 
 }

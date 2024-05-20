@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Column : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class Column : MonoBehaviour
     [SerializeField] private CellTower cellColumn;
     [HideInInspector] public ColumnSctiptable colData;
     public GameObject cellsUpgrade;
+    [SerializeField] private LineEffect lineEffect;
+    public RectTransform rect0;
+    private Coroutine delayEffect;
     public void UpdateColumn()
     {
         HideCells();
@@ -19,17 +23,25 @@ public class Column : MonoBehaviour
     private void Active()
     {
         gameObject.SetActive(true);
+        if(delayEffect != null )
+        {
+        StopCoroutine(delayEffect);
+
+        }
+        delayEffect = StartCoroutine(UpdateEffectLine());
     }
+    [Button]
     private void SetDataCells()
     {
         cellColumn.SetData(colData.indexTower, colData.level);
-        if(colData.upgradeTypes.Length == 0)
+        int length = colData.upgradeTypes.Length;
+        if (length == 0)
         {
             cellsUpgrade.SetActive(false);
             return;
         }
         cellsUpgrade.SetActive(true);
-        for (int i = 0; i < colData.upgradeTypes.Length; i++)
+        for (int i = 0; i < length; i++)
         {
             cells[i].SetData(colData.indexTower, colData.level, colData.upgradeTypes[i]);
         }
@@ -45,5 +57,20 @@ public class Column : MonoBehaviour
         {
             cell.gameObject.SetActive(false);
         }
+    }
+
+    public IEnumerator UpdateEffectLine()
+    {
+        yield return new WaitForEndOfFrame();
+        lineEffect.ClearPoints();
+        lineEffect.AddPoint(rect0.position);
+        for (int i = 0; i < colData.upgradeTypes.Length; i++)
+        {
+            lineEffect.AddPoint(cells[i].GetComponent<RectTransform>().position);
+        }
+    }
+    private void OnDisable()
+    {
+        lineEffect.ClearPoints();
     }
 }

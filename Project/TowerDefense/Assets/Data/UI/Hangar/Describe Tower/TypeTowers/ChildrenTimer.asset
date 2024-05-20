@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: ChildrenTimer
   m_EditorClassIdentifier: 
   list:
-  - Name: t1
-    Description: 
-  - Name: t2
-    Description: 
-  - Name: t3
-    Description: 
+  - Name: Chrono Freezer
+    Description: Slowdown 20%
+  - Name: Temporal Sentry
+    Description: Slowdown 40%
+  - Name: Time Warp Tower
+    Description: Slowdown 60%
