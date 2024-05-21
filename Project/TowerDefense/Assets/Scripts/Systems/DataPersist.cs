@@ -8,6 +8,11 @@ public class DataPersist
         get => PlayerPrefs.GetInt("LEVEL", 0);
         set => PlayerPrefs.SetInt("LEVEL", value);
     }
+    public static int Money
+    {
+        get => PlayerPrefs.GetInt("MONEY", 0);
+        set => PlayerPrefs.SetInt("MONEY", value);
+    }
     public static int TeleportLevel
     {
         get => PlayerPrefs.GetInt("TELEPORT", 0);
@@ -18,7 +23,7 @@ public class DataPersist
         get => PlayerPrefs.GetInt("BOOM", 0);
         set => PlayerPrefs.SetInt("BOOM", value);
     }
-    public static string StringJsonTables
+    public static string JsonTables
     {
         get => PlayerPrefs.GetString("TABLE");
         set => PlayerPrefs.SetString("TABLE", value);

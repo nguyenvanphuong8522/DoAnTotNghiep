@@ -13,7 +13,6 @@ public class Board : Singleton<Board>
     [SerializeField] private Button buy;
     [SerializeField] private GameObject locked; 
     [SerializeField] private GameObject purchased;
-
     private void Start()
     {
         DescTowerSctiptable data = PopupUpgrade.instance.tableTower.descStrategyData.list[0];
@@ -21,6 +20,31 @@ public class Board : Singleton<Board>
         UpdateInfor(data.Name, data.Description);
     }
     public void UpdateInfor(string name, string desc)
+    {
+        SetNameAndDescript(name, desc);
+        HideInforBottom();
+    }
+    public void UpdateStateSell(bool purchased, bool unLocked)
+    {
+        locked.SetActive(!unLocked);
+        if(!unLocked)
+        {
+            buy.gameObject.SetActive(false);
+            this.purchased.SetActive(false);
+            return;
+        }
+        buy.gameObject.SetActive(!purchased);
+        this.purchased.gameObject.SetActive(purchased);
+    }
+    public void UpdateInfor(string name, string desc, string price)
+    {
+        SetNameAndDescript(name, desc);
+        this.price.text = "Price: $" + price;
+        HideInforBottom();
+        this.price.gameObject.SetActive(true);
+    }
+
+    public void UpdateInfor(string name, string desc, bool purchased)
     {
         SetNameAndDescript(name, desc);
         HideInforBottom();

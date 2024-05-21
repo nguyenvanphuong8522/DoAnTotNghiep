@@ -124,6 +124,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6322254767582074642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1673619305034418884, guid: b7d36182adc2e8b4693b1d00d2ca097b, type: 3}
+  m_PrefabInstance: {fileID: 4649063722486062550}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7796113203160388742 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3221641044243532112, guid: b7d36182adc2e8b4693b1d00d2ca097b, type: 3}
@@ -168,3 +173,5 @@ MonoBehaviour:
   imgIcon: {fileID: 7796113203160388742}
   txtPrice: {fileID: 1540011954544550426}
   indexColumn: 0
+  locked: {fileID: 6322254767582074642}
+  upgradeType: 0

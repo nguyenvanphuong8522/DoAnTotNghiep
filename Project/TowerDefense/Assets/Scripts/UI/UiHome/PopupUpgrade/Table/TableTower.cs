@@ -16,8 +16,7 @@ public class TableTower : Singleton<TableTower>
     public DescTowersScriptable descStrategyData;
     public DescTowersScriptable descUpgradeData;
     public LineEffect lineEffect;
-
-
+    
     public void UpdateTable(int id)
     {
         HideColumns();
