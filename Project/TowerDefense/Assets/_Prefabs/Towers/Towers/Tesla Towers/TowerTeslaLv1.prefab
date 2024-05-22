@@ -19306,6 +19306,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 38019469011824403, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 828184311286113534, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.009
@@ -19347,8 +19351,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4696677080953311680, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4696677080953311680, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5048777072565095735, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5323506431846595108, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_Sprite
@@ -19362,10 +19374,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6691191708746957881, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: daafbbacce3f5de4794902567c917abd, type: 2}
     - target: {fileID: 6705592484036796700, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: indexTower
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7191622840771639939, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: initialSkinName
+      value: lv3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191622840771639939, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 771909c2695b40b4e8da0909375b7522, type: 2}
     - target: {fileID: 8865471695728493889, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -19553,8 +19577,10 @@ MonoBehaviour:
   - {fileID: 1082401990158358028}
   typeBullet: 0
   isShootingObstacle: 0
+  atk: 0
   effectShoots:
   - {fileID: 1711156378391268499}
+  skeletonAnimation: {fileID: 0}
   line: {fileID: 1312474082960904782}
 --- !u!4 &1082401990158358028 stripped
 Transform:

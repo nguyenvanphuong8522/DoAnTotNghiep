@@ -12,6 +12,8 @@ public class UiTowerUpgrade : BasePopup
     public ButtonEffectLogic btnUpgrade, btnSell;
     [SerializeField] private TextMeshProUGUI txtPriceUpdate;
     [SerializeField] private TextMeshProUGUI txtPriceSell;
+    [SerializeField] private Image imgBtnUpgrade;
+    [SerializeField] private GameObject spriteUpgrade;
 
     protected override void Awake()
     {
@@ -48,5 +50,20 @@ public class UiTowerUpgrade : BasePopup
         RemoveListener();
         btnUpgrade.onClick.AddListener(action1);
         btnSell.onClick.AddListener(action2);
+    }
+    [Button]
+    public void LockUpgrade()
+    {
+        btnUpgrade.enabled = false;
+        spriteUpgrade.SetActive(false);
+        txtPriceUpdate.text = "LOCK";
+        txtPriceUpdate.color = Color.red;
+    }
+    [Button]
+    public void Unlock()
+    {
+        btnUpgrade.enabled = true;
+        imgBtnUpgrade.raycastTarget = true;
+        txtPriceUpdate.color = Color.white;
     }
 }

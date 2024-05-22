@@ -33,8 +33,8 @@ public class Column : MonoBehaviour
     [Button]
     private void SetDataCells()
     {
-        bool unLocked = PopupUpgrade.instance.IsUnLocked(colData.indexTower, colData.level);
-        bool purchased = PopupUpgrade.instance.IsPurchased(colData.indexTower, colData.level);
+        bool unLocked = DataHangarSave.instance.IsUnLocked(colData.indexTower, colData.level);
+        bool purchased = DataHangarSave.instance.IsPurchased(colData.indexTower, colData.level);
         cellColumn.SetData(colData.indexTower, colData.level, unLocked, purchased);
         int length = colData.upgradeTypes.Length;
         if (length == 0)
@@ -45,8 +45,8 @@ public class Column : MonoBehaviour
         cellsUpgrade.SetActive(true);
         for (int i = 0; i < length; i++)
         {
-            bool _unLocked = PopupUpgrade.instance.GetUpgradeSave(colData.indexTower, colData.level)[i].unLocked;
-            bool _purchased = PopupUpgrade.instance.GetUpgradeSave(colData.indexTower, colData.level)[i].purchased;
+            bool _unLocked = DataHangarSave.instance.GetUpgradeSave(colData.indexTower, colData.level)[i].unLocked;
+            bool _purchased = DataHangarSave.instance.GetUpgradeSave(colData.indexTower, colData.level)[i].purchased;
             cells[i].SetData(colData.indexTower, colData.level, colData.upgradeTypes[i], _unLocked, _purchased);
         }
     }

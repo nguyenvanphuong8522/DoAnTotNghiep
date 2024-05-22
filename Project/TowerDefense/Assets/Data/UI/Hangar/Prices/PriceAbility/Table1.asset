@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Table1
   m_EditorClassIdentifier: 
   rows:
-  - cells: 0100000002000000
-  - cells: 0300000004000000
+  - cells: f4010000e8030000
+  - cells: bc020000b0040000

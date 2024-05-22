@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 38019469011824403, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 828184311286113534, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -55,6 +59,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: a89c3a3077d99fb4598522e50474cff2, type: 3}
+    - target: {fileID: 4696677080953311680, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5323506431846595108, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -63,6 +71,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6691191708746957881, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9e8e1aba1de3cb440ab7a020ad5eaf12, type: 2}
     - target: {fileID: 6705592484036796700, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: coinSell
       value: 150
@@ -75,6 +87,10 @@ PrefabInstance:
       propertyPath: indexTower
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7191622840771639939, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0c7b236ad945ab94982bf896b4be0c96, type: 2}
     - target: {fileID: 8865471695728493889, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_RootOrder
       value: 0

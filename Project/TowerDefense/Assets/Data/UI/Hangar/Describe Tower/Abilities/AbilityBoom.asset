@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   list:
   - Name: Mine
-    Description: 
+    Description: + 20 % Range
   - Name: Mine Power
-    Description: + 20% dame
+    Description: + 30% dame

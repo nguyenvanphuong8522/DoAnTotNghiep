@@ -22,6 +22,7 @@ public class Level : MonoBehaviour
         CameraController.instance.box.offset = offset;
         CameraController.instance.UpdataContraint();
         UiGameplay.instance.UpdatTxtHealth(health);
+        Ground.instance.uiTowerUpgrade.Lock(data.levels[indexLevel].contraintTower);
         IncreaseCoin(dataLevel.initMoney);
         SetEnvironmentData(data);
         SetUpWaveManager();

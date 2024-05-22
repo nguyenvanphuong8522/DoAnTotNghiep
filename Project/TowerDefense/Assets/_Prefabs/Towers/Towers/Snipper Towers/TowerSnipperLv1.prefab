@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 38019469011824403, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1065134498569980840, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: rate
       value: 1
@@ -59,6 +63,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4696677080953311680, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5323506431846595108, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -67,10 +75,18 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6691191708746957881, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 96c114130c85fec429df89f4360db74d, type: 2}
     - target: {fileID: 6705592484036796700, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: indexTower
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7191622840771639939, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b0b98f647530e74594f1be773ab4c8a, type: 2}
     - target: {fileID: 8865471695576185809, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_LocalScale.x
       value: 15

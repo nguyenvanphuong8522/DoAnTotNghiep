@@ -54,7 +54,10 @@ public class ButtonEffectLogic : Button
         base.OnPointerUp(eventData);
         onUp.Invoke();
         EffectUp();
-        AudioManager.instance.PlayShot(AudioManager.instance.btn[0]);
+        if (hasEffect)
+        {
+            AudioManager.instance.PlayShot(AudioManager.instance.btn[0]);
+        }
     }
 
     public override void OnPointerExit(PointerEventData eventData)
@@ -73,7 +76,7 @@ public class ButtonEffectLogic : Button
 
     public virtual void EffectUp()
     {
-        
+
         ScaleDown();
     }
 

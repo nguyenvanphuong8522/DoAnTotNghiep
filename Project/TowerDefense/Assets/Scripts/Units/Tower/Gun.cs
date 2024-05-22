@@ -1,3 +1,4 @@
+using Spine.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +14,11 @@ public class Gun : MonoBehaviour
     public bool isShootingObstacle;
     protected int indexPointShoot;
     [SerializeField]private int atk;
+    float curTime = -100000;
 
     public ParticleSystem[] effectShoots;
+
+    public SkeletonAnimation skeletonAnimation;
     private void OnEnable()
     {
         isAttacking = false;
@@ -25,6 +29,7 @@ public class Gun : MonoBehaviour
     {
         StopShoot();
         isAttacking = true;
+        
         coroutineAttack = StartCoroutine(RateShoot());
     }
     public virtual void StopShoot()
@@ -33,11 +38,12 @@ public class Gun : MonoBehaviour
         {
             StopCoroutine(coroutineAttack);
             isAttacking = false;
+            skeletonAnimation.AnimationState.SetEmptyAnimation(0, 0);
         }
     }
     public virtual IEnumerator RateShoot()
     {
-        float curTime = Time.time;
+        
         while (isAttacking)
         {
             RotateToDirection();
@@ -63,6 +69,7 @@ public class Gun : MonoBehaviour
             movement.SetTarget(target);
             explore.damage = atk;
         }
+        skeletonAnimation.state.SetAnimation(0, "animation", false);
     }
     private void PlaySound()
     {

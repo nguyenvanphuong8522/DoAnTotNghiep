@@ -71,6 +71,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1430672432642689969, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}
+      propertyPath: initialSkinName
+      value: lv2
+      objectReference: {fileID: 0}
     - target: {fileID: 3249363587664252974, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}
       propertyPath: indexLevel
       value: 1
@@ -90,6 +94,18 @@ PrefabInstance:
     - target: {fileID: 3547412408990114034, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3547412408990114034, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551854182465214334, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.271
+      objectReference: {fileID: 0}
+    - target: {fileID: 8111001211624513057, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8892725937902802380, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}
       propertyPath: m_LocalPosition.y

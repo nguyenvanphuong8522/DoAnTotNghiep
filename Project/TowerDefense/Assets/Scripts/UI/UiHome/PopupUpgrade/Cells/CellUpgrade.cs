@@ -9,13 +9,15 @@ public class CellUpgrade : CellTower
     public UpgradeType upgradeType;
     public override void Start()
     {
+        popUpGrade = PopupUpgrade.instance;
         btn.onClick.AddListener(UpdateBoard);
-    }
+    } 
     public void SetData(int indexColumn, int indexCell, UpgradeType type, bool unLocked, bool purchased)
     {
+        popUpGrade = PopupUpgrade.instance;
         upgradeType = type;
-        imgIcon.sprite = PopupUpgrade.instance.tableTower.iconsCellData.optionSprites.array[(int)type];
-        txtPrice.text = PopupUpgrade.instance.tableTower.pricesTower[indexColumn].list[indexCell].priceUpgrades[indexCell].ToString();
+        imgIcon.sprite = popUpGrade.tableTower.iconsCellData.optionSprites.array[(int)type];
+        txtPrice.text = popUpGrade.tableTower.pricesTower[indexColumn].list[indexCell].priceUpgrades[indexCell].ToString();
         this.indexCell = indexCell;
         this.indexColumn = indexColumn;
         this.unLocked = unLocked;
@@ -25,8 +27,21 @@ public class CellUpgrade : CellTower
     }
     public override void UpdateBoard()
     {
-        DescTowerSctiptable data = PopupUpgrade.instance.tableTower.descUpgradeData.list[(int)upgradeType];
-        PopupUpgrade.instance.board.UpdateInfor(data.Name, data.Description, txtPrice.text);
-        PopupUpgrade.instance.board.UpdateStateSell(purchased, unLocked);
+        popUpGrade = PopupUpgrade.instance;
+        DescTowerSctiptable data = popUpGrade.tableTower.descUpgradeData.list[(int)upgradeType];
+        popUpGrade.board.UpdateInfor(data.Name, data.Description, txtPrice.text);
+        popUpGrade.board.UpdateStateSell(purchased, unLocked);
+        popUpGrade.board.SetActionBuy(() =>
+        {
+            DataHangarSave.instance.PurchaseUpgrade(indexColumn, indexCell, upgradeType);
+            popUpGrade.tableTower.Refresh();
+            popUpGrade.board.UpdateStateSell(purchased, unLocked);
+        });
+        if (DataPersist.Money < popUpGrade.tableTower.pricesTower[indexColumn].list[indexCell].priceUnlock)
+        {
+            popUpGrade.board.BlurBtnBuy();
+            return;
+        }
+        popUpGrade.board.ShowBuy();
     }
 }

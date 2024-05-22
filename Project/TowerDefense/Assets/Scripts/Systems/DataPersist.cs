@@ -13,19 +13,14 @@ public class DataPersist
         get => PlayerPrefs.GetInt("MONEY", 0);
         set => PlayerPrefs.SetInt("MONEY", value);
     }
-    public static int TeleportLevel
-    {
-        get => PlayerPrefs.GetInt("TELEPORT", 0);
-        set => PlayerPrefs.SetInt("TELEPORT", value);
-    }
-    public static int BoomLevel
-    {
-        get => PlayerPrefs.GetInt("BOOM", 0);
-        set => PlayerPrefs.SetInt("BOOM", value);
-    }
     public static string JsonTables
     {
         get => PlayerPrefs.GetString("TABLE");
         set => PlayerPrefs.SetString("TABLE", value);
+    }
+    public static string JsonAbility
+    {
+        get => PlayerPrefs.GetString("ABILITY");
+        set => PlayerPrefs.SetString("ABILITY", value);
     }
 }

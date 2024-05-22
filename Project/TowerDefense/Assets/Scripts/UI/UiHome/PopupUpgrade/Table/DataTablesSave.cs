@@ -4,7 +4,51 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class CellAbilitySave
+{
+    public bool unLocked;
+    public bool purchased;
+    public void Unlock()
+    {
+        unLocked = true;
+    }
 
+    public void Purchase()
+    {
+        purchased = true;
+    }
+}
+
+public class RowSave
+{
+    public List<CellAbilitySave> cells;
+    public RowSave() {}
+    public RowSave(int amount)
+    {
+        cells = new List<CellAbilitySave>();
+        for(int i = 0; i < amount; i++)
+        {
+            cells.Add(new CellAbilitySave());
+        }
+    }
+}
+public class TableAbilitySave
+{
+    public List<RowSave> rows;
+    public TableAbilitySave() {}
+    public TableAbilitySave(int amount)
+    {
+        rows = new List<RowSave>();
+        for (int i = 0; i < amount; i++)
+        {
+            rows.Add(new RowSave(2));
+        }
+    }
+    public override string ToString()
+    {
+        return JsonConvert.SerializeObject(this);
+    }
+}
 public class UpgradeSave
 {
     public bool unLocked;

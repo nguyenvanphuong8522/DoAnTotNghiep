@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   list:
   - Name: Dame
-    Description: 
+    Description: Damage + 10 %
   - Name: Range
-    Description: 
+    Description: Range + 10%
   - Name: Rate
-    Description: 
+    Description: Fire Rate +10%

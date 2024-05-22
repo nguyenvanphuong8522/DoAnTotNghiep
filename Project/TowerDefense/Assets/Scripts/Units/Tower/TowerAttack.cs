@@ -1,3 +1,4 @@
+using Spine.Unity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,6 +7,7 @@ public class TowerAttack : MonoBehaviour
 {
     private List<Transform> listEnemy = new List<Transform>();
     public Gun gun;
+    
     private void OnEnable()
     {
         listEnemy.Clear();
@@ -25,6 +27,7 @@ public class TowerAttack : MonoBehaviour
     {
         if (!gun.isShootingObstacle && !gun.isAttacking)
         {
+            
             gun.StartShoot();
         }
     }

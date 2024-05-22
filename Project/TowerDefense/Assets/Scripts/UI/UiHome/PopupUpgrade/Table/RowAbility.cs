@@ -17,7 +17,9 @@ public class RowAbility : MonoBehaviour
         {
             int index = data.column[i].index;
             int level = data.column[i].level;
-            cellAbilities[i].SetData(index, level);
+            bool unLocked = PopupUpgrade.instance.tableAbility.tableSave.rows[index].cells[level].unLocked;
+            bool purchased = PopupUpgrade.instance.tableAbility.tableSave.rows[index].cells[level].purchased;
+            cellAbilities[i].SetData(index, level, unLocked, purchased);
         }
         gameObject.SetActive(true);
     }

@@ -84,6 +84,10 @@ PrefabInstance:
       value: 0.33333334
       objectReference: {fileID: 0}
     - target: {fileID: 1922506701218043975, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1922506701218043975, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -134,6 +138,10 @@ PrefabInstance:
     - target: {fileID: 6525510425608785384, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Name
       value: SnipperBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 6525510425608785384, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6525510425608785385, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_Color.b
@@ -194,6 +202,10 @@ PrefabInstance:
     - target: {fileID: 8696417864825731360, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8857526805436277448, guid: d3a9022abc3ab0440ae4789a02197e33, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

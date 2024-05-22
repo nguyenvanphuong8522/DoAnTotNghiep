@@ -39,9 +39,14 @@ public class TowerUpgrade : MonoBehaviour
     }
     public void Show()
     {
+        uiTowerUpgrade.Unlock();
         uiTowerUpgrade.AddListener(UpdateTower, Sell);
         uiTowerUpgrade.UpDateUi(transform.position, range.localScale);
         uiTowerUpgrade.UpdatePrice(coinUpdate, coinSell);
+        if (!DataHangarSave.instance.tablesSave.dataTablesSave[indexTower].columnSaves[indexLevel + 1].purchased)
+        {
+            uiTowerUpgrade.LockUpgrade();
+        }
         uiTowerUpgrade.Show();
     }
     public void ReturnToPool()

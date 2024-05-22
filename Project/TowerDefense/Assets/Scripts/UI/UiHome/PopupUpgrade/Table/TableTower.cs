@@ -41,4 +41,13 @@ public class TableTower : Singleton<TableTower>
             col.gameObject.SetActive(false);
         }
     }
+
+    public void Refresh()
+    {
+        int count = towerTableData[idTable].columns.Count;
+        for (int i = 0; i < count; i++)
+        {
+            columns[i].UpdateColumn();
+        }
+    }
 }

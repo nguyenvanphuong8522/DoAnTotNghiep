@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -13,6 +14,10 @@ public class Board : Singleton<Board>
     [SerializeField] private Button buy;
     [SerializeField] private GameObject locked; 
     [SerializeField] private GameObject purchased;
+
+    public Image imageBtnBuy;
+    public Image spriteBuy;
+    public Text txtBuy;
     private void Start()
     {
         DescTowerSctiptable data = PopupUpgrade.instance.tableTower.descStrategyData.list[0];
@@ -60,5 +65,22 @@ public class Board : Singleton<Board>
         buy.gameObject.SetActive(false);
         locked.gameObject.SetActive(false);
         purchased.gameObject.SetActive(false);
+    }
+    public void SetActionBuy(Action newEvent)
+    {
+        buy.onClick.RemoveAllListeners();
+        buy.onClick.AddListener(() => { newEvent.Invoke(); });
+    }
+    public void ShowBuy()
+    {
+        imageBtnBuy.raycastTarget = true;
+        spriteBuy.color = Color.white;
+        txtBuy.color = Color.white;
+    }
+    public void BlurBtnBuy()
+    {
+        imageBtnBuy.raycastTarget = false;
+        spriteBuy.color = new Color(1, 1, 1, 0.5f);
+        txtBuy.color = new Color(1, 1, 1, 0.5f);
     }
 }

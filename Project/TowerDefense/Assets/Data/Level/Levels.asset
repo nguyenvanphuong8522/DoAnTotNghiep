@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - initMoney: 100
+    contraintTower: 0200000001000000000000000000000000000000
     posHouse: {x: -3.5, y: 2, z: -5}
     bgSpriteIndex: 0
     homeSpriteIndex: 0
@@ -204,6 +205,7 @@ MonoBehaviour:
       name: 0
       type: 0
   - initMoney: 100
+    contraintTower: 0300000001000000000000000000000000000000
     posHouse: {x: 4.5, y: 1.76, z: -5}
     bgSpriteIndex: 0
     homeSpriteIndex: 0
@@ -469,6 +471,7 @@ MonoBehaviour:
       name: 1
       type: 0
   - initMoney: 100
+    contraintTower: 0300000002000000000000000000000000000000
     posHouse: {x: -4.5, y: 2.5, z: -5}
     bgSpriteIndex: 0
     homeSpriteIndex: 0
@@ -653,6 +656,7 @@ MonoBehaviour:
       name: 1
       type: 0
   - initMoney: 100
+    contraintTower: 0300000002000000000000000000000000000000
     posHouse: {x: -5.5, y: 2.5, z: -5}
     bgSpriteIndex: 0
     homeSpriteIndex: 0
@@ -777,6 +781,7 @@ MonoBehaviour:
       name: 0
       type: 0
   - initMoney: 100
+    contraintTower: 0300000002000000010000000000000000000000
     posHouse: {x: -3.5, y: 3, z: -5}
     bgSpriteIndex: 0
     homeSpriteIndex: 0
@@ -970,6 +975,7 @@ MonoBehaviour:
       name: 2
       type: 0
   - initMoney: 100
+    contraintTower: 0300000002000000010000000100000001000000
     posHouse: {x: 5.5, y: 3, z: -5}
     bgSpriteIndex: 1
     homeSpriteIndex: 0
@@ -1001,6 +1007,7 @@ MonoBehaviour:
       name: 0
       type: 2
   - initMoney: 100
+    contraintTower: 
     posHouse: {x: 5.5, y: -2, z: -5}
     bgSpriteIndex: 1
     homeSpriteIndex: 0
@@ -1065,6 +1072,7 @@ MonoBehaviour:
       name: 0
       type: 1
   - initMoney: 300
+    contraintTower: 
     posHouse: {x: -5.5, y: -1.5, z: -5}
     bgSpriteIndex: 1
     homeSpriteIndex: 0
@@ -1123,6 +1131,7 @@ MonoBehaviour:
       name: 1
       type: 1
   - initMoney: 200
+    contraintTower: 
     posHouse: {x: -5.5, y: 1.5, z: -5}
     bgSpriteIndex: 1
     homeSpriteIndex: 0
@@ -1190,6 +1199,7 @@ MonoBehaviour:
       name: 1
       type: 1
   - initMoney: 100
+    contraintTower: 
     posHouse: {x: -4.5, y: 1, z: -5}
     bgSpriteIndex: 1
     homeSpriteIndex: 0
@@ -1248,6 +1258,7 @@ MonoBehaviour:
       name: 0
       type: 1
   - initMoney: 100
+    contraintTower: 
     posHouse: {x: 1.5, y: 3, z: -5}
     bgSpriteIndex: 0
     homeSpriteIndex: 0
@@ -1309,6 +1320,7 @@ MonoBehaviour:
       name: 1
       type: 0
   - initMoney: 100
+    contraintTower: 
     posHouse: {x: -5.5, y: 3, z: -5}
     bgSpriteIndex: 0
     homeSpriteIndex: 0
@@ -1514,6 +1526,7 @@ MonoBehaviour:
       name: 0
       type: 0
   - initMoney: 100
+    contraintTower: 
     posHouse: {x: -5.5, y: 0, z: -5}
     bgSpriteIndex: 0
     homeSpriteIndex: 0
@@ -1698,6 +1711,7 @@ MonoBehaviour:
       name: 0
       type: 0
   - initMoney: 100
+    contraintTower: 
     posHouse: {x: -0.5, y: 3.5, z: -5}
     bgSpriteIndex: 0
     homeSpriteIndex: 0
@@ -1771,6 +1785,7 @@ MonoBehaviour:
       name: 1
       type: 0
   - initMoney: 100
+    contraintTower: 
     posHouse: {x: -0.5, y: 2, z: -5}
     bgSpriteIndex: 0
     homeSpriteIndex: 0
@@ -1910,6 +1925,7 @@ MonoBehaviour:
       name: 1
       type: 0
   - initMoney: 100
+    contraintTower: 
     posHouse: {x: -0.5, y: 1.5, z: -5}
     bgSpriteIndex: 2
     homeSpriteIndex: 2
@@ -2193,6 +2209,7 @@ MonoBehaviour:
       name: 0
       type: 3
   - initMoney: 100
+    contraintTower: 
     posHouse: {x: -5.5, y: -5.5, z: -5}
     bgSpriteIndex: 2
     homeSpriteIndex: 2
@@ -2305,6 +2322,7 @@ MonoBehaviour:
       name: 1
       type: 2
   - initMoney: 100
+    contraintTower: 
     posHouse: {x: -1.5, y: -1.5, z: -5}
     bgSpriteIndex: 2
     homeSpriteIndex: 2
@@ -2354,6 +2372,7 @@ MonoBehaviour:
       name: 1
       type: 2
   - initMoney: 100
+    contraintTower: 
     posHouse: {x: 4.5, y: 2, z: -5}
     bgSpriteIndex: 2
     homeSpriteIndex: 2
@@ -2436,6 +2455,7 @@ MonoBehaviour:
       name: 1
       type: 2
   - initMoney: 100
+    contraintTower: 
     posHouse: {x: 0.5, y: 3, z: -5}
     bgSpriteIndex: 2
     homeSpriteIndex: 2

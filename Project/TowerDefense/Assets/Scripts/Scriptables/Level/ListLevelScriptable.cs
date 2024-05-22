@@ -15,6 +15,7 @@ public class ListLevelScriptable : ScriptableObject
 public class LevelScriptable
 {
     public int initMoney;
+    public int[] contraintTower;
     public Vector3 posHouse;
     public int bgSpriteIndex;
     public int homeSpriteIndex;
