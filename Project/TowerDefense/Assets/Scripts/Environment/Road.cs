@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Road : MonoBehaviour
 {
@@ -29,15 +30,30 @@ public class Road : MonoBehaviour
 
     public void ActionBtnTeleport()
     {
+        popUp.btnTeleport.Lock();
         powerUps[0].SetPos(popUp.transform.position);  
         powerUps[0].TurnOn();
+        StartCoroutine(DelayTeleUnlock());
         popUp.Hide();
     }
     public void ActionBtnBoom()
     {
+        popUp.btnBoom.Lock();
         powerUps[1].SetPos(popUp.transform.position);
         powerUps[1].TurnOn();
+        StartCoroutine(DelayBoomUnlock());
         popUp.Hide();
     }
+    
 
+    private IEnumerator DelayTeleUnlock()
+    {
+        yield return new WaitForSeconds(popUp.btnTeleport.timeUnlock);
+        popUp.btnTeleport.Unlock();
+    }
+    private IEnumerator DelayBoomUnlock()
+    {
+        yield return new WaitForSeconds(popUp.btnBoom.timeUnlock);
+        popUp.btnBoom.Unlock();
+    }
 }

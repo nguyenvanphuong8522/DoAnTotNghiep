@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TeleportPowerUp : PowerUp
 {
-    private float duration = 2f;
+    private float duration = 10f;
     public override void TurnOn()
     {
         gameObject.SetActive(true);

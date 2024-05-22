@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class BoomPowerUp : PowerUp
 {
-    private float timer = 3f;
+    private float timer = 5f;
     public CircleCollider2D colliderRange;
     public GameObject particle;
     public GameObject icon;
@@ -19,8 +19,9 @@ public class BoomPowerUp : PowerUp
     {
         yield return new WaitForSeconds(timer);
         Explore();
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.2f);
         colliderRange.enabled = false;
+        yield return new WaitForSeconds(5f);
         particle.SetActive(false);
         TurnOff();
     }

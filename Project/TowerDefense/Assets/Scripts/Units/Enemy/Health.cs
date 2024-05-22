@@ -51,7 +51,7 @@ public class Health : MonoBehaviour, Ihealth
     {
         if (col.gameObject.CompareTag("Boom"))
         {
-            TakeDamage(10);
+            TakeDamage(4000);
         }
         else if(col.gameObject.CompareTag("Bullet"))
         {
