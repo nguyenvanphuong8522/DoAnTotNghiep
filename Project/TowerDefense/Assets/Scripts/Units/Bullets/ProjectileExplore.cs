@@ -7,6 +7,7 @@ public class ProjectileExplore : MonoBehaviour
     private ObjectPool objectPool;
     [SerializeField] private Rigidbody2D rb;
     [HideInInspector]public int damage;
+    [SerializeField] private TrailRenderer trailRenderer;
     private void Start()
     { 
         objectPool = ObjectPool.instance;
@@ -29,6 +30,7 @@ public class ProjectileExplore : MonoBehaviour
     public void Explore()
     {
         ResetValueBullet();
+        trailRenderer.Clear();
         objectPool.Return(gameObject);
     }
     private void ResetValueBullet()

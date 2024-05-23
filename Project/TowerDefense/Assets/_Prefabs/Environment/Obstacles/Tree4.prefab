@@ -7,10 +7,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 509773845851836843, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ba6cc343542a9684cb6eaaed41e399b6, type: 2}
+    - target: {fileID: 717142027434767179, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 899522766823007417, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.739
+      objectReference: {fileID: 0}
     - target: {fileID: 1335345618160710168, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 38d2874db595fa2408c849ea6baf6f14, type: 3}
+    - target: {fileID: 1335345618160710168, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1335345619055590162, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
       propertyPath: m_Name
       value: Tree4
@@ -59,6 +75,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3659778302836708096, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: initialSkinName
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659778302836708096, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4ba8fad34834bd042891c77cb9c94a59, type: 2}
     - target: {fileID: 5911245809555708044, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
       propertyPath: m_IsActive
       value: 0

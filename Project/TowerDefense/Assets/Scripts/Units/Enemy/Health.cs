@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Health : MonoBehaviour, Ihealth
@@ -88,13 +89,15 @@ public class Health : MonoBehaviour, Ihealth
     {
         int index = (int)enemyName;
         GameObject die = ObjectPool.instance.Get(ObjectPool.instance.enemyDies[index], transform.position, 0.7f);
+
         die.transform.up = sprite.up;
         SpawnDollarEffect();
     }
     private void SpawnDollarEffect()
     {
         GameObject effect = ObjectPool.instance.Get(ObjectPool.instance.effectDollar);
-        effect.transform.position = transform.position;
+        effect.GetComponent<EffectDollar>().SetText(coin);
+        effect.transform.position = transform.position + new Vector3(0, 0.5f, 0);
         effect.transform.localScale = Vector3.one * 0.1f;
         effect.SetActive(true);
     }

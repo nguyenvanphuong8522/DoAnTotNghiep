@@ -57,6 +57,7 @@ public class Gun : MonoBehaviour
     }
     public virtual void Shoot()
     {
+        RotateImediate();
         PlaySound();
         indexPointShoot = indexPointShoot < pointShoots.Length - 1 ? ++indexPointShoot : 0;
         GameObject bullet = ObjectPool.instance.Get(ObjectPool.instance.bullets[typeBullet]);
@@ -76,6 +77,12 @@ public class Gun : MonoBehaviour
         AudioManager.instance.PlayShot(AudioManager.instance.gunShoots[0]);
     }
     protected void RotateToDirection()
+    {
+        Vector3 look = target.position - transform.position;
+        float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg - 90;
+        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, angle), 0.1f);
+    }
+    protected void RotateImediate()
     {
         Vector3 look = target.position - transform.position;
         float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg - 90;

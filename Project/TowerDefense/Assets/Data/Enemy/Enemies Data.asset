@@ -26,7 +26,7 @@ MonoBehaviour:
     health: 1500
     speedMove: 1
   - name: Small Tank
-    health: 5500
+    health: 5200
     speedMove: 1
   - name: Big Tank
     health: 10000

@@ -6,9 +6,14 @@ using UnityEngine;
 public class GameEvent
 {
     public static Action returnLevel;
+    public static Action startLevel;
 
     public static void CallReturnLevel()
     {
         returnLevel.Invoke();
+    }
+    public static void CallStartLevel()
+    {
+        startLevel.Invoke();
     }
 }

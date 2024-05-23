@@ -7,10 +7,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 101877501331853880, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 717142027434767179, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1335345618160710168, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 2e9642a387dae814190fa2c00761f53b, type: 3}
+    - target: {fileID: 1335345618160710168, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1335345619055590162, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
       propertyPath: m_Name
       value: Tree3

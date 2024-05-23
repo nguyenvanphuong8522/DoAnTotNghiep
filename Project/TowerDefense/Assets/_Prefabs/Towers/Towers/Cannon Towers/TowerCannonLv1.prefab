@@ -88,6 +88,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7191622840771639939, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: timeScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7191622840771639939, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: skeletonDataAsset
       value: 
       objectReference: {fileID: 11400000, guid: 0c7b236ad945ab94982bf896b4be0c96, type: 2}

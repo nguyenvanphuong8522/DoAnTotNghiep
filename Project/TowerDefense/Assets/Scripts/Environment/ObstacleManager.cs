@@ -10,7 +10,9 @@ public class ObstacleManager : MonoBehaviour
 
     public void SpawnAObstacle(ObstacleScriptable data)
     {
-        pool.Get(pool.obstacles[(int)data.name].pools[data.type], data.pos);
+        Vector3 newPos = data.pos;
+        newPos.z = -1;
+        pool.Get(pool.obstacles[(int)data.name].pools[data.type], newPos);
     }
     public void SpawnListObstacle(List<ObstacleScriptable> listObstacle)
     {

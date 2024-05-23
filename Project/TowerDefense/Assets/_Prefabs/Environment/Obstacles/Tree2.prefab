@@ -7,10 +7,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 509773845851836843, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 509773845851836843, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 105489811
+      objectReference: {fileID: 0}
+    - target: {fileID: 509773845851836843, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 509773845851836843, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ba6cc343542a9684cb6eaaed41e399b6, type: 2}
+    - target: {fileID: 717142027434767179, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1335345618160710168, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 729d5bef84a72aa408b1d13e128726fe, type: 3}
+    - target: {fileID: 1335345618160710168, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1335345619055590162, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
       propertyPath: m_Name
       value: Tree2
@@ -59,5 +83,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3659778302836708096, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: initialSkinName
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659778302836708096, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: skeletonDataAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 4ba8fad34834bd042891c77cb9c94a59, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}

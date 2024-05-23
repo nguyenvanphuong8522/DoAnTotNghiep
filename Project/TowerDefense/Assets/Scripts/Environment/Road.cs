@@ -8,6 +8,8 @@ public class Road : MonoBehaviour
     public PowerUpPopUp popUp;
     public PowerUp[] powerUps;
     private Vector3 preClick;
+    [SerializeField] private IconAbility iconTele;
+    [SerializeField] private IconAbility iconBoom;
     private void Awake()
     {
         popUp.SetListenBtns(ActionBtnTeleport, ActionBtnBoom);
@@ -30,18 +32,18 @@ public class Road : MonoBehaviour
 
     public void ActionBtnTeleport()
     {
-        popUp.btnTeleport.Lock();
+        iconTele.Lock();
         powerUps[0].SetPos(popUp.transform.position);  
         powerUps[0].TurnOn();
-        StartCoroutine(DelayTeleUnlock());
+        //StartCoroutine(DelayTeleUnlock());
         popUp.Hide();
     }
     public void ActionBtnBoom()
     {
-        popUp.btnBoom.Lock();
+        iconBoom.Lock();
         powerUps[1].SetPos(popUp.transform.position);
         powerUps[1].TurnOn();
-        StartCoroutine(DelayBoomUnlock());
+        //StartCoroutine(DelayBoomUnlock());
         popUp.Hide();
     }
     

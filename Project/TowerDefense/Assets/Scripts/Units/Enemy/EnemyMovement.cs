@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnemyMovement : MonoBehaviour
 {
@@ -25,6 +26,10 @@ public class EnemyMovement : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+    }
+    private void Update()
+    {
+        RotateFace();
     }
     private void Move()
     {
@@ -58,12 +63,14 @@ public class EnemyMovement : MonoBehaviour
         if (curIndex < path.Length)
         {
             curTarget = path[curIndex];
-            RotateFace();
+            
         }
     }
     private void RotateFace()
     {
-        sprite.up = (Vector3)curTarget - transform.position;
+        Vector3 look = (Vector3)curTarget - transform.position;
+        float angle = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg - 90;
+        sprite.rotation = Quaternion.Lerp(sprite.rotation, Quaternion.Euler(0, 0, angle), 0.1f);
     }
     public void SetPath(Path path)
     {

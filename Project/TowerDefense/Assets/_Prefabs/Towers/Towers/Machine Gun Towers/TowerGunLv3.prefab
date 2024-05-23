@@ -131,6 +131,10 @@ PrefabInstance:
       value: 0.496
       objectReference: {fileID: 0}
     - target: {fileID: 6705592484036796700, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: coinSell
+      value: 225
+      objectReference: {fileID: 0}
+    - target: {fileID: 6705592484036796700, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: indexLevel
       value: 2
       objectReference: {fileID: 0}

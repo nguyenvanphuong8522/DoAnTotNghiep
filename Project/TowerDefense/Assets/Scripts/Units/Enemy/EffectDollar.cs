@@ -19,6 +19,10 @@ public class EffectDollar : MonoBehaviour
         });
         
     }
+    public void SetText(int coin)
+    {
+        text.text = "+" + coin;
+    }
     private void DelayReturnToPool()
     {
         ObjectPool.instance.Return(gameObject);

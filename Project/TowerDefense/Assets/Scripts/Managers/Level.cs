@@ -25,10 +25,12 @@ public class Level : MonoBehaviour
         Ground.instance.uiTowerUpgrade.Lock(data.levels[indexLevel].contraintTower);
         IncreaseCoin(dataLevel.initMoney);
         SetEnvironmentData(data);
-        SetUpWaveManager();
+        StartCoroutine(SetUpWaveManager());
+        GameEvent.CallStartLevel();
     }
-    private void SetUpWaveManager()
+    private IEnumerator SetUpWaveManager()
     {
+        yield return new WaitForSeconds(3);
         waveManager.Init(dataLevel.waves);
         waveManager.NextWave();
     }

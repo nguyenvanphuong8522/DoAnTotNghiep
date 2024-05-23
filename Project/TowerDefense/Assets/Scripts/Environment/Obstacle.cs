@@ -147,10 +147,20 @@ public class Obstacle : MonoBehaviour, Ihealth
     {
         Debug.Log("die");
         GameObject die = ObjectPool.instance.Get(ObjectPool.instance.obstacleDestroys[0], transform.position);
+        SpawnDollarEffect();
     }
     public void ReturnToPool()
     {
         ObjectPool.instance.Return(gameObject);
+    }
+
+    private void SpawnDollarEffect()
+    {
+        GameObject effect = ObjectPool.instance.Get(ObjectPool.instance.effectDollar);
+        effect.GetComponent<EffectDollar>().SetText(coinDestroy);
+        effect.transform.position = transform.position + new Vector3(0, 0.75f, 0);
+        effect.transform.localScale = Vector3.one * 0.1f;
+        effect.SetActive(true);
     }
     private void OnDisable()
     {

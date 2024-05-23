@@ -36,6 +36,10 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2330800040941479201, guid: 1fa45a7bc81d39e4baa0f109e2ded5c2, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 9037673578486588934}
+    - target: {fileID: 2330800040941479201, guid: 1fa45a7bc81d39e4baa0f109e2ded5c2, type: 3}
       propertyPath: enemyName
       value: 5
       objectReference: {fileID: 0}
@@ -117,3 +121,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1fa45a7bc81d39e4baa0f109e2ded5c2, type: 3}
+--- !u!4 &9037673578486588934 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6405387951494929303, guid: 1fa45a7bc81d39e4baa0f109e2ded5c2, type: 3}
+  m_PrefabInstance: {fileID: 2704629674420239761}
+  m_PrefabAsset: {fileID: 0}
