@@ -36,7 +36,7 @@ public class UiGameplay : Singleton<UiGameplay>
     }
     public void UpdatTxtWave(int number, int maxWave)
     {
-        txtWave.text = $"Wave {number}/{maxWave}";
+        txtWave.text = $"Wave   {number}/{maxWave}";
     }
     public void UpdatTxtHealth(int number)
     {

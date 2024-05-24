@@ -23,9 +23,13 @@ public class Level : MonoBehaviour
         CameraController.instance.UpdataContraint();
         UiGameplay.instance.UpdatTxtHealth(health);
         Ground.instance.uiTowerUpgrade.Lock(data.levels[indexLevel].contraintTower);
-        IncreaseCoin(dataLevel.initMoney);
+        money = dataLevel.initMoney;
+        UiGameplay.instance.UpdatTxtMoney();
+
+
         SetEnvironmentData(data);
         StartCoroutine(SetUpWaveManager());
+        UiGameplay.instance.UpdatTxtWave(1, dataLevel.waves.listWave.Count);
         GameEvent.CallStartLevel();
     }
     private IEnumerator SetUpWaveManager()
@@ -60,7 +64,12 @@ public class Level : MonoBehaviour
         UiGameplay.instance.UpdatTxtHealth(--health);
         if(health == 0)
         {
-            UiGameplay.instance.popupLose.Show();
+            StartCoroutine(DelayShowPopUpLose());
         }
+    }
+    private IEnumerator DelayShowPopUpLose()
+    {
+        yield return new WaitForSeconds(1.5f);
+        UiGameplay.instance.popupLose.Show();
     }
 }

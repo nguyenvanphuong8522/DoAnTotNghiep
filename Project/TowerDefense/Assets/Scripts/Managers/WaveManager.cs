@@ -24,6 +24,7 @@ public class WaveManager : Singleton<WaveManager>
     }
     public void Init(ListWaveScriptable waves)
     {
+        StopCoroutineNextWave();
         listWaveData = waves;
         InitGate();
         curWave = new Wave();
@@ -37,8 +38,12 @@ public class WaveManager : Singleton<WaveManager>
             coroutine = StartCoroutine(DelayNextWave());
             return;
         }
+        StartCoroutine(DelayShowPopUpWin());
+    }
+    private IEnumerator DelayShowPopUpWin()
+    {
+        yield return new WaitForSeconds(1.5f);
         UiGameplay.instance.popupWin.Show();
-
     }
     private void StopCoroutineNextWave()
     {

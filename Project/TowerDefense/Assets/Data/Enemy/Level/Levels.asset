@@ -204,6 +204,8 @@ MonoBehaviour:
     - pos: {x: 0.5, y: -4.5, z: 0}
       name: 0
       type: 0
+    coinCompleted: 200
+    coinBonus: 8
   - initMoney: 100
     contraintTower: 0300000001000000000000000000000000000000
     posHouse: {x: 4.5, y: 1.76, z: -5}
@@ -470,6 +472,8 @@ MonoBehaviour:
     - pos: {x: -3.5, y: -4.5, z: 0}
       name: 1
       type: 0
+    coinCompleted: 300
+    coinBonus: 12
   - initMoney: 100
     contraintTower: 0300000002000000000000000000000000000000
     posHouse: {x: -4.5, y: 2.5, z: -5}
@@ -655,6 +659,8 @@ MonoBehaviour:
     - pos: {x: -0.5, y: -2.5, z: 0}
       name: 1
       type: 0
+    coinCompleted: 400
+    coinBonus: 16
   - initMoney: 100
     contraintTower: 0300000002000000000000000000000000000000
     posHouse: {x: -5.5, y: 2.5, z: -5}
@@ -780,6 +786,8 @@ MonoBehaviour:
     - pos: {x: 6.5, y: 3.5, z: 0}
       name: 0
       type: 0
+    coinCompleted: 450
+    coinBonus: 18
   - initMoney: 100
     contraintTower: 0300000002000000010000000000000000000000
     posHouse: {x: -3.5, y: 3, z: -5}
@@ -974,6 +982,8 @@ MonoBehaviour:
     - pos: {x: 2.5, y: 1.5, z: 0}
       name: 2
       type: 0
+    coinCompleted: 500
+    coinBonus: 20
   - initMoney: 100
     contraintTower: 0300000002000000010000000100000001000000
     posHouse: {x: 5.5, y: 3, z: -5}
@@ -1012,6 +1022,8 @@ MonoBehaviour:
     - pos: {x: -4, y: -1.5, z: -1}
       name: 1
       type: 1
+    coinCompleted: 400
+    coinBonus: 16
   - initMoney: 100
     contraintTower: 0300000003000000020000000100000001000000
     posHouse: {x: 5.5, y: -2, z: -5}
@@ -1092,6 +1104,8 @@ MonoBehaviour:
     - pos: {x: 0.5, y: -0.5, z: 0}
       name: 1
       type: 1
+    coinCompleted: 450
+    coinBonus: 18
   - initMoney: 300
     contraintTower: 0300000003000000030000000100000001000000
     posHouse: {x: -5.5, y: -1.5, z: -5}
@@ -1151,6 +1165,8 @@ MonoBehaviour:
     - pos: {x: -1.5, y: -0.5, z: 0}
       name: 1
       type: 1
+    coinCompleted: 500
+    coinBonus: 20
   - initMoney: 200
     contraintTower: 0300000003000000030000000200000002000000
     posHouse: {x: -5.5, y: 1.5, z: -5}
@@ -1219,6 +1235,8 @@ MonoBehaviour:
     - pos: {x: -6.5, y: -3.5, z: 0}
       name: 1
       type: 1
+    coinCompleted: 500
+    coinBonus: 20
   - initMoney: 100
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -4.5, y: 1, z: -5}
@@ -1278,6 +1296,8 @@ MonoBehaviour:
     - pos: {x: -2.5, y: -2.5, z: 0}
       name: 0
       type: 1
+    coinCompleted: 550
+    coinBonus: 25
   - initMoney: 100
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: 1.5, y: 3, z: -5}
@@ -1340,6 +1360,8 @@ MonoBehaviour:
     - pos: {x: -2.5, y: -3.5, z: 0}
       name: 1
       type: 0
+    coinCompleted: 500
+    coinBonus: 20
   - initMoney: 300
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -5.5, y: 3, z: -5}
@@ -1546,6 +1568,8 @@ MonoBehaviour:
     - pos: {x: 0.5, y: 1.5, z: 0}
       name: 0
       type: 0
+    coinCompleted: 600
+    coinBonus: 24
   - initMoney: 100
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -5.5, y: 0, z: -5}
@@ -1731,6 +1755,8 @@ MonoBehaviour:
     - pos: {x: -3.5, y: 3.5, z: 0}
       name: 0
       type: 0
+    coinCompleted: 650
+    coinBonus: 26
   - initMoney: 100
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -0.5, y: 3.5, z: -5}
@@ -1805,6 +1831,8 @@ MonoBehaviour:
     - pos: {x: -1.5, y: -4.5, z: 0}
       name: 1
       type: 0
+    coinCompleted: 700
+    coinBonus: 28
   - initMoney: 100
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -0.5, y: 2, z: -5}
@@ -1945,6 +1973,8 @@ MonoBehaviour:
     - pos: {x: -1.5, y: -1.5, z: 0}
       name: 1
       type: 0
+    coinCompleted: 750
+    coinBonus: 30
   - initMoney: 100
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -0.5, y: 1.5, z: -5}
@@ -2229,6 +2259,8 @@ MonoBehaviour:
     - pos: {x: 1.5, y: -2.5, z: 0}
       name: 0
       type: 3
+    coinCompleted: 750
+    coinBonus: 30
   - initMoney: 100
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: 5.5, y: -5.3, z: -5}
@@ -2342,6 +2374,8 @@ MonoBehaviour:
     - pos: {x: 1.5, y: -5.5, z: 0}
       name: 1
       type: 2
+    coinCompleted: 750
+    coinBonus: 30
   - initMoney: 100
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -1.5, y: -1.5, z: -5}
@@ -2392,6 +2426,8 @@ MonoBehaviour:
     - pos: {x: 2.5, y: -6.5, z: 0}
       name: 1
       type: 2
+    coinCompleted: 750
+    coinBonus: 30
   - initMoney: 100
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: 4.5, y: 2, z: -5}
@@ -2475,6 +2511,8 @@ MonoBehaviour:
     - pos: {x: 6.5, y: -1.5, z: 0}
       name: 1
       type: 2
+    coinCompleted: 750
+    coinBonus: 30
   - initMoney: 100
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: 0.5, y: 3, z: -5}
@@ -2630,6 +2668,8 @@ MonoBehaviour:
     - pos: {x: -1.5, y: -0.5, z: 0}
       name: 0
       type: 3
+    coinCompleted: 750
+    coinBonus: 30
   homeSprites:
   - {fileID: 21300000, guid: 69993b0d5f7f2b94b9e6c9ac3c34591b, type: 3}
   - {fileID: 21300000, guid: ed6cced2a85653245938226afd225757, type: 3}

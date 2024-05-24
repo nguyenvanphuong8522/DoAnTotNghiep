@@ -10,6 +10,7 @@ public class Gate : MonoBehaviour
     private Coroutine coroutine;
     private void OnEnable()
     {
+        
         GameEvent.returnLevel += StopSpawn;
     }
     public void StartSpawn(Path path)
@@ -46,12 +47,14 @@ public class Gate : MonoBehaviour
     }
     public void SetValueGate(GateScriptable gateData)
     {
+        StopSpawn();
         amount = gateData.amount;
         type = gateData.type;
         rate = gateData.rate;
     }
     private void OnDisable()
     {
+        StopSpawn();
         GameEvent.returnLevel -= StopSpawn;
     }
 }

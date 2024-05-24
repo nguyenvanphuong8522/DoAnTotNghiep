@@ -22,6 +22,8 @@ public class LevelScriptable
     public int heightBound;
     public ListWaveScriptable waves;
     public List<ObstacleScriptable> listObstacle;
+    public int coinCompleted;
+    public int coinBonus;
 }
 
 
