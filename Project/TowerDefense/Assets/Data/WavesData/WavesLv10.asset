@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gatesPos:
   - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   paths:
   - path:
-    - {x: 5.5, y: 4.5}
+    - {x: 5.5, y: 5.5}
     - {x: 5.5, y: -1.5}
     - {x: -0.5, y: -1.5}
     - {x: -0.5, y: -4.5}
@@ -32,14 +33,142 @@ MonoBehaviour:
     - {x: -4.5, y: 0.5}
   listWave:
   - gates:
-    - amount: 1
-      rate: 0.5
+    - amount: 10
+      rate: 2
+      type: 0
+    - amount: 10
+      rate: 2
       type: 0
   - gates:
-    - amount: 2
-      rate: 0.5
-      type: 1
+    - amount: 15
+      rate: 2
+      type: 0
+    - amount: 15
+      rate: 2
+      type: 0
   - gates:
-    - amount: 4
+    - amount: 15
+      rate: 1
+      type: 0
+    - amount: 15
+      rate: 1
+      type: 0
+  - gates:
+    - amount: 16
+      rate: 4
+      type: 2
+    - amount: 16
+      rate: 4
+      type: 2
+  - gates:
+    - amount: 0
+      rate: 0
+      type: 0
+    - amount: 15
+      rate: 3.5
+      type: 2
+  - gates:
+    - amount: 0
+      rate: 0
+      type: 0
+    - amount: 25
+      rate: 1.5
+      type: 2
+  - gates:
+    - amount: 10
+      rate: 3
+      type: 2
+    - amount: 5
+      rate: 5
+      type: 3
+  - gates:
+    - amount: 20
       rate: 0.5
       type: 1
+    - amount: 15
+      rate: 4
+      type: 3
+  - gates:
+    - amount: 0
+      rate: 0
+      type: 0
+    - amount: 8
+      rate: 3
+      type: 4
+  - gates:
+    - amount: 10
+      rate: 3
+      type: 3
+    - amount: 20
+      rate: 3
+      type: 3
+  - gates:
+    - amount: 15
+      rate: 3
+      type: 3
+    - amount: 0
+      rate: 0
+      type: 0
+  - gates:
+    - amount: 8
+      rate: 3
+      type: 4
+    - amount: 12
+      rate: 3
+      type: 4
+  - gates:
+    - amount: 8
+      rate: 3
+      type: 4
+    - amount: 0
+      rate: 0
+      type: 0
+  - gates:
+    - amount: 7
+      rate: 2
+      type: 3
+    - amount: 3
+      rate: 5
+      type: 5
+  - gates:
+    - amount: 10
+      rate: 5
+      type: 4
+    - amount: 10
+      rate: 8
+      type: 5
+  - gates:
+    - amount: 0
+      rate: 0
+      type: 0
+    - amount: 20
+      rate: 2.5
+      type: 4
+  - gates:
+    - amount: 0
+      rate: 0
+      type: 0
+    - amount: 20
+      rate: 6
+      type: 5
+  - gates:
+    - amount: 10
+      rate: 6
+      type: 5
+    - amount: 1
+      rate: 8
+      type: 6
+  - gates:
+    - amount: 10
+      rate: 6
+      type: 5
+    - amount: 3
+      rate: 7
+      type: 6
+  - gates:
+    - amount: 10
+      rate: 7
+      type: 6
+    - amount: 10
+      rate: 7
+      type: 6

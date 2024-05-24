@@ -43,7 +43,7 @@ MonoBehaviour:
       type: 1
   - gates:
     - amount: 5
-      rate: 4
+      rate: 5
       type: 2
   - gates:
     - amount: 10
@@ -59,15 +59,15 @@ MonoBehaviour:
       type: 2
   - gates:
     - amount: 5
-      rate: 4
+      rate: 6
       type: 3
   - gates:
     - amount: 5
-      rate: 4
+      rate: 6
       type: 3
   - gates:
     - amount: 5
-      rate: 3.5
+      rate: 5
       type: 3
   - gates:
     - amount: 1

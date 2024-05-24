@@ -29,14 +29,82 @@ MonoBehaviour:
     - {x: 5.5, y: -5.5}
   listWave:
   - gates:
-    - amount: 1
+    - amount: 30
       rate: 0.5
       type: 0
   - gates:
-    - amount: 2
+    - amount: 20
       rate: 0.5
       type: 1
   - gates:
-    - amount: 4
+    - amount: 30
       rate: 0.5
       type: 1
+  - gates:
+    - amount: 10
+      rate: 4
+      type: 2
+  - gates:
+    - amount: 15
+      rate: 4
+      type: 2
+  - gates:
+    - amount: 20
+      rate: 2
+      type: 2
+  - gates:
+    - amount: 5
+      rate: 3.5
+      type: 3
+  - gates:
+    - amount: 5
+      rate: 3.5
+      type: 4
+  - gates:
+    - amount: 5
+      rate: 2.5
+      type: 4
+  - gates:
+    - amount: 10
+      rate: 2.5
+      type: 4
+  - gates:
+    - amount: 15
+      rate: 2.5
+      type: 4
+  - gates:
+    - amount: 8
+      rate: 4
+      type: 5
+  - gates:
+    - amount: 14
+      rate: 4
+      type: 5
+  - gates:
+    - amount: 18
+      rate: 4
+      type: 5
+  - gates:
+    - amount: 10
+      rate: 4
+      type: 6
+  - gates:
+    - amount: 15
+      rate: 4
+      type: 6
+  - gates:
+    - amount: 5
+      rate: 7
+      type: 7
+  - gates:
+    - amount: 10
+      rate: 7
+      type: 7
+  - gates:
+    - amount: 10
+      rate: 5
+      type: 7
+  - gates:
+    - amount: 15
+      rate: 5
+      type: 7

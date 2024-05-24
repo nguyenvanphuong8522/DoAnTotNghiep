@@ -30,13 +30,13 @@ MonoBehaviour:
     speedMove: 1
   - name: Big Tank
     health: 10000
-    speedMove: 1
+    speedMove: 0.5
   - name: Big Tank2
-    health: 10000
-    speedMove: 1
+    health: 15000
+    speedMove: 0.5
   - name: Big Tank3
-    health: 10000
-    speedMove: 1
+    health: 20000
+    speedMove: 0.5
   - name: Big Tank4
-    health: 10000
-    speedMove: 1
+    health: 40000
+    speedMove: 0.5

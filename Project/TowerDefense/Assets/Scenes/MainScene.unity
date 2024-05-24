@@ -3503,7 +3503,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d1d8a5542595697468701f004efae940, type: 2}
   - {fileID: 11400000, guid: f4df0f30448b6da4dbfa7b2407a08c23, type: 2}
   - {fileID: 11400000, guid: 1ca4765c044f52a41b418bf93a109da1, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: c0af502b9b9b1104393193872141aa9f, type: 2}
   listPos: []
 --- !u!1 &313784616
 GameObject:

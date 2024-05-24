@@ -16,6 +16,7 @@ public class LevelManager : Singleton<LevelManager>
     public void InitLevel(int index)
     {
         indexLevel = index;
+        CameraController.instance.transform.position = new Vector3(0, 0, -10);
         curLevel.InitLevel(index, listLevelData);
     }
     [Button]
