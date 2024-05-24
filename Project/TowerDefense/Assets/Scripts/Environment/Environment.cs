@@ -17,6 +17,11 @@ public class Environment : MonoBehaviour
 
     public SpriteRenderer homeSprite;
     public SpriteRenderer bgSprite;
+    public GameObject EffectSnow;
+    public void SetEffect(bool active = false)
+    {
+        EffectSnow.SetActive(active);
+    }
 
     public void Init(EnvirInfor data)
     {

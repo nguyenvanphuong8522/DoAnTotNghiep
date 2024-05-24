@@ -19,6 +19,8 @@ public class Gun : MonoBehaviour
     public ParticleSystem[] effectShoots;
 
     public SkeletonAnimation skeletonAnimation;
+
+    public AudioClip soundEffect;
     private void OnEnable()
     {
         isAttacking = false;
@@ -74,7 +76,7 @@ public class Gun : MonoBehaviour
     }
     private void PlaySound()
     {
-        AudioManager.instance.PlayShot(AudioManager.instance.gunShoots[0]);
+        AudioManager.instance.PlayShot(soundEffect);
     }
     protected void RotateToDirection()
     {

@@ -27,6 +27,10 @@ PrefabInstance:
       propertyPath: typeBullet
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1065134498569980840, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: soundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 4b4b42eefd6ad1c4380bead3680ec51b, type: 3}
     - target: {fileID: 3645374536174241857, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0

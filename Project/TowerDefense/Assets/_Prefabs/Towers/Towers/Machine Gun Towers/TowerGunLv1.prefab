@@ -291,6 +291,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5787992467143479282}
     - target: {fileID: 5059292285781466979, guid: 9f740db4e0dc25c49acd134bc013dc5b, type: 3}
+      propertyPath: soundEffect
+      value: 
+      objectReference: {fileID: 8300000, guid: 56e5d42fb0424834f82ed862a4baaadf, type: 3}
+    - target: {fileID: 5059292285781466979, guid: 9f740db4e0dc25c49acd134bc013dc5b, type: 3}
       propertyPath: skeletonAnimation
       value: 
       objectReference: {fileID: 7191622840771639939}

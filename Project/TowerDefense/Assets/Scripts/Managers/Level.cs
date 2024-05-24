@@ -15,6 +15,14 @@ public class Level : MonoBehaviour
     public void InitLevel(int indexLevel, ListLevelScriptable data)
     {
         dataLevel = data.levels[indexLevel];
+        if(dataLevel.bgSpriteIndex == 2)
+        {
+            environment.SetEffect(true);
+        }
+        else
+        {
+            environment.SetEffect();
+        }
         health = 10;
         Vector2 size = new Vector2(14.4f, 10 + data.levels[indexLevel].heightBound);
         Vector2 offset = new Vector2(0,-1 - (data.levels[indexLevel].heightBound / 2));
