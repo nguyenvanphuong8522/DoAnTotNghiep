@@ -9,7 +9,7 @@ public class WaveManager : Singleton<WaveManager>
     private List<Path> paths;
     private Gate[] gates;
     public Wave curWave;
-    private int waveIndex;
+    public int waveIndex;
     public float timeDelayNextWave = 1.5f;
     private Coroutine coroutine;
     private int maxWave;
@@ -45,7 +45,7 @@ public class WaveManager : Singleton<WaveManager>
         yield return new WaitForSeconds(1.5f);
         UiGameplay.instance.popupWin.Show();
     }
-    private void StopCoroutineNextWave()
+    public void StopCoroutineNextWave()
     {
         if (coroutine != null)
         {

@@ -28,10 +28,6 @@ MonoBehaviour:
     - {x: -0.5, y: 2.5}
   listWave:
   - gates:
-    - amount: 1
-      rate: 6.5
-      type: 8
-  - gates:
     - amount: 20
       rate: 0.5
       type: 0
@@ -107,3 +103,7 @@ MonoBehaviour:
     - amount: 15
       rate: 6.5
       type: 7
+  - gates:
+    - amount: 1
+      rate: 6.5
+      type: 8

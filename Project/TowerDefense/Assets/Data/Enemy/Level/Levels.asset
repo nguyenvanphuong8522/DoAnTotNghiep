@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levels:
   - initMoney: 100
+    posCamera: {x: -0.088888645, y: -1.2065746, z: -10}
     contraintTower: 0200000001000000000000000000000000000000
     posHouse: {x: -3.5, y: 2, z: -5}
     bgSpriteIndex: 0
@@ -207,6 +208,7 @@ MonoBehaviour:
     coinCompleted: 200
     coinBonus: 8
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000001000000000000000000000000000000
     posHouse: {x: 4.5, y: 1.76, z: -5}
     bgSpriteIndex: 0
@@ -475,6 +477,7 @@ MonoBehaviour:
     coinCompleted: 300
     coinBonus: 12
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000002000000000000000000000000000000
     posHouse: {x: -4.5, y: 2.5, z: -5}
     bgSpriteIndex: 0
@@ -662,6 +665,7 @@ MonoBehaviour:
     coinCompleted: 400
     coinBonus: 16
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000002000000000000000000000000000000
     posHouse: {x: -5.5, y: 2.5, z: -5}
     bgSpriteIndex: 0
@@ -789,6 +793,7 @@ MonoBehaviour:
     coinCompleted: 450
     coinBonus: 18
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000002000000010000000000000000000000
     posHouse: {x: -3.5, y: 3, z: -5}
     bgSpriteIndex: 0
@@ -985,6 +990,7 @@ MonoBehaviour:
     coinCompleted: 500
     coinBonus: 20
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000002000000010000000100000001000000
     posHouse: {x: 5.5, y: 3, z: -5}
     bgSpriteIndex: 1
@@ -1025,6 +1031,7 @@ MonoBehaviour:
     coinCompleted: 400
     coinBonus: 16
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000020000000100000001000000
     posHouse: {x: 5.5, y: -2, z: -5}
     bgSpriteIndex: 1
@@ -1107,6 +1114,7 @@ MonoBehaviour:
     coinCompleted: 450
     coinBonus: 18
   - initMoney: 300
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000100000001000000
     posHouse: {x: -5.5, y: -1.5, z: -5}
     bgSpriteIndex: 1
@@ -1168,6 +1176,7 @@ MonoBehaviour:
     coinCompleted: 500
     coinBonus: 20
   - initMoney: 200
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000200000002000000
     posHouse: {x: -5.5, y: 1.5, z: -5}
     bgSpriteIndex: 1
@@ -1238,6 +1247,7 @@ MonoBehaviour:
     coinCompleted: 500
     coinBonus: 20
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -4.5, y: 1, z: -5}
     bgSpriteIndex: 1
@@ -1299,6 +1309,7 @@ MonoBehaviour:
     coinCompleted: 550
     coinBonus: 25
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: 1.5, y: 3, z: -5}
     bgSpriteIndex: 3
@@ -1363,6 +1374,7 @@ MonoBehaviour:
     coinCompleted: 500
     coinBonus: 20
   - initMoney: 300
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -5.5, y: 3, z: -5}
     bgSpriteIndex: 3
@@ -1571,6 +1583,7 @@ MonoBehaviour:
     coinCompleted: 600
     coinBonus: 24
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -5.5, y: 0, z: -5}
     bgSpriteIndex: 3
@@ -1758,6 +1771,7 @@ MonoBehaviour:
     coinCompleted: 650
     coinBonus: 26
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -0.5, y: 3.5, z: -5}
     bgSpriteIndex: 3
@@ -1834,6 +1848,7 @@ MonoBehaviour:
     coinCompleted: 700
     coinBonus: 28
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -0.5, y: 2, z: -5}
     bgSpriteIndex: 3
@@ -1976,6 +1991,7 @@ MonoBehaviour:
     coinCompleted: 750
     coinBonus: 30
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -0.5, y: 1.5, z: -5}
     bgSpriteIndex: 2
@@ -2262,6 +2278,7 @@ MonoBehaviour:
     coinCompleted: 750
     coinBonus: 30
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: 5.5, y: -5.3, z: -5}
     bgSpriteIndex: 2
@@ -2377,6 +2394,7 @@ MonoBehaviour:
     coinCompleted: 750
     coinBonus: 30
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -1.5, y: -1.5, z: -5}
     bgSpriteIndex: 2
@@ -2429,6 +2447,7 @@ MonoBehaviour:
     coinCompleted: 750
     coinBonus: 30
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: 4.5, y: 2, z: -5}
     bgSpriteIndex: 2
@@ -2514,6 +2533,7 @@ MonoBehaviour:
     coinCompleted: 750
     coinBonus: 30
   - initMoney: 100
+    posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: 0.5, y: 3, z: -5}
     bgSpriteIndex: 2

@@ -19,6 +19,9 @@ public class PopupWin : BasePopup
     public override void Show(object data = null)
     {
         base.Show(data);
+        LevelScriptable dataLevel = LevelManager.instance.listLevelData.levels[LevelManager.instance.indexLevel];
+        DataPersist.Money += dataLevel.coinCompleted;
+        DataPersist.Money += dataLevel.coinBonus * LevelManager.instance.curLevel.health;
         GameState.instance.UpdateState(NameState.PAUSE);
     }
 }

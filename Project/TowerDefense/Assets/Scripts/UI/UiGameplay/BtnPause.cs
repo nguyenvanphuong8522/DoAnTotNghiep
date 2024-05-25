@@ -9,7 +9,7 @@ public class BtnPause : MonoBehaviour
     [SerializeField] private Sprite iconNormal;
     [SerializeField] private Sprite iconPressed;
     [SerializeField] private Image image;
-    private GameState gameState;
+    public GameState gameState;
 
     private void Awake()
     {
@@ -23,7 +23,7 @@ public class BtnPause : MonoBehaviour
     {
         gameState = GameState.instance;
     }
-    private void PauseGame()
+    public void PauseGame()
     {
         if (gameState.paused)
         {
@@ -33,12 +33,12 @@ public class BtnPause : MonoBehaviour
         Pause();
     }
 
-    private void Pause()
+    public void Pause()
     {
         gameState.UpdateState(NameState.PAUSE);
         ChangeIcon(iconPressed);
     }
-    private void UnPause()
+    public void UnPause()
     {
         gameState.UpdateState(NameState.UNPAUSE);
         ChangeIcon(iconNormal);

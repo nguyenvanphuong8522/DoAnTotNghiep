@@ -3,6 +3,11 @@ using UnityEngine;
 
 public class DataPersist
 {
+    public static int Tutorialed
+    {
+        get => PlayerPrefs.GetInt("TUTORIAL", 0);
+        set => PlayerPrefs.SetInt("TUTORIAL", value);
+    }
     public static int Level
     {
         get => PlayerPrefs.GetInt("LEVEL", 0);

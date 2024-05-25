@@ -6,6 +6,13 @@ using UnityEngine.UI;
 
 public class PowerUpPopUp : BasePopup
 {
+    public static PowerUpPopUp instance;
+    protected override void Awake()
+    {
+        base.Awake();
+        instance = this;
+        Hide();
+    }
     public BtnPutBoom btnBoom, btnTeleport;
     public void SetPos(Vector3 pos)
     {
