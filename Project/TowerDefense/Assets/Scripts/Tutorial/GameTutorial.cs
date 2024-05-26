@@ -28,11 +28,6 @@ public class GameTutorial : Singleton<GameTutorial>
         steps[++indexStep].StartStep();
         UpdateTextTalk();
     }
-    [Button]
-    public void Speed()
-    {
-        Time.timeScale = 3;
-    }
     public void UpdateTextTalk()
     {
         dialogTalk.SetText(data.texts[indexStep]);

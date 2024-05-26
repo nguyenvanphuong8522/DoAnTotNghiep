@@ -5323,7 +5323,7 @@ MonoBehaviour:
     Game Design: Nguyen Van Phuong
 
 
-    Game Art: Nguyen Minh Tuan
+    Game Art: ww.Artstation.com
 
 
     Music:
@@ -8793,7 +8793,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &804893460
 Transform:
   m_ObjectHideFlags: 0

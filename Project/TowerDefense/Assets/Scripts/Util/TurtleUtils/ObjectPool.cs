@@ -115,7 +115,7 @@ public class ObjectPool : Singleton<ObjectPool>
             pools.Add(pool);
         }
     }
-
+    [Button]
     public void ReturnAllPool()
     {
         foreach (var p in pools)

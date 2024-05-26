@@ -42,19 +42,16 @@ public class LevelManager : Singleton<LevelManager>
         indexLevel = index;
         CameraController.instance.transform.position = listLevelData.levels[indexLevel].posCamera;
         curLevel.InitLevel(index, listLevelData);
-        if (index == 0 && DataPersist.Tutorialed == 0)
+        if (index == 0 && DataPersist.Tutorialed < 0)
         {
             GameTutorial.instance.StartTutorial();
         }
-        
-        
     }
     [Button]
     public void RestartLevel()
     {
         RemoveOldLevel();
         InitLevel(indexLevel);
-        
     }
 
     public void RemoveOldLevel()

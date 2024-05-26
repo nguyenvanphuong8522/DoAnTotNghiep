@@ -120,7 +120,7 @@ MonoBehaviour:
   disableRenderingOnOverride: 1
   _animationName: indle
   loop: 1
-  timeScale: 1
+  timeScale: 2
 --- !u!1 &1335345618160710174
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8b23af17188664fb73eb88a774f057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationSke: {fileID: 0}
+  animationSke: {fileID: 3659778302836708096}
   towerAttacks: []
   isUnderAttack: 0
   maxHeal: 1600

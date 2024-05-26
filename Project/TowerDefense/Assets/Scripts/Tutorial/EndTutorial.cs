@@ -18,6 +18,6 @@ public class EndTutorial : MonoBehaviour
 
     public void Save()
     {
-        DataPersist.Tutorialed = 1;
+        DataPersist.Tutorialed = 2;
     }
 }

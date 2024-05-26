@@ -7,7 +7,7 @@ public class PopupPreview : BasePopup
     [SerializeField] private LitsElementActive listElement;
     [SerializeField] private int index;
     [SerializeField] private ButtonEffectLogic btnStart;
-    private void OnEnable()
+    private void Start()
     {
         btnStart.onClick.AddListener(StartButton);
     }

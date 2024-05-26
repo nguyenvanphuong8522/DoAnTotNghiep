@@ -44,19 +44,19 @@ public class Obstacle : MonoBehaviour, Ihealth
         float distance = Vector3.Distance(curClick, preClick);
         if (!Utils.IsPointerOverUIElement() && distance <= 0.00001f)
         {
-            if(Arrow.instance.obstacle == null)
+            if (Arrow.instance.obstacle == null)
             {
                 Arrow.instance.obstacle = this;
                 Arrow.instance.SetPos(transform.position);
                 CheckStartShootObstacles();
             }
-            else if(Arrow.instance.obstacle == this)
+            else if (Arrow.instance.obstacle == this)
             {
                 CheckStartShootObstacles();
                 Arrow.instance.obstacle = null;
                 Arrow.instance.HideArrow();
             }
-            else if(Arrow.instance.obstacle != this)
+            else if (Arrow.instance.obstacle != this)
             {
                 Arrow.instance.obstacle.CheckStartShootObstacles();
                 Arrow.instance.obstacle = this;
@@ -64,13 +64,13 @@ public class Obstacle : MonoBehaviour, Ihealth
                 Arrow.instance.SetPos(transform.position);
             }
         }
-            
+
     }
     public void CheckStartShootObstacles()
     {
         isUnderAttack = !isUnderAttack;
         boxSmall.isTrigger = false;
-        
+
         if (towerAttacks.Count > 0)
         {
             foreach (TowerAttack element in towerAttacks)
@@ -84,10 +84,21 @@ public class Obstacle : MonoBehaviour, Ihealth
     {
         towerAttack.ShootObstacle(transform, !towerAttack.gun.isShootingObstacle);
         Arrow.instance.Show(towerAttack.gun.isShootingObstacle);
+
+        if(towerAttack.gun.isShootingObstacle)
+        {
+            animationSke.state.SetAnimation(0, "dame", true);
+        }
+        else
+        {
+            animationSke.state.SetAnimation(0, "indle", true);
+        }
+
     }
     public void TakeDamage(float damage)
     {
         health -= damage;
+        
         healBar.UpdateHealBar();
     }
     private void OnCollisionEnter2D(Collision2D col)
@@ -107,7 +118,7 @@ public class Obstacle : MonoBehaviour, Ihealth
 
         if (!col.gameObject.CompareTag("Bullet")) return;
         int LayerIgnoreRaycast = LayerMask.NameToLayer("Snipper");
-        if(col.gameObject.layer == LayerIgnoreRaycast)
+        if (col.gameObject.layer == LayerIgnoreRaycast)
         {
             ProjectileExplore bulletExplore = col.gameObject.GetComponent<ProjectileExplore>();
             if (bulletExplore != null)
@@ -115,7 +126,7 @@ public class Obstacle : MonoBehaviour, Ihealth
                 TakeDamage(bulletExplore.damage * 0.1f);
             }
         }
-        
+
     }
     private void OnTriggerExit2D(Collider2D col)
     {
@@ -146,7 +157,7 @@ public class Obstacle : MonoBehaviour, Ihealth
     }
 
     private void SetDie()
-    { 
+    {
         CheckDie();
         SpawnEffectDie();
         ReturnToPool();
