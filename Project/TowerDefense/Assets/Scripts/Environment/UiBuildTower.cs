@@ -23,6 +23,10 @@ public class UiBuildTower : BasePopup
             {
                 btnBuildTowerList[i].Lock();
             }
+            else
+            {
+                btnBuildTowerList[i].Unlock();
+            }
         }
         DataTablesSave tbSave = DataHangarSave.instance.tablesSave;
         for (int i = 0;i <tbSave.dataTablesSave.Count; i++)

@@ -76,6 +76,10 @@ PrefabInstance:
       value: lv2
       objectReference: {fileID: 0}
     - target: {fileID: 3249363587664252974, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}
+      propertyPath: coinSell
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3249363587664252974, guid: 64e57b1307efe6f40a46bc107c974ed7, type: 3}
       propertyPath: indexLevel
       value: 1
       objectReference: {fileID: 0}

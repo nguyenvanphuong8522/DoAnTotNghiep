@@ -12,9 +12,53 @@ public class TowerUpgrade : MonoBehaviour
     public int indexLevel;
     private UiTowerUpgrade uiTowerUpgrade;
     public CircleCollider2D rangeCollider;
+    public Gun gun;
+
     private void OnEnable()
     {
         EnableRange();
+        SetData();
+    }
+    private void SetData()
+    {
+        TowerInfor data = GameManager.instance.towersData.dataTowers[indexTower].dataTowers[indexLevel];
+        coinUpdate = data.coinUpgrade;
+        coinSell = data.coinSell;
+        List<UpgradeSave> listUpgrade = DataHangarSave.instance.tablesSave.dataTablesSave[indexTower].columnSaves[indexLevel].types;
+        UpgradeSave upgradeSave = listUpgrade.Find(x => x.type == UpgradeType.RANGE);
+        if (upgradeSave != null)
+        {
+            if (upgradeSave.unLocked == true)
+            {
+                range.localScale = (data.range + (data.range * 0.1f)) * Vector3.one;
+            }
+            else
+            {
+                range.localScale = data.range * Vector3.one;
+            }
+        }
+        
+
+        if(gun != null)
+        {
+            if (listUpgrade.Find(x => x.type == UpgradeType.DAME).unLocked == true)
+            {
+                gun.atk = (int)(data.damge + (data.damge * 0.1f));
+            }
+            else
+            {
+                gun.atk = data.damge;
+            }
+            if (listUpgrade.Find(x => x.type == UpgradeType.DAME).unLocked == true)
+            {
+                gun.rate = data.fireRate - (data.fireRate * 0.1f);
+            }
+            else
+            {
+                gun.rate = data.fireRate;
+            }
+        }
+
     }
 
     private void Start()

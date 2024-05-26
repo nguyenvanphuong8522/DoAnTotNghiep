@@ -49,19 +49,19 @@ MonoBehaviour:
       rate: 1
       type: 0
   - gates:
+    - amount: 10
+      rate: 2
+      type: 1
+    - amount: 10
+      rate: 2
+      type: 1
+  - gates:
     - amount: 8
-      rate: 6
+      rate: 7
       type: 2
     - amount: 0
-      rate: 6
+      rate: 7
       type: 2
-  - gates:
-    - amount: 10
-      rate: 2
-      type: 1
-    - amount: 10
-      rate: 2
-      type: 1
   - gates:
     - amount: 25
       rate: 2

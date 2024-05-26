@@ -9,6 +9,7 @@ public class IconAbility : MonoBehaviour
     [SerializeField] private Image iconGray;
     [SerializeField] private float delta;
     [SerializeField] private BtnPutBoom btnPutAbility;
+    private Coroutine coroutine;
 
     private void OnEnable()
     {
@@ -21,10 +22,15 @@ public class IconAbility : MonoBehaviour
         iconGray.enabled = true;
         iconBlack.fillAmount = 1;
         btnPutAbility.Lock();
-        StartCoroutine(Rotate());
+        if (coroutine != null)
+        {
+            StopCoroutine(coroutine);
+            coroutine = null;
+        }
+            coroutine = StartCoroutine(Rotate());
     }
 
-    public void Unlock() 
+    public void Unlock()
     {
         iconBlack.enabled = false;
         iconGray.enabled = false;
@@ -32,7 +38,7 @@ public class IconAbility : MonoBehaviour
     }
     public IEnumerator Rotate()
     {
-        while(iconBlack.fillAmount > 0)
+        while (iconBlack.fillAmount > 0)
         {
             iconBlack.fillAmount -= delta;
             yield return new WaitForSeconds(0.25f);

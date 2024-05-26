@@ -28,4 +28,9 @@ public class DataPersist
         get => PlayerPrefs.GetString("ABILITY");
         set => PlayerPrefs.SetString("ABILITY", value);
     }
+    public static string JsonStarLevel
+    {
+        get => PlayerPrefs.GetString("LEVELSTAR");
+        set => PlayerPrefs.SetString("LEVELSTAR", value);
+    }
 }

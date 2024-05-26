@@ -7,9 +7,57 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1312474082960904782, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312474082960904782, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.g
+      value: 0.14884314
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312474082960904782, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312474082960904782, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.b
+      value: 0.027450982
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312474082960904782, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.g
+      value: 0.17254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312474082960904782, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: m_Parameters.colorGradient.key1.r
+      value: 0.9725491
+      objectReference: {fileID: 0}
     - target: {fileID: 1335005262657696291, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711156378391268499, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711156378391268499, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.49106053
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711156378391268499, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711156378391268499, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: InitialModule.startColor.minColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711156378391268499, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: InitialModule.startColor.minColor.g
+      value: 0.12784651
+      objectReference: {fileID: 0}
+    - target: {fileID: 1711156378391268499, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: InitialModule.startColor.minColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2318745019090544538, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -105,17 +153,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7129429665816947980, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 7129429665816947980, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 7129429665816947980, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 7129429665816947980, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594361518107840794, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594361518107840794, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594361518107840794, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594361518107840794, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}

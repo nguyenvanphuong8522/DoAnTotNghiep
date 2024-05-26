@@ -17,6 +17,7 @@ public class SeventhStep : BaseStep
         UiGameplay.instance.btnPause.UnPause();
         gameTutorial.dialogTalk.HideDialog();
         gameTutorial.obstacle.CheckStartShootObstacles();
+        Arrow.instance.SetPos(gameTutorial.obstacle.transform.position);
         gameTutorial.NextStep();
         gameObject.SetActive(false);
     }

@@ -11,6 +11,9 @@ TagManager:
   - Teleport
   - Boom
   - TimeWraper
+  - Missile
+  - Target
+  - Obstacle
   layers:
   - Default
   - TransparentFX

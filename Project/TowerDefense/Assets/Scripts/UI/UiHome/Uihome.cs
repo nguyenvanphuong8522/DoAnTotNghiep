@@ -8,8 +8,12 @@ public class Uihome : Singleton<Uihome>
     public ButtonEffectLogic btnSetting;
     public ButtonEffectLogic btnInforGame;
     public PopUpManager popUpManager;
+
+    public Sprite spriteGray;
+    public Sprite spriteGreen;
     private void Start()
     {
+        Loading.instance.Show();
         btnPlay.onClick.AddListener(ShowPopUpLevel);
         btnSetting.onClick.AddListener(ShowPopUpSetting);
         btnInforGame.onClick.AddListener(ShowPopUpInforGame);

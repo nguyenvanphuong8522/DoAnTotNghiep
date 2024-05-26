@@ -1770,7 +1770,7 @@ MonoBehaviour:
       type: 0
     coinCompleted: 650
     coinBonus: 26
-  - initMoney: 100
+  - initMoney: 200
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -0.5, y: 3.5, z: -5}
@@ -2277,7 +2277,7 @@ MonoBehaviour:
       type: 3
     coinCompleted: 750
     coinBonus: 30
-  - initMoney: 100
+  - initMoney: 200
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: 5.5, y: -5.3, z: -5}
@@ -2532,7 +2532,7 @@ MonoBehaviour:
       type: 2
     coinCompleted: 750
     coinBonus: 30
-  - initMoney: 100
+  - initMoney: 1000
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: 0.5, y: 3, z: -5}

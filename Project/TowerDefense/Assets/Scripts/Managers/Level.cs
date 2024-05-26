@@ -11,9 +11,24 @@ public class Level : MonoBehaviour
     public LevelScriptable dataLevel;
     public WaveManager waveManager;
     public Environment environment;
+    public Coroutine coroutine;
+    private void OnEnable()
+    {
+        GameEvent.returnLevel += Stop;
+    }
 
+    public void Stop()
+    {
+        if(coroutine != null)
+        {
+            StopCoroutine(coroutine);
+            coroutine = null;
+        }
+    }
     public void InitLevel(int indexLevel, ListLevelScriptable data)
     {
+        Loading.instance.Show();
+        Arrow.instance.HideArrow();
         dataLevel = data.levels[indexLevel];
         if(dataLevel.bgSpriteIndex == 2)
         {
@@ -33,10 +48,9 @@ public class Level : MonoBehaviour
         Ground.instance.uiTowerUpgrade.Lock(data.levels[indexLevel].contraintTower);
         money = dataLevel.initMoney;
         UiGameplay.instance.UpdatTxtMoney();
-
-
         SetEnvironmentData(data);
-        StartCoroutine(SetUpWaveManager());
+        Stop();
+        coroutine = StartCoroutine(SetUpWaveManager());
         UiGameplay.instance.UpdatTxtWave(1, dataLevel.waves.listWave.Count);
         GameEvent.CallStartLevel();
     }
@@ -79,5 +93,9 @@ public class Level : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         UiGameplay.instance.popupLose.Show();
+    }
+    private void OnDisable()
+    {
+        GameEvent.returnLevel -= Stop;
     }
 }

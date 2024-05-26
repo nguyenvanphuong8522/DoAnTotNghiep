@@ -12,7 +12,7 @@ public class GunLaser : Gun
     }
     public override void Shoot()
     {
-        enemyHealth.TakeDamage(0.5f);
+        enemyHealth.TakeDamage(atk);
     }
     public override void StartShoot()
     {

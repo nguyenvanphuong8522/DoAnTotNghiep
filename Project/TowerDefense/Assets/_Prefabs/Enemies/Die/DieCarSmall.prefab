@@ -40,8 +40,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 2603411362737201044}
     m_Modifications:
     - target: {fileID: 7308141299115527897, guid: 7c61d7e62fb59bc4690b97c3556570bf, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308141299115527897, guid: 7c61d7e62fb59bc4690b97c3556570bf, type: 3}
       propertyPath: InitialModule.startSpeed.minScalar
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308141299115527897, guid: 7c61d7e62fb59bc4690b97c3556570bf, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 7308141299115527897, guid: 7c61d7e62fb59bc4690b97c3556570bf, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.scalar
@@ -79,12 +87,36 @@ PrefabInstance:
       propertyPath: ClampVelocityModule.enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7308141299115613579, guid: 7c61d7e62fb59bc4690b97c3556570bf, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308141299115613579, guid: 7c61d7e62fb59bc4690b97c3556570bf, type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 7308141299130548979, guid: 7c61d7e62fb59bc4690b97c3556570bf, type: 3}
       propertyPath: m_Name
       value: CarSmallDie
       objectReference: {fileID: 0}
     - target: {fileID: 7308141299130629939, guid: 7c61d7e62fb59bc4690b97c3556570bf, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308141299130719459, guid: 7c61d7e62fb59bc4690b97c3556570bf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308141299130719459, guid: 7c61d7e62fb59bc4690b97c3556570bf, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308141299130719459, guid: 7c61d7e62fb59bc4690b97c3556570bf, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308141299130719459, guid: 7c61d7e62fb59bc4690b97c3556570bf, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7308141299130772781, guid: 7c61d7e62fb59bc4690b97c3556570bf, type: 3}

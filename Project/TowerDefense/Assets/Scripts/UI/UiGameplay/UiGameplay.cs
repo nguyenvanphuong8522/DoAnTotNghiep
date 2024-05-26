@@ -16,6 +16,7 @@ public class UiGameplay : Singleton<UiGameplay>
     public PopupSettingInGame popUpSetting;
     public PopupLose popupLose;
     public PopupWin popupWin;
+    public TextWave textWave;
     protected override void Awake()
     {
         base.Awake();
@@ -25,6 +26,7 @@ public class UiGameplay : Singleton<UiGameplay>
     public void Hide()
     {
         gameObject.SetActive(false);
+        textWave.StopDelay();
     }
     public void Show()
     {

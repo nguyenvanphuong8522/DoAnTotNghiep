@@ -10,7 +10,6 @@ public class Gate : MonoBehaviour
     private Coroutine coroutine;
     private void OnEnable()
     {
-        
         GameEvent.returnLevel += StopSpawn;
     }
     public void StartSpawn(Path path)

@@ -7,13 +7,11 @@ public class DataHangarSave : Singleton<DataHangarSave>
 {
     [HideInInspector]public DataTablesSave tablesSave;
     public TableTower tableTower;
-
     protected override void Awake()
     {
         base.Awake();
         CheckInitData();
     }
-
 
     [Button]
     public void TestMoney()

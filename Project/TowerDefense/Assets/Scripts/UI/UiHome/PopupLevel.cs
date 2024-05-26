@@ -8,6 +8,7 @@ public class PopupLevel : BasePopup
 {
     [SerializeField] private List<BtnLevel> btnLevels;
     [SerializeField] private ButtonEffectLogic btnUpgrade;
+    public PopupPreview popupPreview;
     public Transform listBtn;
     
     private void Start()
@@ -36,5 +37,17 @@ public class PopupLevel : BasePopup
     private void ShowPopupUpgarde()
     {
         Uihome.instance.popUpManager.popupUpgrade.Show();
+    }
+    public override void Show(object data = null)
+    {
+        base.Show(data);
+        UpdateBtnLevel();
+    }
+    public void UpdateBtnLevel()
+    {
+        foreach(var btnLevel in btnLevels)
+        {
+            btnLevel.UpdateStarLevel();
+        }
     }
 }

@@ -353,6 +353,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 9e5c066d297635741bf82590f471c4a7, type: 3}
     - target: {fileID: 1459079082663220663, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 1065134498569980840}
+    - target: {fileID: 1459079082663220663, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
       propertyPath: coinSell
       value: 75
       objectReference: {fileID: 0}
@@ -418,6 +422,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3618862129832775544, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3618862129832775546, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}
+      propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3618862129832775547, guid: 23d2a05d5906e814faa424590c9e5d61, type: 3}

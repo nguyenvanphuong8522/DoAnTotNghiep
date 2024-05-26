@@ -11,6 +11,7 @@ public class Health : MonoBehaviour, Ihealth
     public Transform sprite;
     public float health { get; set; }
     public HealBar healBar { get; set ; }
+    public ParticleSystem effectTakeDame;
 
     private void OnEnable()
     {
@@ -33,6 +34,7 @@ public class Health : MonoBehaviour, Ihealth
     public void TakeDamage(float damage)
     {
         health -= damage;
+        
         healBar.UpdateHealBar();
     }
     private void OnCollisionEnter2D(Collision2D col)
@@ -42,6 +44,7 @@ public class Health : MonoBehaviour, Ihealth
             ProjectileExplore bulletExplore = col.gameObject.GetComponent<ProjectileExplore>();
             if (bulletExplore != null)
             {
+                effectTakeDame.Play();
                 TakeDamage(bulletExplore.damage);
                 bulletExplore.Explore();
             }
@@ -52,7 +55,7 @@ public class Health : MonoBehaviour, Ihealth
     {
         if (col.gameObject.CompareTag("Boom"))
         {
-            TakeDamage(4000);
+            TakeDamage(5500);
         }
         else if(col.gameObject.CompareTag("Bullet"))
         {

@@ -13,7 +13,7 @@ public class Gun : MonoBehaviour
     public int typeBullet;
     public bool isShootingObstacle;
     protected int indexPointShoot;
-    [SerializeField]private int atk;
+    public int atk;
     float curTime = -100000;
 
     public ParticleSystem[] effectShoots;

@@ -14697,8 +14697,8 @@ ParticleSystem:
     startColor:
       serializedVersion: 2
       minMaxState: 2
-      minColor: {r: 1, g: 0, b: 0, a: 1}
-      maxColor: {r: 1, g: 0.43867922, b: 0.43867922, a: 1}
+      minColor: {r: 0, g: 0.72399664, b: 1, a: 1}
+      maxColor: {r: 0, g: 1, b: 0.9820225, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -19326,6 +19326,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.37
       objectReference: {fileID: 0}
+    - target: {fileID: 3645374536174241857, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645374536174241857, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645374536174241857, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.85
+      objectReference: {fileID: 0}
     - target: {fileID: 4696677080953311680, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: m_Size.x
       value: 0.2
@@ -19378,6 +19390,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: daafbbacce3f5de4794902567c917abd, type: 2}
+    - target: {fileID: 6705592484036796700, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 5092835347521969493}
     - target: {fileID: 6705592484036796700, guid: 6cf12250a9ba6ee42a2228cccab947ad, type: 3}
       propertyPath: indexTower
       value: 4
@@ -19523,8 +19539,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 0.08018869, b: 0.08018869, a: 1}
-      key1: {r: 1, g: 0.08018869, b: 0.08018869, a: 1}
+      key0: {r: 0.03476668, g: 0.96981126, b: 0.95430124, a: 1}
+      key1: {r: 0.07450981, g: 0.9607844, b: 0.91372555, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -19581,6 +19597,7 @@ MonoBehaviour:
   effectShoots:
   - {fileID: 1711156378391268499}
   skeletonAnimation: {fileID: 0}
+  soundEffect: {fileID: 0}
   line: {fileID: 1312474082960904782}
 --- !u!4 &1082401990158358028 stripped
 Transform:

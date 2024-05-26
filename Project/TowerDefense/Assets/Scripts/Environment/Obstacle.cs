@@ -44,7 +44,25 @@ public class Obstacle : MonoBehaviour, Ihealth
         float distance = Vector3.Distance(curClick, preClick);
         if (!Utils.IsPointerOverUIElement() && distance <= 0.00001f)
         {
-            CheckStartShootObstacles();
+            if(Arrow.instance.obstacle == null)
+            {
+                Arrow.instance.obstacle = this;
+                Arrow.instance.SetPos(transform.position);
+                CheckStartShootObstacles();
+            }
+            else if(Arrow.instance.obstacle == this)
+            {
+                CheckStartShootObstacles();
+                Arrow.instance.obstacle = null;
+                Arrow.instance.HideArrow();
+            }
+            else if(Arrow.instance.obstacle != this)
+            {
+                Arrow.instance.obstacle.CheckStartShootObstacles();
+                Arrow.instance.obstacle = this;
+                Arrow.instance.obstacle.CheckStartShootObstacles();
+                Arrow.instance.SetPos(transform.position);
+            }
         }
             
     }
@@ -65,6 +83,7 @@ public class Obstacle : MonoBehaviour, Ihealth
     public void CheckIsShootObstacle(TowerAttack towerAttack)
     {
         towerAttack.ShootObstacle(transform, !towerAttack.gun.isShootingObstacle);
+        Arrow.instance.Show(towerAttack.gun.isShootingObstacle);
     }
     public void TakeDamage(float damage)
     {
@@ -93,7 +112,7 @@ public class Obstacle : MonoBehaviour, Ihealth
             ProjectileExplore bulletExplore = col.gameObject.GetComponent<ProjectileExplore>();
             if (bulletExplore != null)
             {
-                TakeDamage(bulletExplore.damage);
+                TakeDamage(bulletExplore.damage * 0.1f);
             }
         }
         
@@ -141,6 +160,7 @@ public class Obstacle : MonoBehaviour, Ihealth
                 element.ShootObstacle(transform, false);
             }
         }
+        Arrow.instance.HideArrow();
         LevelManager.instance.curLevel.IncreaseCoin(coinDestroy);
     }
     private void SpawnEffectDie()

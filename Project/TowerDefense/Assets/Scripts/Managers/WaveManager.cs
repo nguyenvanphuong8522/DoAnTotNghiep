@@ -60,6 +60,10 @@ public class WaveManager : Singleton<WaveManager>
         curWave.StartWave(paths);
         waveIndex++;
         UiGameplay.instance.UpdatTxtWave(waveIndex, maxWave);
+        if (coroutine != null)
+        {
+            UiGameplay.instance.textWave.Show();
+        }
     }
 
     private void InitGate()
