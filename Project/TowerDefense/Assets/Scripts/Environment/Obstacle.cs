@@ -11,6 +11,7 @@ public class Obstacle : MonoBehaviour, Ihealth
     public SkeletonAnimation animationSke;
     public List<TowerAttack> towerAttacks;
     public bool isUnderAttack = false;
+    public ParticleSystem effectTakeDame;
 
     public float health { get; set; }
     public HealBar healBar { get; set; }
@@ -85,20 +86,25 @@ public class Obstacle : MonoBehaviour, Ihealth
         towerAttack.ShootObstacle(transform, !towerAttack.gun.isShootingObstacle);
         Arrow.instance.Show(towerAttack.gun.isShootingObstacle);
 
-        if(towerAttack.gun.isShootingObstacle)
+        if(animationSke != null)
         {
-            animationSke.state.SetAnimation(0, "dame", true);
+            if (towerAttack.gun.isShootingObstacle)
+            {
+                animationSke.state.SetAnimation(0, "dame", true);
+            }
+            else
+            {
+                animationSke.state.SetAnimation(0, "indle", true);
+            }
         }
-        else
-        {
-            animationSke.state.SetAnimation(0, "indle", true);
-        }
-
     }
     public void TakeDamage(float damage)
     {
         health -= damage;
-        
+        if(!effectTakeDame.isPlaying)
+        {
+            effectTakeDame.Play();
+        }
         healBar.UpdateHealBar();
     }
     private void OnCollisionEnter2D(Collision2D col)
@@ -178,6 +184,7 @@ public class Obstacle : MonoBehaviour, Ihealth
     {
         Debug.Log("die");
         GameObject die = ObjectPool.instance.Get(ObjectPool.instance.obstacleDestroys[0], transform.position);
+        ObjectPool.instance.Get(ObjectPool.instance.enemyDies[3], transform.position);
         SpawnDollarEffect();
     }
     public void ReturnToPool()

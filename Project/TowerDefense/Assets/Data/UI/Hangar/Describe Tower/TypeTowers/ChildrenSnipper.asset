@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   list:
   - Name: Shadow Sentinel
-    Description: Basic sniper rifle capable of penetrating multiple light targets
-      at medium range.
+    Description: "S\xFAng b\u1EAFn t\u1EC9a c\u01A1 b\u1EA3n c\xF3 kh\u1EA3 n\u0103ng
+      xuy\xEAn th\u1EE7ng nhi\u1EC1u m\u1EE5c ti\xEAu h\u1EA1ng nh\u1EB9 \u1EDF t\u1EA7m
+      trung."
   - Name: Phantom Marksman
-    Description: Enhanced sniper rifle with extended range, able to penetrate multiple
-      harder and thicker targets.
+    Description: "S\xFAng b\u1EAFn t\u1EC9a c\u1EA3i ti\u1EBFn v\u1EDBi t\u1EA7m
+      b\u1EAFn m\u1EDF r\u1ED9ng, c\xF3 th\u1EC3 xuy\xEAn th\u1EE7ng nhi\u1EC1u m\u1EE5c
+      ti\xEAu c\u1EE9ng h\u01A1n v\xE0 d\xE0y h\u01A1n."
   - Name: Eagle Eye Perch
-    Description: Advanced sniper rifle with very long range, capable of penetrating
-      multiple heavy and armored targets, integrated with recoil reduction and advanced
-      sensors.
+    Description: "S\xFAng b\u1EAFn t\u1EC9a ti\xEAn ti\u1EBFn v\u1EDBi t\u1EA7m b\u1EAFn
+      r\u1EA5t xa, c\xF3 kh\u1EA3 n\u0103ng xuy\xEAn th\u1EE7ng nhi\u1EC1u m\u1EE5c
+      ti\xEAu h\u1EA1ng n\u1EB7ng v\xE0 b\u1ECDc th\xE9p, t\xEDch h\u1EE3p t\xEDnh
+      n\u0103ng gi\u1EA3m \u0111\u1ED9 gi\u1EADt v\xE0 c\u1EA3m bi\u1EBFn ti\xEAn
+      ti\u1EBFn."

@@ -8,9 +8,19 @@ public class DataPersist
         get => PlayerPrefs.GetInt("TUTORIAL", -1);
         set => PlayerPrefs.SetInt("TUTORIAL", value);
     }
+    public static int VolumeMusic
+    {
+        get => PlayerPrefs.GetInt("MUSIC", 1);
+        set => PlayerPrefs.SetInt("MUSIC", value);
+    }
+    public static int VolumeSound
+    {
+        get => PlayerPrefs.GetInt("SOUND", 1);
+        set => PlayerPrefs.SetInt("SOUND", value);
+    }
     public static int Level
     {
-        get => PlayerPrefs.GetInt("LEVEL", 0);
+        get => PlayerPrefs.GetInt("LEVEL", 20);
         set => PlayerPrefs.SetInt("LEVEL", value);
     }
     public static int Money

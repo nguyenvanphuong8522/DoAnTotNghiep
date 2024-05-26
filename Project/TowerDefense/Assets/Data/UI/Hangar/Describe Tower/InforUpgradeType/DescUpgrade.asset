@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: DescUpgrade
   m_EditorClassIdentifier: 
   list:
-  - Name: Dame
-    Description: Damage + 10 %
-  - Name: Range
-    Description: Range + 10%
-  - Name: Rate
-    Description: Fire Rate +10%
+  - Name: "S\xE1t th\u01B0\u01A1ng"
+    Description: "S\xE1t th\u01B0\u01A1ng + 10 %"
+  - Name: "Ph\u1EA1m vi"
+    Description: "Ph\u1EA1m vi + 10%"
+  - Name: "T\u1ED1c \u0111\u1ECD b\u1EAFn"
+    Description: "T\u1ED1c \u0111\u1ED9 b\u1EAFn +10%"

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: AbilityTeleport
   m_EditorClassIdentifier: 
   list:
-  - Name: Teleport
+  - Name: "D\u1ECBch chuy\u1EC3n"
     Description: + 5 second
-  - Name: Teleport Longer
+  - Name: "D\u1ECBch chuy\u1EC3n cao c\u1EA5p"
     Description: + 5 second

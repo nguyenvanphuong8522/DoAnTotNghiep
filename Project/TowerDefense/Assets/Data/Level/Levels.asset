@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Levels
   m_EditorClassIdentifier: 
   levels:
-  - initMoney: 100
+  - screenMap: {fileID: 21300000, guid: 9c04b9b548200724c9a1e78955245b03, type: 3}
+    initMoney: 100
     posCamera: {x: -0.088888645, y: -1.2065746, z: -10}
     contraintTower: 0200000001000000000000000000000000000000
     posHouse: {x: -3.5, y: 2, z: -5}
@@ -207,7 +208,8 @@ MonoBehaviour:
       type: 0
     coinCompleted: 200
     coinBonus: 8
-  - initMoney: 100
+  - screenMap: {fileID: 21300000, guid: 6974c4043b80c0848848ce33798415a6, type: 3}
+    initMoney: 100
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000001000000000000000000000000000000
     posHouse: {x: 4.5, y: 1.76, z: -5}
@@ -476,7 +478,8 @@ MonoBehaviour:
       type: 0
     coinCompleted: 300
     coinBonus: 12
-  - initMoney: 100
+  - screenMap: {fileID: 21300000, guid: 3f5b94578b057b749bc2d48fed784260, type: 3}
+    initMoney: 100
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000002000000000000000000000000000000
     posHouse: {x: -4.5, y: 2.5, z: -5}
@@ -664,7 +667,8 @@ MonoBehaviour:
       type: 0
     coinCompleted: 400
     coinBonus: 16
-  - initMoney: 100
+  - screenMap: {fileID: 21300000, guid: 120d806eff5483b41b010a203e43f890, type: 3}
+    initMoney: 100
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000002000000000000000000000000000000
     posHouse: {x: -5.5, y: 2.5, z: -5}
@@ -792,7 +796,8 @@ MonoBehaviour:
       type: 0
     coinCompleted: 450
     coinBonus: 18
-  - initMoney: 100
+  - screenMap: {fileID: 21300000, guid: 68a447b20fc86c44dadcc60e51c8207e, type: 3}
+    initMoney: 100
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000002000000010000000000000000000000
     posHouse: {x: -3.5, y: 3, z: -5}
@@ -989,7 +994,8 @@ MonoBehaviour:
       type: 0
     coinCompleted: 500
     coinBonus: 20
-  - initMoney: 100
+  - screenMap: {fileID: 21300000, guid: 02d8cae70848e1b4dbac539587620eb8, type: 3}
+    initMoney: 100
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000002000000010000000100000001000000
     posHouse: {x: 5.5, y: 3, z: -5}
@@ -1028,9 +1034,25 @@ MonoBehaviour:
     - pos: {x: -4, y: -1.5, z: -1}
       name: 1
       type: 1
+    - pos: {x: 0, y: 2.7, z: -1}
+      name: 1
+      type: 3
+    - pos: {x: -1.5, y: -3.5, z: -1}
+      name: 0
+      type: 2
+    - pos: {x: -2.5, y: -3.5, z: -1}
+      name: 0
+      type: 2
+    - pos: {x: -3.5, y: -3.5, z: -1}
+      name: 0
+      type: 2
+    - pos: {x: 2.5, y: -4.5, z: -1}
+      name: 0
+      type: 2
     coinCompleted: 400
     coinBonus: 16
-  - initMoney: 100
+  - screenMap: {fileID: 21300000, guid: 5f902065b985b5e4283e0db70db57757, type: 3}
+    initMoney: 100
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000020000000100000001000000
     posHouse: {x: 5.5, y: -2, z: -5}
@@ -1111,9 +1133,13 @@ MonoBehaviour:
     - pos: {x: 0.5, y: -0.5, z: 0}
       name: 1
       type: 1
+    - pos: {x: 3.6, y: 4, z: 0}
+      name: 1
+      type: 3
     coinCompleted: 450
     coinBonus: 18
-  - initMoney: 300
+  - screenMap: {fileID: 21300000, guid: 0bd79b61d9a5cd54e8abcb32c2318d53, type: 3}
+    initMoney: 300
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000100000001000000
     posHouse: {x: -5.5, y: -1.5, z: -5}
@@ -1175,7 +1201,8 @@ MonoBehaviour:
       type: 1
     coinCompleted: 500
     coinBonus: 20
-  - initMoney: 200
+  - screenMap: {fileID: 21300000, guid: ca346bae3f9814442b2ea408d725a970, type: 3}
+    initMoney: 200
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000200000002000000
     posHouse: {x: -5.5, y: 1.5, z: -5}
@@ -1244,9 +1271,13 @@ MonoBehaviour:
     - pos: {x: -6.5, y: -3.5, z: 0}
       name: 1
       type: 1
+    - pos: {x: 0, y: 0, z: -1}
+      name: 1
+      type: 4
     coinCompleted: 500
     coinBonus: 20
-  - initMoney: 100
+  - screenMap: {fileID: 21300000, guid: 1c9d1132ad7849a4489e0615c7ad6bb1, type: 3}
+    initMoney: 100
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -4.5, y: 1, z: -5}
@@ -1306,9 +1337,13 @@ MonoBehaviour:
     - pos: {x: -2.5, y: -2.5, z: 0}
       name: 0
       type: 1
+    - pos: {x: 0.58, y: 2.8, z: -2}
+      name: 1
+      type: 4
     coinCompleted: 550
     coinBonus: 25
-  - initMoney: 100
+  - screenMap: {fileID: 21300000, guid: 3ebeb620f67a659419fab96ad332b492, type: 3}
+    initMoney: 100
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: 1.5, y: 3, z: -5}
@@ -1373,7 +1408,8 @@ MonoBehaviour:
       type: 0
     coinCompleted: 500
     coinBonus: 20
-  - initMoney: 300
+  - screenMap: {fileID: 21300000, guid: 4291e6fa6e3fde443874e430bf805a8d, type: 3}
+    initMoney: 300
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -5.5, y: 3, z: -5}
@@ -1580,9 +1616,31 @@ MonoBehaviour:
     - pos: {x: 0.5, y: 1.5, z: 0}
       name: 0
       type: 0
+    - pos: {x: -4.5, y: -2.5, z: -1}
+      name: 1
+      type: 5
+    - pos: {x: -4.5, y: -5.5, z: -1}
+      name: 1
+      type: 5
+    - pos: {x: -4.5, y: -8.5, z: -1}
+      name: 1
+      type: 5
+    - pos: {x: 3.5, y: -5.5, z: -1}
+      name: 1
+      type: 5
+    - pos: {x: 3.5, y: -2.5, z: -1}
+      name: 1
+      type: 5
+    - pos: {x: 3.5, y: -8.5, z: -1}
+      name: 1
+      type: 5
+    - pos: {x: -0.5, y: -8.5, z: -1}
+      name: 1
+      type: 5
     coinCompleted: 600
     coinBonus: 24
-  - initMoney: 100
+  - screenMap: {fileID: 21300000, guid: e96fdd6a0d875f243a26671a92c8c3d4, type: 3}
+    initMoney: 100
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -5.5, y: 0, z: -5}
@@ -1768,9 +1826,22 @@ MonoBehaviour:
     - pos: {x: -3.5, y: 3.5, z: 0}
       name: 0
       type: 0
+    - pos: {x: -3.5, y: -8.5, z: 0}
+      name: 1
+      type: 5
+    - pos: {x: -0.02, y: -8.5, z: 0}
+      name: 1
+      type: 5
+    - pos: {x: 3.5, y: -8.5, z: 0}
+      name: 1
+      type: 5
+    - pos: {x: 0.5, y: -1.5, z: 0}
+      name: 1
+      type: 5
     coinCompleted: 650
     coinBonus: 26
-  - initMoney: 200
+  - screenMap: {fileID: 21300000, guid: 100a96870b0388847b75574460bf86e4, type: 3}
+    initMoney: 200
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -0.5, y: 3.5, z: -5}
@@ -1847,7 +1918,8 @@ MonoBehaviour:
       type: 0
     coinCompleted: 700
     coinBonus: 28
-  - initMoney: 100
+  - screenMap: {fileID: 21300000, guid: 2e9b47054e4b268478493aef75e71aad, type: 3}
+    initMoney: 100
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -0.5, y: 2, z: -5}
@@ -1990,7 +2062,8 @@ MonoBehaviour:
       type: 0
     coinCompleted: 750
     coinBonus: 30
-  - initMoney: 100
+  - screenMap: {fileID: 21300000, guid: ee8ba827345bb324ea19ffa744088a10, type: 3}
+    initMoney: 100
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -0.5, y: 1.5, z: -5}
@@ -2277,7 +2350,8 @@ MonoBehaviour:
       type: 3
     coinCompleted: 750
     coinBonus: 30
-  - initMoney: 200
+  - screenMap: {fileID: 21300000, guid: 88f2a3f68309c4f40a311879847f0598, type: 3}
+    initMoney: 200
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: 5.5, y: -5.3, z: -5}
@@ -2393,7 +2467,8 @@ MonoBehaviour:
       type: 2
     coinCompleted: 750
     coinBonus: 30
-  - initMoney: 100
+  - screenMap: {fileID: 21300000, guid: 4fc39d1c0afee404cb360e9007e7724a, type: 3}
+    initMoney: 100
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: -1.5, y: -1.5, z: -5}
@@ -2446,7 +2521,8 @@ MonoBehaviour:
       type: 2
     coinCompleted: 750
     coinBonus: 30
-  - initMoney: 100
+  - screenMap: {fileID: 21300000, guid: 4aaa6439bf47d3a4e8b28e89ad204528, type: 3}
+    initMoney: 100
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: 4.5, y: 2, z: -5}
@@ -2532,7 +2608,8 @@ MonoBehaviour:
       type: 2
     coinCompleted: 750
     coinBonus: 30
-  - initMoney: 1000
+  - screenMap: {fileID: 21300000, guid: 271cf8e8bdae2e24585ecb5ee6c6dafe, type: 3}
+    initMoney: 1000
     posCamera: {x: 0, y: 0, z: -10}
     contraintTower: 0300000003000000030000000300000003000000
     posHouse: {x: 0.5, y: 3, z: -5}

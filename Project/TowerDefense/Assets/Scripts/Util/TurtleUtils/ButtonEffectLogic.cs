@@ -28,6 +28,10 @@ public class ButtonEffectLogic : Button
     protected override void Awake()
     {
         initScale = transform.localScale;
+        if(hasEffect)
+        {
+            transform.localScale = initScale * 0.9f;
+        }
     }
 
     public override void OnPointerClick(PointerEventData eventData)
@@ -46,7 +50,7 @@ public class ButtonEffectLogic : Button
     {
         base.OnPointerEnter(eventData);
         onEnter.Invoke();
-        EffectDown();
+        //EffectDown();
     }
 
     public override void OnPointerUp(PointerEventData eventData)
@@ -54,29 +58,24 @@ public class ButtonEffectLogic : Button
         base.OnPointerUp(eventData);
         onUp.Invoke();
         EffectUp();
-        if (hasEffect)
-        {
-            AudioManager.instance.PlayShot(AudioManager.instance.btn[0]);
-        }
     }
 
     public override void OnPointerExit(PointerEventData eventData)
     {
         base.OnPointerExit(eventData);
         onExit.Invoke();
-        EffectUp();
+        //EffectUp();
     }
 
 
     public virtual void EffectDown()
     {
-        //SoundManageLogic.Instance?.PlayButton(SoundManageLogic.Instance.btnClickSound);
-        //ScaleUp();
+        AudioManager.instance.PlayShot(AudioManager.instance.btn[0]);
+        ScaleUp();
     }
 
     public virtual void EffectUp()
     {
-
         ScaleDown();
     }
 

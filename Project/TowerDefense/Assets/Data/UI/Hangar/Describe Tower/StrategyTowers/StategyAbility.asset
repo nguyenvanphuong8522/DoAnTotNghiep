@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: StategyAbility
   m_EditorClassIdentifier: 
   list:
-  - Name: Ability
-    Description: Calculating and planning when to use them effectively.
+  - Name: "H\u1ED7 tr\u1EE3"
+    Description: "H\xE3y l\xEAn k\u1EBF ho\u1EA1ch \u0111\u1EC3 s\u1EED d\u1EE5ng
+      ch\xFAng \u0111\xFAng l\xFAc."

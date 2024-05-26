@@ -14,6 +14,7 @@ public class ListLevelScriptable : ScriptableObject
 [Serializable]
 public class LevelScriptable
 {
+    public Sprite screenMap;
     public int initMoney;
     public Vector3 posCamera;
     public int[] contraintTower;

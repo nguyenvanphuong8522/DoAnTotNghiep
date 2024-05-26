@@ -12,6 +12,8 @@ public class LevelManager : Singleton<LevelManager>
 
     private void Start()
     {
+        DataPersist.Level = 20;
+        DataPersist.Money = 999999;
         if(PlayerPrefs.HasKey("LEVELSTAR"))
         {
             starsLevel = JsonConvert.DeserializeObject<StarLevelSave>(DataPersist.JsonStarLevel);

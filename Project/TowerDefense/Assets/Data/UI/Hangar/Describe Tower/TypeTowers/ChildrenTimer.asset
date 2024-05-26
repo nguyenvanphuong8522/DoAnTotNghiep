@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   list:
   - Name: Chrono Freezer
-    Description: Slowdown 20%
+    Description: "L\xE0m ch\u1EADm 20% t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n c\u1EE7a
+      k\u1EBB \u0111\u1ECBch."
   - Name: Temporal Sentry
-    Description: Slowdown 40%
+    Description: "L\xE0m ch\u1EADm 40% t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n c\u1EE7a
+      k\u1EBB \u0111\u1ECBch."
   - Name: Time Warp Tower
-    Description: Slowdown 60%
+    Description: "L\xE0m ch\u1EADm 60% t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n c\u1EE7a
+      k\u1EBB \u0111\u1ECBch."

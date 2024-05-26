@@ -71,6 +71,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1335345619055590174, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: animationSke
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659778302836708096, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
+      propertyPath: _animationName
+      value: dame
+      objectReference: {fileID: 0}
     - target: {fileID: 5911245809555708044, guid: 7b21ed321e9c7c84b93fc9120a65484f, type: 3}
       propertyPath: m_IsActive
       value: 0

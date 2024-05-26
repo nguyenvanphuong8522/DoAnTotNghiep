@@ -287,7 +287,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
-  hasEffect: 0
+  hasEffect: 1
   onEnter:
     m_PersistentCalls:
       m_Calls: []

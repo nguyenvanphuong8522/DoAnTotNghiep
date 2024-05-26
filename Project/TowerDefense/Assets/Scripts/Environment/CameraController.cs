@@ -49,6 +49,7 @@ public class CameraController : Singleton<CameraController>
             float camHalfWidth = camHalfHeight * screenAspect;
             newPos.x = Mathf.Clamp(newPos.x, -maxRight + camHalfWidth, maxRight - camHalfWidth);
             newPos.y = Mathf.Clamp(newPos.y, -maxHeight + camHalfHeight + box.offset.y, maxHeight - camHalfHeight + box.offset.y);
+            newPos.z = -10;
             transform.position = newPos;
         }
         float size = cam.orthographicSize - Input.GetAxis("Mouse ScrollWheel");

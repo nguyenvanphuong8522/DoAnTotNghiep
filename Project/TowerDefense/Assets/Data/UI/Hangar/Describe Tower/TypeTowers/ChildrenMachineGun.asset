@@ -14,11 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   list:
   - Name: MG-1
-    Description: Basic defense tower with small-caliber automated machine guns, capable
-      of protecting nearby areas.
+    Description: "Th\xE1p ph\xF2ng th\u1EE7 c\u01A1 b\u1EA3n v\u1EDBi s\xFAng m\xE1y
+      t\u1EF1 \u0111\u1ED9ng c\u1EE1 n\xF2ng nh\u1ECF, c\xF3 kh\u1EA3 n\u0103ng b\u1EA3o
+      v\u1EC7 c\xE1c khu v\u1EF1c l\xE2n c\u1EADn."
   - Name: MG-2
-    Description: Enhanced defense tower equipped with medium-caliber machine guns,
-      with extended range and improved durability.
+    Description: "Th\xE1p ph\xF2ng th\u1EE7 n\xE2ng cao \u0111\u01B0\u1EE3c trang
+      b\u1ECB s\xFAng m\xE1y c\u1EE1 n\xF2ng trung b\xECnh, v\u1EDBi t\u1EA7m b\u1EAFn
+      m\u1EDF r\u1ED9ng v\xE0 \u0111\u1ED9 b\u1EC1n \u0111\u01B0\u1EE3c c\u1EA3i
+      thi\u1EC7n."
   - Name: MG-3
-    Description: Advanced defense tower with heavy-caliber machine guns, wide range,
-      and integrated automated target detection and elimination systems.
+    Description: "Th\xE1p ph\xF2ng th\u1EE7 ti\xEAn ti\u1EBFn v\u1EDBi s\xFAng m\xE1y
+      c\u1EE1 n\xF2ng n\u1EB7ng, t\u1EA7m b\u1EAFn r\u1ED9ng v\xE0 h\u1EC7 th\u1ED1ng
+      ph\xE1t hi\u1EC7n v\xE0 ti\xEAu di\u1EC7t m\u1EE5c ti\xEAu t\u1EF1 \u0111\u1ED9ng
+      t\xEDch h\u1EE3p."

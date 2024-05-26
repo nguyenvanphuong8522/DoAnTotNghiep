@@ -44,7 +44,10 @@ public class Health : MonoBehaviour, Ihealth
             ProjectileExplore bulletExplore = col.gameObject.GetComponent<ProjectileExplore>();
             if (bulletExplore != null)
             {
-                effectTakeDame.Play();
+                if(!effectTakeDame.isPlaying)
+                {
+                    effectTakeDame.Play();
+                }
                 TakeDamage(bulletExplore.damage);
                 bulletExplore.Explore();
             }

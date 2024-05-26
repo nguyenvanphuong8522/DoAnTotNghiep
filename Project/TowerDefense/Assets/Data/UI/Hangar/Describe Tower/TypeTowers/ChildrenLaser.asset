@@ -14,12 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   list:
   - Name: 'Luminous Laser '
-    Description: Basic continuous damage laser, suitable for lowering target resistance
-      at close range.
+    Description: "Laser s\xE1t th\u01B0\u01A1ng li\xEAn t\u1EE5c c\u01A1 b\u1EA3n,
+      th\xEDch h\u1EE3p \u0111\u1EC3 gi\u1EA3m s\u1EE9c \u0111\u1EC1 kh\xE1ng c\u1EE7a
+      m\u1EE5c ti\xEAu \u1EDF c\u1EF1 ly g\u1EA7n."
   - Name: Radiant Blaster
-    Description: Enhanced laser with increased energy, capable of dealing greater
-      continuous damage and longer range.
+    Description: "Tia laser \u0111\u01B0\u1EE3c t\u0103ng c\u01B0\u1EDDng v\u1EDBi
+      n\u0103ng l\u01B0\u1EE3ng t\u0103ng l\xEAn, c\xF3 kh\u1EA3 n\u0103ng g\xE2y
+      s\xE1t th\u01B0\u01A1ng li\xEAn t\u1EE5c l\u1EDBn h\u01A1n v\xE0 t\u1EA7m b\u1EAFn
+      xa h\u01A1n."
   - Name: Ray Emitter
-    Description: Extremely powerful laser, able to inflict significant continuous
-      damage on heavily armored targets, integrated with automatic target detection
-      and control systems.
+    Description: "Tia laser c\u1EF1c m\u1EA1nh, c\xF3 th\u1EC3 g\xE2y s\xE1t th\u01B0\u01A1ng
+      li\xEAn t\u1EE5c \u0111\xE1ng k\u1EC3 l\xEAn c\xE1c m\u1EE5c ti\xEAu \u0111\u01B0\u1EE3c
+      b\u1ECDc th\xE9p h\u1EA1ng n\u1EB7ng, t\xEDch h\u1EE3p h\u1EC7 th\u1ED1ng ph\xE1t
+      hi\u1EC7n v\xE0 \u0111i\u1EC1u khi\u1EC3n m\u1EE5c ti\xEAu t\u1EF1 \u0111\u1ED9ng."

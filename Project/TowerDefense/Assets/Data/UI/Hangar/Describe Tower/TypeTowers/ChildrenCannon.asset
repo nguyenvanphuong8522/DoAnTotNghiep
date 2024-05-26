@@ -14,11 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   list:
   - Name: Single Cannon
-    Description: Basic cannon with short range and moderate firepower, mainly used
-      for close defense.
+    Description: "Ph\xE1o c\u01A1 b\u1EA3n c\xF3 t\u1EA7m b\u1EAFn ng\u1EAFn v\xE0
+      h\u1ECFa l\u1EF1c v\u1EEBa ph\u1EA3i, ch\u1EE7 y\u1EBFu d\xF9ng \u0111\u1EC3
+      ph\xF2ng th\u1EE7 t\u1EA7m g\u1EA7n."
   - Name: Ironclad Blaster
-    Description: Enhanced cannon with extended range and stronger firepower, capable
-      of accurately targeting medium and long-distance threats.
+    Description: "Ph\xE1o \u0111\u01B0\u1EE3c c\u1EA3i ti\u1EBFn v\u1EDBi t\u1EA7m
+      b\u1EAFn xa h\u01A1n v\xE0 h\u1ECFa l\u1EF1c m\u1EA1nh h\u01A1n, c\xF3 kh\u1EA3
+      n\u0103ng nh\u1EAFm m\u1EE5c ti\xEAu ch\xEDnh x\xE1c v\xE0o c\xE1c m\u1ED1i
+      \u0111e d\u1ECDa \u1EDF kho\u1EA3ng c\xE1ch trung b\xECnh v\xE0 xa."
   - Name: Vortex Cannon
-    Description: Advanced cannon with wide range, powerful firepower, and integrated
-      automated targeting and firing systems for moving targets.
+    Description: "Ph\xE1o ti\xEAn ti\u1EBFn v\u1EDBi t\u1EA7m b\u1EAFn r\u1ED9ng,
+      h\u1ECFa l\u1EF1c m\u1EA1nh m\u1EBD v\xE0 h\u1EC7 th\u1ED1ng nh\u1EAFm m\u1EE5c
+      ti\xEAu v\xE0 b\u1EAFn t\u1EF1 \u0111\u1ED9ng t\xEDch h\u1EE3p cho m\u1EE5c
+      ti\xEAu di chuy\u1EC3n."
