@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1312474082960904782, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: m_Parameters.widthMultiplier
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312474082960904782, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
       propertyPath: m_Parameters.colorGradient.key0.b
       value: 0
       objectReference: {fileID: 0}
@@ -66,6 +70,18 @@ PrefabInstance:
     - target: {fileID: 2318745019090544538, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.78
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129528793364176540, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129528793364176540, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129528793364176540, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4969623090833487809, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
       propertyPath: indexLevel
@@ -169,15 +185,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8594361518107840794, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 8594361518107840794, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 8594361518107840794, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.2
+      value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 8594361518107840794, guid: cb8e3ee9518039e42b1a1809c70f88e0, type: 3}
       propertyPath: m_ConstrainProportionsScale

@@ -6,6 +6,7 @@ public class GunLaser : Gun
 {
     public Ihealth enemyHealth;
     public LineRenderer line;
+    public AudioSource source;
     private void OnEnable()
     {
         HideLine();
@@ -17,6 +18,7 @@ public class GunLaser : Gun
     public override void StartShoot()
     {
         base.StartShoot();
+        source.Play();
         line.enabled = true;
     }
     public override void StopShoot()
@@ -25,6 +27,7 @@ public class GunLaser : Gun
         {
             StopCoroutine(coroutineAttack);
             isAttacking = false;
+            source.Stop();
             HideLine();
         }
     }

@@ -755,8 +755,8 @@ RectTransform:
   m_GameObject: {fileID: 36250155}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7289999, y: 0.7289999, z: 0.7289999}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1058448427}
   m_Father: {fileID: 1409328253}
@@ -2708,6 +2708,11 @@ MonoBehaviour:
   text: {fileID: 2123984609}
   character: {fileID: 639379962}
   dialog: {fileID: 1071115827}
+--- !u!82 &180631371 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 3564146365819959832, guid: 3b88e043146e93341b5640e9a68f1f21, type: 3}
+  m_PrefabInstance: {fileID: 3564146365626638910}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &182087715
 GameObject:
   m_ObjectHideFlags: 0
@@ -5002,7 +5007,7 @@ RectTransform:
   m_GameObject: {fileID: 402457274}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.80999994, y: 0.80999994, z: 0.80999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 887579437}
@@ -5487,7 +5492,7 @@ RectTransform:
   m_GameObject: {fileID: 452674179}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.80999994, y: 0.80999994, z: 0.80999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2122007315}
@@ -5997,7 +6002,19 @@ MonoBehaviour:
   m_Value: 0.589
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 837699929}
+        m_TargetAssemblyTypeName: PopupSetting, Assembly-CSharp
+        m_MethodName: ChangeVolumeSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &515139284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9048,8 +9065,8 @@ RectTransform:
   m_GameObject: {fileID: 812254281}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.80999994, y: 0.80999994, z: 0.80999994}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1188542571}
   - {fileID: 706808523}
@@ -9392,6 +9409,8 @@ MonoBehaviour:
   main: {fileID: 837699928}
   btnClose: {fileID: 1870815972}
   _isShow: 0
+  slideMusic: {fileID: 1375196272}
+  slideSound: {fileID: 507926747}
 --- !u!222 &837699931
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13784,7 +13803,7 @@ RectTransform:
   m_GameObject: {fileID: 1281803869}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.80999994, y: 0.80999994, z: 0.80999994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 255436968}
@@ -14599,7 +14618,19 @@ MonoBehaviour:
   m_Value: 0.589
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 837699929}
+        m_TargetAssemblyTypeName: PopupSetting, Assembly-CSharp
+        m_MethodName: ChangeVolumeMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1375739348
 GameObject:
   m_ObjectHideFlags: 0
@@ -16020,8 +16051,8 @@ RectTransform:
   m_GameObject: {fileID: 1472514178}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7289999, y: 0.7289999, z: 0.7289999}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 444798543}
   - {fileID: 718574284}
@@ -19424,7 +19455,7 @@ RectTransform:
   m_GameObject: {fileID: 1870815968}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.80999994, y: 0.80999994, z: 0.80999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1795814106}
@@ -22344,6 +22375,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3564146364040517717, guid: 3b88e043146e93341b5640e9a68f1f21, type: 3}
+      propertyPath: musicSource
+      value: 
+      objectReference: {fileID: 180631371}
+    - target: {fileID: 3564146364040517717, guid: 3b88e043146e93341b5640e9a68f1f21, type: 3}
       propertyPath: btn.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -22354,6 +22389,18 @@ PrefabInstance:
     - target: {fileID: 3564146364040517719, guid: 3b88e043146e93341b5640e9a68f1f21, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564146365819959832, guid: 3b88e043146e93341b5640e9a68f1f21, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564146365819959832, guid: 3b88e043146e93341b5640e9a68f1f21, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ed8a0596f8f7ac245918fe6b52865e47, type: 3}
+    - target: {fileID: 3564146365819959832, guid: 3b88e043146e93341b5640e9a68f1f21, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b88e043146e93341b5640e9a68f1f21, type: 3}

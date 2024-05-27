@@ -29,8 +29,7 @@ public class AudioManager : Singleton<AudioManager>
     {
         foreach (var sound in soundSources)
         {
-            //sound.volume = UserData.FxSound;
-            //sound.mute = !UserData.IsSoundOn;
+            sound.volume = DataPersist.VolumeSound;
         }
         foreach (var sound in soundLoops)
         {
@@ -38,13 +37,26 @@ public class AudioManager : Singleton<AudioManager>
             //sound.mute = !UserData.IsSoundOn;
         }
     }
+    public void ChangeMusicVolume(float volume)
+    {
+        if(musicSource != null)
+        {
+            musicSource.volume = volume;
+        }
+    }
+    public void ChangeSoundVolume(float volume)
+    {
+        foreach (var sound in soundSources)
+        {
+            sound.volume = volume;
+        }
+    }
 
     public void ChangeMusicVolume()
     {
         if (musicSource != null)
         {
-            //musicSource.mute = !UserData.IsSoundOn;
-            //musicSource.volume = UserData.Music;
+            musicSource.volume = DataPersist.VolumeMusic;
         }
     }
 

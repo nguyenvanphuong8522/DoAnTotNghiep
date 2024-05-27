@@ -30,7 +30,7 @@ public class ButtonEffectLogic : Button
         initScale = transform.localScale;
         if(hasEffect)
         {
-            transform.localScale = initScale * 0.9f;
+            //transform.localScale = initScale * 0.9f;
         }
     }
 
@@ -70,12 +70,13 @@ public class ButtonEffectLogic : Button
 
     public virtual void EffectDown()
     {
-        AudioManager.instance.PlayShot(AudioManager.instance.btn[0]);
+        
         ScaleUp();
     }
 
     public virtual void EffectUp()
     {
+        AudioManager.instance.PlayShot(AudioManager.instance.btn[0]);
         ScaleDown();
     }
 

@@ -184,7 +184,7 @@ public class Obstacle : MonoBehaviour, Ihealth
     {
         Debug.Log("die");
         GameObject die = ObjectPool.instance.Get(ObjectPool.instance.obstacleDestroys[0], transform.position);
-        ObjectPool.instance.Get(ObjectPool.instance.enemyDies[3], transform.position);
+        ObjectPool.instance.Get(ObjectPool.instance.enemyDies[3], transform.position, 0.5f);
         SpawnDollarEffect();
     }
     public void ReturnToPool()

@@ -8,15 +8,15 @@ public class DataPersist
         get => PlayerPrefs.GetInt("TUTORIAL", -1);
         set => PlayerPrefs.SetInt("TUTORIAL", value);
     }
-    public static int VolumeMusic
+    public static float VolumeMusic
     {
-        get => PlayerPrefs.GetInt("MUSIC", 1);
-        set => PlayerPrefs.SetInt("MUSIC", value);
+        get => PlayerPrefs.GetFloat("MUSIC", 1);
+        set => PlayerPrefs.SetFloat("MUSIC", value);
     }
-    public static int VolumeSound
+    public static float VolumeSound
     {
-        get => PlayerPrefs.GetInt("SOUND", 1);
-        set => PlayerPrefs.SetInt("SOUND", value);
+        get => PlayerPrefs.GetFloat("SOUND", 1);
+        set => PlayerPrefs.SetFloat("SOUND", value);
     }
     public static int Level
     {

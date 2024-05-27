@@ -12,8 +12,7 @@ public class LevelManager : Singleton<LevelManager>
 
     private void Start()
     {
-        DataPersist.Level = 20;
-        DataPersist.Money = 999999;
+        TestMoney();
         if(PlayerPrefs.HasKey("LEVELSTAR"))
         {
             starsLevel = JsonConvert.DeserializeObject<StarLevelSave>(DataPersist.JsonStarLevel);
@@ -23,6 +22,11 @@ public class LevelManager : Singleton<LevelManager>
             starsLevel = new StarLevelSave();
             Save();
         }
+    }
+    public void TestMoney()
+    {
+        DataPersist.Level = 20;
+        DataPersist.Money = 9999;
     }
     public void SetStarLeve(int amountStar)
     {
@@ -41,6 +45,7 @@ public class LevelManager : Singleton<LevelManager>
     }
     public void InitLevel(int index)
     {
+        AudioManager.instance.ChangeMusicVolume(0);
         indexLevel = index;
         CameraController.instance.transform.position = listLevelData.levels[indexLevel].posCamera;
         curLevel.InitLevel(index, listLevelData);
@@ -62,5 +67,6 @@ public class LevelManager : Singleton<LevelManager>
         GameEvent.CallReturnLevel();
         curLevel.Stop();
         ObjectPool.instance.ReturnAllPool();
+        AudioManager.instance.ChangeMusicVolume();
     }
 }

@@ -16,5 +16,11 @@ public class GameManager : Singleton<GameManager>
         {
             DataPersist.Tutorialed = 3;
         }
+
+        if(Input.GetKeyDown (KeyCode.Q))
+        {
+            GameTutorial.instance.gameObject.SetActive(false);
+            DataPersist.Tutorialed = 3;
+        }
     }
 }

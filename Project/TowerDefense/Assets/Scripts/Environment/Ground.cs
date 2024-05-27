@@ -18,7 +18,14 @@ public class Ground : Singleton<Ground>
 
         if (!Utils.IsPointerOverUIElement() && distance <= 0.00001f)
         {
-            uiTowerUpgrade.SetPos(ConvertToGridPos.instance.GetPosToBuild());
+            if(ConvertToGridPos.instance.GetPosToBuild().y >= 3.4f)
+            {
+                uiTowerUpgrade.SetPos(ConvertToGridPos.instance.GetPosToBuild() - Vector3.up);
+            }
+            else
+            {
+                uiTowerUpgrade.SetPos(ConvertToGridPos.instance.GetPosToBuild());
+            }
             uiTowerUpgrade.Show();
         }
     }

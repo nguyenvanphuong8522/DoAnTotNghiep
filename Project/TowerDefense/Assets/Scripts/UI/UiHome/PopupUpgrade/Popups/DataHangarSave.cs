@@ -69,7 +69,7 @@ public class DataHangarSave : Singleton<DataHangarSave>
     }
     private DataTablesSave GetOldData()
     {
-        return JsonConvert.DeserializeObject<DataTablesSave>(DataPersist.JsonTables);
+        return JsonConvert.DeserializeObject<DataTablesSave>(DataPersist. JsonTables);
     }
     public List<UpgradeSave> GetUpgradeType(int indexTower, int indexColumn)
     {
